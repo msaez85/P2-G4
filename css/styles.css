@@ -1,0 +1,126 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*inicio del css del navbar*/
+.navbar {
+    height: 15vh;
+    background-color: rgb(39, 35, 33);
+    width: 100%;
+}
+
+.btn-navbar{
+  margin-left: 14rem;
+}
+
+.nav-container{
+    background-color: rgb(93, 83, 78) !important;
+}
+
+.menu-navbar{
+  margin-left: 10rem;;
+}
+
+.nav-img{
+  height: 100px !important;
+  width: 200px !important;
+}
+
+.img-fluid{
+    max-width: 200px !important;
+}
+
+.modal-suscribe{
+  background-color: rgb(110, 106, 105) !important;
+}
+
+.modal-backdrop {
+  z-index: 0 !important;
+}
+/*fin del css del navbar*/
+
+
+@media (max-width: 1300px){
+    /*inicio css media-query navbar*/
+    .nav-container{
+        background-color: rgb(93, 83, 78) !important;
+        width: 90% !important;
+        border-radius: 5px;
+    }
+
+    .nav-img{
+        height: 100px !important;
+        width: 200px !important;
+    }
+
+    .img-fluid{
+        max-width: 200px !important;
+    }
+
+    .btn-navbar{
+        margin-left: 2rem;
+    }
+    
+    .menu-navbar{
+        margin-left: 2rem;
+    }
+
+    .nav-link{
+        font-size: 19px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    } 
+    /*fin css media-query navbar*/
+}
+
+@media (max-width: 768px){
+    /*inicio css media-query navbar*/
+    .nav-container{
+        width: 90% !important;
+    }
+
+    .btn-navbar{
+        margin-left: 0;
+    }
+
+    .img-fluid{
+        max-width: 200px !important;
+    }
+
+    .nav-img{
+        height: 100px !important;
+        width: 200px !important;
+      }
+    
+    .menu-navbar{
+        margin-left: 0;
+    }
+
+    .nav-link{
+        font-size: 19px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    /*fin css media-query navbar*/
+}
+
+@media (max-width: 576px){
+
+      /*inicio css media-query navbar*/
+      .nav-container{
+         width: 100% !important;
+      }
+
+      .img-fluid{
+         max-width: 200px !important;
+    }
+
+      .nav-img{
+        height: 100px !important;
+        width: 200px !important;
+      }
+      /*fin css media-query navbar*/
+}
