@@ -6,7 +6,7 @@
 
 /*inicio del css del navbar*/
 .navbar {
-    height: 15vh;
+    height: 120px;
     background-color: rgb(39, 35, 33);
     width: 100%;
 }
@@ -26,10 +26,7 @@
 .nav-img{
   height: 100px !important;
   width: 200px !important;
-}
-
-.img-fluid{
-    max-width: 200px !important;
+  max-width: 200px !important;
 }
 
 .modal-suscribe{
@@ -40,6 +37,27 @@
   z-index: 0 !important;
 }
 /*fin del css del navbar*/
+/*inicio del css destacado*/
+
+.destacado{
+    width: 100%;
+    margin-top:120px;
+    background-color: rgb(39, 35, 33);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-main{
+    border-radius: 30px;
+}
+
+/*fin del css destacado*/
+.main{
+    width: 100%;
+    border: 1px solid black;
+}
 
 /** main y body*/
 body{
@@ -82,9 +100,6 @@ main {
     .nav-img{
         height: 100px !important;
         width: 200px !important;
-    }
-
-    .img-fluid{
         max-width: 200px !important;
     }
 
@@ -114,13 +129,10 @@ main {
         margin-left: 0;
     }
 
-    .img-fluid{
-        max-width: 200px !important;
-    }
-
     .nav-img{
         height: 100px !important;
         width: 200px !important;
+        max-width: 200px !important;
       }
     
     .menu-navbar{
@@ -133,6 +145,15 @@ main {
         padding: 0 !important;
     }
     /*fin css media-query navbar*/
+    /*inicio del css destacado*/
+
+    .destacado{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    /*fin del css destacado*/
 }
 
 @media (max-width: 576px){
@@ -142,13 +163,19 @@ main {
          width: 100% !important;
       }
 
-      .img-fluid{
-         max-width: 200px !important;
-    }
-
       .nav-img{
         height: 100px !important;
         width: 200px !important;
+        max-width: 200px !important;
       }
       /*fin css media-query navbar*/
+      /*inicio del css destacado*/
+
+      .destacado{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+      /*fin del css destacado*/
 }
