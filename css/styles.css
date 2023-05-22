@@ -6,8 +6,8 @@
 
 /*inicio del css del navbar*/
 .navbar {
-    height: 15vh;
-    background-color: rgb(39, 35, 33);
+    height: 200px;
+    background-color: black;
     width: 100%;
 }
 
@@ -26,10 +26,7 @@
 .nav-img{
   height: 100px !important;
   width: 200px !important;
-}
-
-.img-fluid{
-    max-width: 200px !important;
+  max-width: 200px !important;
 }
 
 .modal-suscribe{
@@ -40,20 +37,53 @@
   z-index: 0 !important;
 }
 /*fin del css del navbar*/
+/*inicio del css destacado*/
 
+.destacado{
+    width: 100% !important;
+    margin-top:200px;
+    background-color: rgb(39, 35, 33);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-main{
+    border-radius: 30px;
+}
+
+/*fin del css destacado*/
 /** main y body*/
 body{
+    width: 100% !important;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-main {
+.main {
     flex-grow: 1;
-    margin-top: 15vh ;
-    padding-top: 11px;
+    padding-top: 25px;
+    background-color: rgb(39, 35, 33);
   }
+
   /**fin main y body*/
-/** inicio Footer **/
+
+.contenido{
+    width: 70% !important;
+}
+
+.card{
+    border: 3px solid grey !important;
+}
+
+.card-body{
+    background-color: rgb(93, 83, 78) !important;
+}
+
+
+/* inicio Footer **/
+
 
 #copyrightFooter {
     text-align: center;
@@ -71,6 +101,7 @@ main {
     list-style: none;
   }
 /**fin del footer**/
+
 /** tablas***/
 table,td,th {
 	border: 1px solid black;
@@ -104,6 +135,15 @@ table,td,th {
 }
 /**fin de video reproduccion**/
 
+
+@media (max-width: 1475px){
+    /*inicio css media-query navbar*/
+    .contenido{
+        width: 80% !important;
+    }
+}
+
+
 @media (max-width: 1300px){
     /*inicio css media-query navbar*/
     .nav-container{
@@ -115,9 +155,6 @@ table,td,th {
     .nav-img{
         height: 100px !important;
         width: 200px !important;
-    }
-
-    .img-fluid{
         max-width: 200px !important;
     }
 
@@ -135,6 +172,20 @@ table,td,th {
         padding: 0 !important;
     } 
     /*fin css media-query navbar*/
+
+    .contenido{
+        width: 80% !important;
+    }
+}
+
+@media (max-width: 870px){
+    /*inicio css media-query navbar*/
+    .contenido{
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        
+    }
 }
 
 @media (max-width: 768px){
@@ -147,13 +198,10 @@ table,td,th {
         margin-left: 0;
     }
 
-    .img-fluid{
-        max-width: 200px !important;
-    }
-
     .nav-img{
         height: 100px !important;
         width: 200px !important;
+        max-width: 200px !important;
       }
     
     .menu-navbar{
@@ -166,6 +214,20 @@ table,td,th {
         padding: 0 !important;
     }
     /*fin css media-query navbar*/
+    /*inicio del css destacado*/
+
+    .destacado{
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenido{
+        width: 100% !important;
+    }
+    /*fin del css destacado*/
 }
 
 @media (max-width: 576px){
@@ -175,13 +237,27 @@ table,td,th {
          width: 100% !important;
       }
 
-      .img-fluid{
-         max-width: 200px !important;
-    }
-
       .nav-img{
         height: 100px !important;
         width: 200px !important;
+        max-width: 200px !important;
       }
       /*fin css media-query navbar*/
+      /*inicio del css destacado*/
+
+      .destacado{
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+      /*fin del css destacado*/
+}
+
+@media (max-width: 410px){
+    body{
+        width: 410px !important;
+    }
 }
