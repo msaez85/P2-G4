@@ -7,6 +7,7 @@ const TipoRoles = {
     usuario: "usuario"
 }
 const EstadosComic = {
+    Publicandose: "Publicandose",
     Finalizado: "Finalizado", 
     Emitiendose: "Emitiendose"
 }

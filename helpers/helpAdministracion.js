@@ -11,6 +11,11 @@ function agregarInformacionParrafo(texto, idContenedor){
 
 function cargarEstadoComic(selector){
     let nuevaOpcion = document.createElement("option");
+    nuevaOpcion.text = EstadosComic.Publicandose;
+    nuevaOpcion.value = EstadosComic.Publicandose;
+    selector.appendChild(nuevaOpcion);
+
+    nuevaOpcion = document.createElement("option");
     nuevaOpcion.text = EstadosComic.Emitiendose;
     nuevaOpcion.value = EstadosComic.Emitiendose;
     selector.appendChild(nuevaOpcion);
@@ -19,8 +24,8 @@ function cargarEstadoComic(selector){
     nuevaOpcion.text = EstadosComic.Finalizado;
     nuevaOpcion.value = EstadosComic.Finalizado;
     selector.appendChild(nuevaOpcion);
-
 }
+
 function obtenerEstado(){
     let selector = document.querySelector('#estadoComic'); 
     let opcion = selector.options[selector.selectedIndex];

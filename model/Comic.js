@@ -13,8 +13,7 @@ class Comic {
         this.price = price;
         this.status = status;
     }
-
-
+    
     toJson() {
         return {
             id: this.id,
@@ -29,6 +28,7 @@ class Comic {
             status: this.status
         }
     }
+
 }
 
 export{Comic}; 

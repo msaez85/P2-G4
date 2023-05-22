@@ -65,6 +65,8 @@
                                 <th>Categoría</th>
                                 <th>Sinopsis</th>
                                 <th>Estado</th>
+                                <th>Editorial</th>
+                                <th>Precio</th>
                                 <th>Publicado</th>
                                 <th>Trailer</th>
                                 <th>Opciones</th>
@@ -120,6 +122,7 @@
                 <select class="form-select" id="estadoComic" name="selectorEstado" required >
                   <option selected disabled value="">Seleccionar Estado Comic</option>
                 </select>
+
                 <div class="invalid-feedback">
                   Por favor, Seleccioná el Estado  de un Comic!.
                 </div>
@@ -127,8 +130,26 @@
                 <label for="urlVideoComic" class="form-label">URL Video:</label>
                 <input type="text" class="form-control" id="urlVideoComic" required minlength="1" maxlength="50">
                 <div class="invalid-feedback">
-                  Por favor, ingresa el URL del Video  de un Comic!.
+                  Por favor, Seleccioná el Estado  de un Comic!.
                 </div>
+              <div class="mb-3">
+                <label for="precioComic" class="form-label">Precio: </label>
+                <input type="text" class="form-control" id="precioComic" required minlength="1" maxlength="50">
+                <div class="invalid-feedback">
+                  Por favor, ingresa Precio  de un Comic!.
+                </div>
+                <div class="mb-3">
+                  <label for="editorialComicComic" class="form-label">Editorial:</label>
+                  <input type="text" class="form-control" id="editorialComic" required minlength="1" maxlength="50">
+                  <div class="invalid-feedback">
+                    Por favor, ingresa Editorial de un Comic!.
+                  </div>
+                  <div class="mb-3">
+                    <label for="urlVideoComic" class="form-label">URL Video:</label>
+                    <input type="text" class="form-control" id="urlVideoComic" required minlength="1" maxlength="50">
+                    <div class="invalid-feedback">
+                      Por favor, ingresa el URL del Video  de un Comic!.
+                    </div>
                 <div class="mb-3">
                   <label for="urlImagenComic" class="form-label">URL Imagen Portada:</label>
                   <input type="text" class="form-control" id="urlImagenComic" required minlength="1" maxlength="50">

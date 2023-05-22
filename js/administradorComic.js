@@ -1,5 +1,6 @@
 import { validarComic, deleteChildNode, parsearBoolean} from "../helpers/help.js";
 import {agregarInformacionParrafo,cargarEstadoComic, obtenerEstado,agregarVideo} from"../helpers/helpAdministracion.js"; 
+import{listaComics } from "../model/data.js"
 import { Comic } from "../model/Comic.js";
 import { Biblioteca } from "../model/Biblioteca.js";
 
@@ -46,11 +47,13 @@ function agregarComic(event){
    category = document.getElementById("categoriaComic").value,
    synopsis = document.getElementById("sipnosisComic").value, 
    opcion = parsearBoolean(document.querySelector('input[name="radio-stacked"]:checked').value),
-   state = obtenerEstado(),
+   status = obtenerEstado(),
+   price = document.getElementById("precioComic").value, 
+   editorial = document.getElementById("editorialComic").value,
    urlVideo = document.getElementById("urlVideoComic").value, 
    urlImage = document.getElementById("urlImagenComic").value; 
 
-   let newComic = new Comic(name,category,synopsis,opcion,state,urlVideo,urlImage),
+   let newComic = new Comic(name,category,synopsis,opcion,urlVideo,urlImage,editorial,price,status),
    respuestaValidacion = validarComic(newComic.toJson()); 
 
   if(respuestaValidacion != null ) {
@@ -66,8 +69,9 @@ function agregarComic(event){
 listarComics(); 
 
 function listarComics(){
+  debugger
   deleteChildNode(bodyTablaComic); 
-biblioteca.getArrayComic.forEach(comic => {  
+  listaComics.arrayComics.forEach(comic => {  
   let row = document.createElement('tr'); 
 
   let column = document.createElement("td"); 
@@ -103,7 +107,15 @@ biblioteca.getArrayComic.forEach(comic => {
   row.appendChild(column); 
 
   column = document.createElement("td"); 
-  column.innerText = comic.state; 
+  column.innerText = comic.status; 
+  row.appendChild(column);
+
+  column = document.createElement("td"); 
+  column.innerText = comic.editorial; 
+  row.appendChild(column);
+
+  column = document.createElement("td"); 
+  column.innerText ='$ '+comic.price; 
   row.appendChild(column);
 
   column = document.createElement("td"); 
