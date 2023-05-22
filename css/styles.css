@@ -67,6 +67,8 @@ body{
     background-color: rgb(39, 35, 33);
   }
 
+  /**fin main y body*/
+
 .contenido{
     width: 70% !important;
 }
@@ -79,8 +81,9 @@ body{
     background-color: rgb(93, 83, 78) !important;
 }
 
-/*fin main y body*/
+
 /* inicio Footer **/
+
 
 #copyrightFooter {
     text-align: center;
@@ -99,12 +102,47 @@ body{
   }
 /**fin del footer**/
 
+/** tablas***/
+table,td,th {
+	border: 1px solid black;
+    background-color: #f8f9fa;
+    color: black;
+}
+/** fin de tablas***/
+/**Modal***/
+#sipnosisComic{
+  resize: none;
+}
+.modalAgregarComics, .modalVideoComic{
+  background-color: rgb(127, 124, 123) !important;
+}
+/***Fin de la modal***/
+/**video reproduccion**/
+.video{
+    position: relative;
+    padding-bottom: 700px;
+    padding-top: 0px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 80%;
+}
+/**fin de video reproduccion**/
+
+
 @media (max-width: 1475px){
     /*inicio css media-query navbar*/
     .contenido{
         width: 80% !important;
     }
 }
+
 
 @media (max-width: 1300px){
     /*inicio css media-query navbar*/
