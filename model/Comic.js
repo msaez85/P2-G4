@@ -5,15 +5,17 @@ class Comic{
     #category; 
     #synopsis; 
     #publics; 
+    #state; 
     #urlVideo;
     #urlImage; 
 
-    constructor(name , category, synopsis, publics, urlVideo , urlImage){
+    constructor(name , category, synopsis, publics, state,  urlVideo , urlImage){
         this.#id = generarID();
         this.#name = name; 
         this.#category = category; 
         this.#synopsis = synopsis; 
         this.#publics = publics;
+        this.#state = state; 
         this.#urlVideo = urlVideo; 
         this.#urlImage = urlImage;
     }
@@ -31,6 +33,9 @@ class Comic{
     }
     get getPublics(){
         return this.#publics;
+    }
+    get getStates(){
+        return this.#state;
     }
     get getUrlVideo(){
         return this.#urlVideo;
@@ -50,6 +55,9 @@ class Comic{
     set setPublic(publics){
         this.#publics = publics; 
     }
+    set setState(state){
+        this.#state = state; 
+    }
     set setUrlVideo(urlVideo){
         this.#urlVideo = urlVideo;
     }
@@ -63,6 +71,7 @@ class Comic{
             category: this.#category,
             synopsis: this.#synopsis,
             publics: this.#publics,
+            state: this.#state,
             urlVideo: this.#urlVideo,
             urlImage: this.#urlImage
         }

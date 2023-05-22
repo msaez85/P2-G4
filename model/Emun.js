@@ -6,4 +6,8 @@ const TipoRoles = {
     administrador: "administrativo",
     usuario: "usuario"
 }
-export {Estado, TipoRoles}; 
+const EstadosComic = {
+    Finalizado: "Finalizado", 
+    Emitiendose: "Emitiendose"
+}
+export {Estado, TipoRoles, EstadosComic}; 
