@@ -67,23 +67,7 @@
 /* Fin modal */
 
 
-/*inicio del css destacado*/
 
-.destacado{
-    width: 100% !important;
-    margin-top:200px;
-    background-color: rgb(39, 35, 33);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.img-main{
-    border-radius: 30px;
-}
-
-/*fin del css destacado*/
 /** main y body*/
 body{
     width: 100% !important;
@@ -95,23 +79,45 @@ body{
     flex-grow: 1;
     padding-top: 25px;
     background-color: rgb(39, 35, 33);
-  }
+}
 
   /**fin main y body*/
 
-.contenido{
-    width: 70% !important;
+.register-div-h2{
+    width: 100% !important;
+    /* justify-content: center !important; */
+    /* align-items: center !important; */
+    margin-top: 200px;
 }
 
-.card{
-    border: 3px solid grey !important;
+.register-input{
+    width: 350px !important;
+    border-radius: 2%;
+    border-style: double;
+    border: 3px solid black;
+    height: 40px;
+}
+.register-input:hover{
+    border: 3px solid white;
 }
 
-.card-body{
-    background-color: rgb(93, 83, 78) !important;
+.register-btn{
+    width: 200px !important;
+    height: 45px;
+    font-size: large;
 }
-
-
+.register-btn:hover{
+    border: 4px solid black;
+}
+.have-account-link{
+    margin-left: 20px !important;
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+}
+.have-account-link:hover{
+    color: rgb(98, 82, 168);
+    text-decoration: underline;
+}
 /* inicio Footer **/
 
 
