@@ -47,7 +47,7 @@
     </nav>
 </header>
             <main class="mainAdministrador"> 
-               <section class="container">
+               <section class="container-fluid">
                 <article class="row ">
                     <span class="col-xl-10 col-sm-8 col-md-8 col-lg-8 ">
                         <p class="h4 text-center" id="tituloAdministrarComic"> Administrar Comics </p>
@@ -56,18 +56,20 @@
                         <button type="button" class="btn btn-primary d-flex" data-bs-toggle="modal" data-bs-target="#agregarComicsModal"> <i class="bi bi-plus-circle mx-1"></i> Nuevo Comic</button>
                     </span>
                 </article>
-                <article class="row my-4 d-flex justify-content-center table-responsive">
-                        <table class="text-center">
+                <article class="row my-4 d-flex justify-content-center table-responsive mx-1">
+                        <table class="text-center table table-hover">
                             <thead>
-                                <th></th>
-                                <th>Codigo</th>
-                                <th>Nombre</th>
-                                <th>Categoría</th>
-                                <th>Sinopsis</th>
-                                <th>Estado</th>
-                                <th>Publicado</th>
-                                <th>Trailer</th>
-                                <th>Opciones</th>
+                                <th scope="col"></th>
+                                <th scope="col">Codigo</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Categoría</th>
+                                <th scope="col">Sinopsis</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Editorial</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Publicado</th>
+                                <th scope="col">Trailer</th>
+                                <th scope="col">Opciones</th>
                             </thead>
                             <tbody id="bodyListComic"></tbody>
                         </table>   
@@ -120,6 +122,7 @@
                 <select class="form-select" id="estadoComic" name="selectorEstado" required >
                   <option selected disabled value="">Seleccionar Estado Comic</option>
                 </select>
+
                 <div class="invalid-feedback">
                   Por favor, Seleccioná el Estado  de un Comic!.
                 </div>
@@ -127,8 +130,26 @@
                 <label for="urlVideoComic" class="form-label">URL Video:</label>
                 <input type="text" class="form-control" id="urlVideoComic" required minlength="1" maxlength="50">
                 <div class="invalid-feedback">
-                  Por favor, ingresa el URL del Video  de un Comic!.
+                  Por favor, Seleccioná el Estado  de un Comic!.
                 </div>
+              <div class="mb-3">
+                <label for="precioComic" class="form-label">Precio: </label>
+                <input type="text" class="form-control" id="precioComic" required minlength="1" maxlength="50">
+                <div class="invalid-feedback">
+                  Por favor, ingresa Precio  de un Comic!.
+                </div>
+                <div class="mb-3">
+                  <label for="editorialComicComic" class="form-label">Editorial:</label>
+                  <input type="text" class="form-control" id="editorialComic" required minlength="1" maxlength="50">
+                  <div class="invalid-feedback">
+                    Por favor, ingresa Editorial de un Comic!.
+                  </div>
+                  <div class="mb-3">
+                    <label for="urlVideoComic" class="form-label">URL Video:</label>
+                    <input type="text" class="form-control" id="urlVideoComic" required minlength="1" maxlength="50">
+                    <div class="invalid-feedback">
+                      Por favor, ingresa el URL del Video  de un Comic!.
+                    </div>
                 <div class="mb-3">
                   <label for="urlImagenComic" class="form-label">URL Imagen Portada:</label>
                   <input type="text" class="form-control" id="urlImagenComic" required minlength="1" maxlength="50">
@@ -183,49 +204,62 @@
           <form action="form-control" id="formModificarModal"  class="needs-validation" novalidate>
             <div class="mb-3">
               <label for="nombreComic" class="form-label">Nombre:</label>
-              <input type="text" class="form-control" id="nombreComic" required minlength="1" maxlength="20" placeholder="">
+              <input type="text" class="form-control" id="nombreComicModificar" required minlength="1" maxlength="20" >
               <div class="invalid-feedback">
                 Por favor, ingrese el nombre de un Comic!.
               </div>
             </div>
             <div class="mb-3">
               <label for="categoriaComic" class="form-label">Categoría:</label>
-              <input type="text" class="form-control" id="categoriaComic" required minlength="1" maxlength="20">
+              <input type="text" class="form-control" id="categoriaComicModificar" required minlength="1" maxlength="20">
               <div class="invalid-feedback">
                 Por favor, ingrese categoría de un Comic!.
               </div>
             </div>
             <div class="mb-3">
               <label for="sipnosisComic" class="form-label">Sipnosis:</label>
-              <textarea type="text" class="form-control" id="sipnosisComic"  cols="20" rows="5" required minlength="1" maxlength="2000" ></textarea>
+              <textarea type="text" class="form-control" id="sipnosisComicModificar"  cols="20" rows="5" required minlength="1" maxlength="2000" ></textarea>
               <div class="invalid-feedback">
                 Por favor, ingrese la sipnosis de un Comic!.
               </div>
             </div>
             <div class="mb-3">
               <label for="selectorEstado" class="form-label">Estado:</label>
-              <select class="form-select" id="estadoComic" name="selectorEstado" required >
+              <select class="form-select" id="estadoComicModificar" name="selectorEstado" required >
                 <option selected disabled value="">Seleccionar Estado Comic</option>
+                <option value="c">c</option>
               </select>
               <div class="invalid-feedback">
                 Por favor, Seleccioná el Estado  de un Comic!.
               </div>
+              <div class="mb-3">
+                <label for="precioComic" class="form-label">Precio: </label>
+                <input type="text" class="form-control" id="precioComicModificar" required minlength="1" maxlength="50">
+                <div class="invalid-feedback">
+                  Por favor, ingresa Precio  de un Comic!.
+                </div>
+                <div class="mb-3">
+                  <label for="editorialComicComic" class="form-label">Editorial:</label>
+                  <input type="text" class="form-control" id="editorialComicModificar" required minlength="1" maxlength="50">
+                  <div class="invalid-feedback">
+                    Por favor, ingresa Editorial de un Comic!.
+                  </div>
             <div class="mb-3">
               <label for="urlVideoComic" class="form-label">URL Video:</label>
-              <input type="text" class="form-control" id="urlVideoComic" required minlength="1" maxlength="50">
+              <input type="text" class="form-control" id="urlVideoComicModificar" required minlength="1" maxlength="50">
               <div class="invalid-feedback">
                 Por favor, ingresa el URL del Video  de un Comic!.
               </div>
               <div class="mb-3">
                 <label for="urlImagenComic" class="form-label">URL Imagen Portada:</label>
-                <input type="text" class="form-control" id="urlImagenComic" required minlength="1" maxlength="50">
+                <input type="text" class="form-control" id="urlImagenComicModificar" required minlength="1" maxlength="50">
                 <div class="invalid-feedback">
                   Por favor, ingresa el URL de la Imagen Portada de un Comic!.
                 </div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="btnCancelar">Cancelar</button>
-              <button type="submit" class="btn btn-success" id="btnAgregarComic">Agregar Comic</button>
+              <button type="submit" class="btn btn-success" id="btnGuardarModificacionComic">Guardar Comic</button>
             </div>
           </form>
         </div>

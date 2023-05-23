@@ -92,11 +92,18 @@ body{
     min-height: 100vh;
 }
 .main {
-    flex-grow: 1;
     padding-top: 25px;
-    background-color: rgb(39, 35, 33);
   }
-
+  #tituloAdministrarComic , #textoSynopsis{
+    color:#f8f9fa
+  }
+main{
+  flex-grow: 1;
+  background-color: rgb(39, 35, 33);
+}
+.mainAdministrador{
+  padding-top: 220px;
+}
   /**fin main y body*/
 
 .contenido{
@@ -133,10 +140,11 @@ body{
 /**fin del footer**/
 
 /** tablas***/
-table,td,th {
-	border: 1px solid black;
+table {
     background-color: #f8f9fa;
-    color: black;
+}
+.paintRow{
+  background-color: #ffeeba;
 }
 /** fin de tablas***/
 /**Modal***/
@@ -147,24 +155,6 @@ table,td,th {
   background-color: rgb(127, 124, 123) !important;
 }
 /***Fin de la modal***/
-/**video reproduccion**/
-.video{
-    position: relative;
-    padding-bottom: 700px;
-    padding-top: 0px;
-    height: 0;
-    overflow: hidden;
-}
-
-.video iframe{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 80%;
-}
-/**fin de video reproduccion**/
-
 
 @media (max-width: 1475px){
     /*inicio css media-query navbar*/
