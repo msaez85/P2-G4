@@ -1,20 +1,21 @@
-class Biblioteca{
-    #arrayComics = localStorage.getItem("listComic") ? JSON.parse(localStorage.getItem("listComic")) : []; 
-    #arrayComicsFavorite = [];
-    
+class Biblioteca {
+    constructor() {
+        this.arrayComics = [];
+        this.favoriteComic = null;
+    }
 
-    addArrayComic(comic){
-        let existingComic = this.#arrayComics.find(comics => comics == comic); 
-        if(existingComic == undefined){
-            this.#arrayComics.push(comic); 
-            localStorage.setItem("listComic", JSON.stringify(this.#arrayComics)); 
-            return 'Comic Agregado!'; 
-        }else{
-            return 'Ya existe el Comic!'; 
+    addArrayComic(comic) {
+        let existingComic = this.arrayComics.find(comics => comics == comic);
+        if (existingComic == undefined) {
+            this.arrayComics.push(comic);
+            localStorage.setItem("listComic", JSON.stringify(this.arrayComics));
+            return 'Comic Agregado!';
+        } else {
+            return 'Ya existe el Comic!';
         }
     }
     get getArrayComic(){
-        return this.#arrayComics;
+        return this.arrayComics;
     }
     deleteComic(id){
         let deleteComic = this.#arrayComics.find(comics => comics.id == id); 
