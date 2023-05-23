@@ -57,7 +57,8 @@ function agregarComic(event){
 
 function listarComics(){
   deleteChildNode(bodyTablaComic); 
-  listaComics.getArrayComic.forEach(comic => {  
+  listaComics.getArrayComic.forEach(comic => { 
+     
     let row = document.createElement('tr'); 
     if(comic.id == listaComics.getComicFavorite.id){
       row.classList.toggle('paintRow');
