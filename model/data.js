@@ -1,6 +1,10 @@
 import { Comic } from "./Comic.js";
 import { Biblioteca } from "./Biblioteca.js";
 
+let listaComics = new Biblioteca();
+
+export { listaComics };  
+
 const gantzSinopsis = `Kei Kurono es un estudiante egoísta y apático que se ve obligado a salvar a una persona de morir atropellada por un tren subterráneo debido a que su compañero de la infancia Masaru Kato lo llama para que le ayude. Como consecuencia él y Kato mueren en el intento.
 Posteriormente aparecen en un apartamento visualmente normal con otras personas igual de desconcertadas que ellos. Allí, una misteriosa esfera negra les obliga a participar de un sádico juego y para ello les pone a su disposición todo un exótico arsenal futurista que deberán aprender a usar para combatir a diversas especies de alienígenas y otras amenazas que para la gente común pasan desapercibidas.
 Los que llegan a la habitación no son vistos por los humanos mortales hasta que la esfera no los «suelta» después de cada misión. Una vez que cumplen una misión pueden llevarse el equipo que se les entrega (como un arma, un traje especial...) a su casa o a dónde quiera que vayan.
@@ -49,7 +53,7 @@ let saintSeiya = new Comic('Saint Seiya', 'Mitologia', saintSeiyaSinopsis, 'Si',
 
 
 const sevenSinsSinopsis = `Elizabeth Liones, la tercera princesa del Reino de Liones, tras el golpe de estado hecho por los Caballeros Sagrados decide huir y buscar a los ya desaparecidos caballeros que se hacen llamar Los Siete Pecados Capitales, cuya orden está conformado por los peores criminales del reino. Un día cae desmayada en una taberna, los clientes que ya habían escuchado sobre una Armadura andante oxidada, creen que es uno de los Sietes Pecados y todos menos el propietario y su compañero Hawk, huyen asustados.`;
-let sevenSins = new Comic('Nanatsu no Taizai', 'Aventura', sevenSinsSinopsis, 'Si', 'https://youtu.be/x2ex07fceig', './assets/sevenSins.jpg', 'EDITORIAL PANINI MANGA', '8.26', 'Finalizado');
+let sevenSins = new Comic('Nanatsu no Taizai', 'Aventura', sevenSinsSinopsis, 'Si', 'https://youtu.be/x2ex07fceig', '../assets/sevenSins.jpg', 'EDITORIAL PANINI MANGA', '8.26', 'Finalizado');
 
 
 const xmenSinopsis = `Hace poco, los Nuevos Mutantes regresaron de una misión en el espacio Shiar y trajeron con ellos un fascinante y extraño objeto que será la causa de una terrible lucha para evitar la destrucción total de su hogar. Mientras tanto, Forge se entera que su antiguo invento, del cual se arrepiente y avergüenza de haber creado, está siendo usado por los enemigos de la raza mutante para eliminarla.
@@ -83,7 +87,7 @@ const starwarsSinopsis = `Alba Escarlata amenaza con traer el caos a todos los r
 let starwars = new Comic('STAR WARS - DARTH VADER (2021) 04', 'Ciencia Ficcion', starwarsSinopsis, 'Si', 'https://youtu.be/QYMETt578MM', '/assets/starwars.jpg', 'EDITORIAL PANINI COMIC', '9.54', 'Finalizado');
 
 const xmenIIISinopsis = `Comienza Amanecer X ¡Es el inicio de la saga de Cyclops y su escuadrón cuidadosamente seleccionado de poderosos mutantes! Los Marauders Storm, Pyro, Bishop y Iceman navegan por los mares del mundo para proteger a sus compañeros genéticos, dirigidos por la capitana Kate Pride. Están financiados por Emma Frost y la Compañía Distribuidora Hellfire. Mientras tanto, en la Tierra, X-Force es la CIA del mundo mutante: mitad rama de inteligencia: Bestia, Jean Grey y Sage y mitad operaciones especiales: Wolverine, Kid Omega y Domino. ¡En un mundo perfecto no habría necesidad de X-Force!`;
-let xmenIII = new Comic('X-MEN (2023) 01', 'Mitologia', xmenIIISinopsis, 'Si', 'https://youtu.be/qrS4cTKINfI', './assets/xmenIII.jpg', 'EDITORIAL PANINI MARVEL', '13.28', 'Finalizado');
+let xmenIII = new Comic('X-MEN (2023) 01', 'Mitologia', xmenIIISinopsis, 'Si', 'https://youtu.be/qrS4cTKINfI', '/assets/xmenIII.jpg', 'EDITORIAL PANINI MARVEL', '13.28', 'Finalizado');
 
 const starwarsIISinopsis = `Mientras la Rebelión intenta reunir sus fuerzas para hacer un último esfuerzo por derrotar al malvado Imperio Galáctico, Luke se da cuenta de que es momento de dar el siguiente paso en su camino a convertirse en Jedi. Pero si la Orden Jedi ya no existe, ¿en dónde puede hallar el legado que necesita tan desesperadamente? La voz del Maestro Yoda será una pieza clave en este viaje, pero Yoda no enseñará a Luke la lección que este debe aprender. ¡Esa lección tomará (y también le dará) mucho más de lo que el joven Skywalker había imaginado! Asimismo, comienza la cacería final entre la comandante Ellian Zahra y la General Leia Organa. Además, luego de una misión que salió mal, la piloto rebelde Shara Bey, madre de Poe Dameron, quedó rezagada a bordo de un destructor estelar y ya no tiene mucho tiempo. ¡Todo esto y una celebración de Star Wars que abarca la Galaxia entera!`;
 let starwarsII = new Comic('STAR WARS 04 - REINO ESCARLATA', 'Ciencia Ficcion', starwarsIISinopsis, 'Si', 'https://youtu.be/_9FcJaEWIgg', '/assets/starwarsII.jpg', 'EDITORIAL PANINI COMIC', '8.26', 'Finalizado');
@@ -91,39 +95,5 @@ let starwarsII = new Comic('STAR WARS 04 - REINO ESCARLATA', 'Ciencia Ficcion', 
 const spidermanSinopsis = `May “Mayday” Parker, Spider-Gwen, Ben Reilly, Kaine, Spider-Ham, Silk, Miguel OHara, Superior Spider-Man, Capitán Universo, Spider-U.K., Spider-Man Noir... todos tus héroes arácnidos favoritos están en esta aventura. Si no conoces a alguno, aún estás a tiempo de hacerlo... pero date prisa, porque no todos sobrevivirán al encuentro con Los Herederos.`;
 let spiderman = new Comic('SPIDER-MAN: SPIDER-VERSE', 'Aventura', spidermanSinopsis, 'Si', 'https://youtu.be/x2ex07fceig', '/assets/spiderman.jpg', 'EDITORIAL PANINI MARVEL', '8.26', 'Finalizado');
 
-let localList = JSON.parse(localStorage.getItem("listComic"));
 
-let listaComics = new Biblioteca();
 
-if (localList) {
-    listaComics.arrayComics = localList;
-} else {
-    listaComics.addArrayComic(gantz);
-    listaComics.addArrayComic(daredevil);
-    listaComics.addArrayComic(bleach);
-    listaComics.addArrayComic(demonSlayer);
-    listaComics.addArrayComic(dragonBallS);
-    listaComics.addArrayComic(heroAcademy);
-    listaComics.addArrayComic(hunterX);
-    listaComics.addArrayComic(naruto);
-    listaComics.addArrayComic(onePiece);
-    listaComics.addArrayComic(onePunch);
-    listaComics.addArrayComic(saintSeiya);
-    listaComics.addArrayComic(sevenSins);
-    listaComics.addArrayComic(xmen);
-    listaComics.addArrayComic(attackTitan);
-    listaComics.addArrayComic(avenger);
-    listaComics.addArrayComic(xmenII);
-    listaComics.addArrayComic(guardianes);
-    listaComics.addArrayComic(milesmorales);
-    listaComics.addArrayComic(wolverine);
-    listaComics.addArrayComic(avengerII);
-    listaComics.addArrayComic(starwars);
-    listaComics.addArrayComic(xmenIII);
-    listaComics.addArrayComic(starwarsII);
-    listaComics.addArrayComic(spiderman);
-}
-
-listaComics.favoriteComic = spiderman;
-
-export { listaComics };  

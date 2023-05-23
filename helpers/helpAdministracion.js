@@ -48,4 +48,7 @@ function agregarVideo(urlVideo,idcontenedor){
     iframe.src = nuevoTexto;
     ratioVideo.appendChild(iframe); 
 }
+function cargarEstadoModificacion (estado){
+    
+}
 export {agregarInformacionParrafo,cargarEstadoComic, obtenerEstado,agregarVideo}; 

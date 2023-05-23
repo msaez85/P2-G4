@@ -54,7 +54,7 @@ function cargarContenido(comics) {
 }
 
 window.onload = function () {
-    cargarDestacado(listaComics.favoriteComic);
-    cargarContenido(listaComics.arrayComics);
+    cargarDestacado(listaComics.getComicFavorite);
+    cargarContenido(listaComics.getArrayComic);
 }
 

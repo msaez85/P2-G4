@@ -1,21 +1,23 @@
 class Biblioteca {
+    #arrayComics;
+    #favoriteComic;
     constructor() {
-        this.arrayComics = [];
-        this.favoriteComic = null;
+        this.#arrayComics = localStorage.getItem("listComic") ? JSON.parse(localStorage.getItem("listComic")) : [];
+        this.#favoriteComic = localStorage.getItem("comicFavorite") ? JSON.parse(localStorage.getItem("comicFavorite")) : null;
     }
 
     addArrayComic(comic) {
-        let existingComic = this.arrayComics.find(comics => comics == comic);
+        let existingComic = this.#arrayComics.find(comics => comics == comic);
         if (existingComic == undefined) {
-            this.arrayComics.push(comic);
-            localStorage.setItem("listComic", JSON.stringify(this.arrayComics));
+            this.#arrayComics.push(comic);
+            localStorage.setItem("listComic", JSON.stringify(this.#arrayComics));
             return 'Comic Agregado!';
         } else {
             return 'Ya existe el Comic!';
         }
     }
     get getArrayComic(){
-        return this.arrayComics;
+        return this.#arrayComics;
     }
     deleteComic(id){
         let deleteComic = this.#arrayComics.find(comics => comics.id == id); 
@@ -27,9 +29,18 @@ class Biblioteca {
             return 'No existe ID del Comic Enviado!'; 
         }
     }
+    addComicFavorite(idComic){
+        let favoriteComic = this.#arrayComics.find(comics => comics.id == idComic); 
+        if(favoriteComic !== undefined){
+            localStorage.setItem("comicFavorite", JSON.stringify(favoriteComic)); 
+            return 'Comic Agregado Como Favorito!'; 
+        }else{
+            return 'No existe ID del Comic Enviado!'; 
+        }
+    }
+    get getComicFavorite(){
+        return this.#favoriteComic;
+    }
 }
-/**
- * https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes/constructor#constructores_por_defecto
- * consultar si se pone o no el constructor......
- */
+
 export{Biblioteca}
