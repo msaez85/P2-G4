@@ -62,11 +62,18 @@ body{
     min-height: 100vh;
 }
 .main {
-    flex-grow: 1;
     padding-top: 25px;
-    background-color: rgb(39, 35, 33);
   }
-
+  #tituloAdministrarComic , #textoSynopsis{
+    color:#f8f9fa
+  }
+main{
+  flex-grow: 1;
+  background-color: rgb(39, 35, 33);
+}
+.mainAdministrador{
+  padding-top: 220px;
+}
   /**fin main y body*/
 
 .contenido{

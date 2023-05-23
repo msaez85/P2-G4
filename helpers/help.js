@@ -15,8 +15,21 @@ function validarComic(comic){
     if(comic.name.length == 0 || comic.name.match(ExpReg)==null) return "Ingrese Nombre Correcto del Comic! "; 
     if(comic.category.length == 0 || comic.category.match(ExpReg)==null) return "Ingrese Categoría Correcta del Comic! "; 
     if(comic.synopsis.length == 0 ) return "Ingrese Sinopsis Correcta del Comic! "; 
+    if(comic.publics == null) return "Seleccioná una opcion de publicacion!"; 
+    if(comic.state == "") return "Seleccioná un Estado! "
+    if(comic.state.length == 0 || comic.state.match(ExpReg)==null) return "Ingrese Estado Correcto del Comic! "; 
     if(comic.urlVideo.length == 0 || comic.urlVideo.match(ExpRegURL)== null) return "Ingrese URL de Video Correcta del Comic!"; 
     if(comic.urlImage.length == 0 || comic.urlImage.match(ExpRegURL)== null) return "Ingrese URL de Imagen Correcta del Comic!"; 
     return null; 
 }
-export {generarID, validarComic}; 
+function deleteChildNode(container){
+    while (container.hasChildNodes()) {
+        container.childNodes.forEach(child => child.remove());
+    }
+}
+
+function parsearBoolean(text){
+    if(text =='si') return true; 
+    if(text =='no') return false; 
+}
+export {generarID, validarComic,deleteChildNode,parsearBoolean}; 

@@ -17,6 +17,16 @@ class Biblioteca {
     get getArrayComic(){
         return this.arrayComics;
     }
+    deleteComic(id){
+        let deleteComic = this.#arrayComics.find(comics => comics.id == id); 
+        if(deleteComic !== undefined){
+            this.#arrayComics = this.#arrayComics.filter(comics => comics.id !== id); 
+            localStorage.setItem("listComic", JSON.stringify(this.#arrayComics)); 
+            return 'Comic Eliminado!'; 
+        }else{
+            return 'No existe ID del Comic Enviado!'; 
+        }
+    }
 }
 /**
  * https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes/constructor#constructores_por_defecto

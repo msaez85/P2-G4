@@ -1,4 +1,5 @@
 import { generarID } from "../helpers/help.js";
+
 class Comic {
     constructor(name, category, synopsis, publics, urlVideo, urlImage, editorial = 'EDITORIAL PANINI', price = '9.99', status = 'Publicandose') {
         this.id = generarID();
