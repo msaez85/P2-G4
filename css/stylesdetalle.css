@@ -29,7 +29,7 @@
 }
 
 .nav-container{
-    background-color: rgba(93, 83, 78, 0.9) !important;
+    background-color: rgb(93, 83, 78, 0.9) !important;
 }
 
 .menu-navbar{
@@ -50,53 +50,39 @@
   z-index: 0 !important;
 }
 /*fin del css del navbar*/
+/*inicio del css detalle*/
 
-
-
-/* Modal */
-.register-link{
-    color: rgb(0, 0, 85);
-    text-decoration: none;
-
-}
-.register-link:hover{
-    color: rgb(0, 17, 255);
-    font-size: 16.5px;
-}
-
-.redes-modal-login ul{
-    list-style-type: none;
-}
-.redes-modal-login-text{
-    color: rgb(0, 0, 85);
-    text-decoration: none;
-    
-}
-.redes-modal-login-text:hover{
-    color: rgb(0, 17, 255);
-    font-size: 16.5px;
-}
-
-/* Fin modal */
-
-
-/*inicio del css destacado*/
-
-.destacado{
-    width: 100% !important;
+.detalle{
+    width: 70% !important;
     margin-top:200px;
-    background-color: rgb(39, 35, 33);
+    background-color: rgb(225, 225, 225);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
+.descripcion-detalle{
+    width: 50% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important; 
+}
+
+.sinopsis{
+    text-align: center !important;
+}
+
+
+.btn-carrito{
+    width: 250px !important;
+}
+
 .img-main{
     border-radius: 30px;
 }
 
-/*fin del css destacado*/
+/*fin del css detalle*/
 /** main y body*/
 body{
     width: 100% !important;
@@ -107,35 +93,8 @@ body{
 .main {
     flex-grow: 1;
     padding-top: 25px;
-    background-color: rgb(39, 35, 33);
+    background-color: rgb(225, 225, 225);
   }
-  }
-  #tituloAdministrarComic , #textoSynopsis,#tituloContacto{
-    color:#f8f9fa
-  }
-  #tituloContacto {
-    animation: aparecerAnimacion 1s ease-in-out forwards;
-    opacity: 0;
-  }
-  
-  @keyframes aparecerAnimacion {
-    0% {
-      opacity: 0;
-      transform: translateY(-50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-main{
-  flex-grow: 1;
-  background-color: rgb(39, 35, 33);
-}
-.mainAdministrador, .mainContacto{
-  padding-top: 220px;
-}
-  /**fin main y body*/
 
 .contenido{
     width: 70% !important;
@@ -149,9 +108,8 @@ main{
     background-color: rgb(93, 83, 78) !important;
 }
 
-
+/*fin main y body*/
 /* inicio Footer **/
-
 
 #copyrightFooter {
     text-align: center;
@@ -170,49 +128,12 @@ main{
   }
 /**fin del footer**/
 
-/** tablas***/
-table {
-    background-color: #f8f9fa;
-}
-.paintRow{
-  background-color: #ffeeba;
-}
-.checkboxPublicado{
-  width: 20px;
-  height: 20px;
-  border: 2px solid #999;
-  border-radius: 4px;
-}
-#btnNuevoComic{
-  background-color:#7c706a ;
-  border: #7c706a;
-  font-size: 18px;
-  color: #333;
-  border: none;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-#btnNuevoComic:hover {
-  background-color: #ddd;
-}
-/** fin de tablas***/
-/**Modal***/
-#sipnosisComic{
-  resize: none;
-}
-.modalAgregarComics, .modalVideoComic{
-  background-color: rgb(127, 124, 123) !important;
-}
-/***Fin de la modal***/
-
-
 @media (max-width: 1475px){
     /*inicio css media-query navbar*/
     .contenido{
         width: 80% !important;
     }
 }
-
 
 @media (max-width: 1300px){
     /*inicio css media-query navbar*/
@@ -243,25 +164,30 @@ table {
     } 
     /*fin css media-query navbar*/
 
-    .contenido{
+    .detalle{
         width: 80% !important;
     }
 }
 
 @media (max-width: 870px){
     /*inicio css media-query navbar*/
-    .contenido{
+    .detalle{
+        width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: center !important;
-        
+        align-items: center !important; 
+    }
+
+    .descripcion-detalle{
+        width: 80% !important;
     }
 }
 
 @media (max-width: 768px){
     /*inicio css media-query navbar*/
     .nav-container{
-        width: 90% !important;
+        width: 100% !important;
     }
 
     .btn-navbar{
@@ -284,9 +210,9 @@ table {
         padding: 0 !important;
     }
     /*fin css media-query navbar*/
-    /*inicio del css destacado*/
+    /*inicio del css detalle*/
 
-    .destacado{
+    .detalle{
         width: 100% !important;
         display: flex;
         flex-direction: column;
@@ -294,10 +220,7 @@ table {
         align-items: center;
     }
 
-    .contenido{
-        width: 100% !important;
-    }
-    /*fin del css destacado*/
+    /*fin del css detalle*/
 }
 
 @media (max-width: 576px){
@@ -313,9 +236,9 @@ table {
         max-width: 200px !important;
       }
       /*fin css media-query navbar*/
-      /*inicio del css destacado*/
+      /*inicio del css detalle*/
 
-      .destacado{
+      .detalle{
         width: 100% !important;
         display: flex;
         flex-direction: column;
@@ -323,11 +246,15 @@ table {
         align-items: center;
     }
 
-      /*fin del css destacado*/
+      /*fin del css detalle*/
 }
 
 @media (max-width: 410px){
     body{
         width: 410px !important;
+    }
+
+    .main{
+        width: 110% !important;
     }
 }
