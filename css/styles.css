@@ -121,8 +121,8 @@ body{
     align-items: center !important;
     text-align: center !important;
   }
-  
-  #tituloAdministrarComic , #textoSynopsis,#tituloContacto{
+  }
+  #tituloAdministrarComic , #textoSynopsis,#tituloContacto, .subtituloContacto{
     color:#f8f9fa
   }
   #tituloContacto {
