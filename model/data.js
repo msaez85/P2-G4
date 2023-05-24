@@ -93,7 +93,7 @@ const starwarsIISinopsis = `Mientras la Rebelión intenta reunir sus fuerzas par
 let starwarsII = new Comic('STAR WARS 04 - REINO ESCARLATA', 'Ciencia Ficcion', starwarsIISinopsis, true, 'https://www.youtube.com/embed/_9FcJaEWIgg', './assets/starwarsII.jpg', 'EDITORIAL PANINI COMIC', '8.26', 'Finalizado');
 
 const spidermanSinopsis = `May “Mayday” Parker, Spider-Gwen, Ben Reilly, Kaine, Spider-Ham, Silk, Miguel OHara, Superior Spider-Man, Capitán Universo, Spider-U.K., Spider-Man Noir... todos tus héroes arácnidos favoritos están en esta aventura. Si no conoces a alguno, aún estás a tiempo de hacerlo... pero date prisa, porque no todos sobrevivirán al encuentro con Los Herederos.`;
-let spiderman = new Comic('SPIDER-MAN: SPIDER-VERSE', 'Aventura', spidermanSinopsis, true, 'https://www.youtube.com/embed/x2ex07fceig', '/assets/spiderman.jpg', 'EDITORIAL PANINI MARVEL', '8.26', 'Finalizado');
+let spiderman = new Comic('SPIDER-MAN: SPIDER-VERSE', 'Aventura', spidermanSinopsis, true, 'https://www.youtube.com/embed/x2ex07fceig', './assets/spiderman.jpg', 'EDITORIAL PANINI MARVEL', '8.26', 'Finalizado');
 
 if(listaComics.isNullArrayComic()){
     /**Cargamos comic de prueba */
