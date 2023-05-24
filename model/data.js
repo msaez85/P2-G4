@@ -95,5 +95,27 @@ let starwarsII = new Comic('STAR WARS 04 - REINO ESCARLATA', 'Ciencia Ficcion', 
 const spidermanSinopsis = `May “Mayday” Parker, Spider-Gwen, Ben Reilly, Kaine, Spider-Ham, Silk, Miguel OHara, Superior Spider-Man, Capitán Universo, Spider-U.K., Spider-Man Noir... todos tus héroes arácnidos favoritos están en esta aventura. Si no conoces a alguno, aún estás a tiempo de hacerlo... pero date prisa, porque no todos sobrevivirán al encuentro con Los Herederos.`;
 let spiderman = new Comic('SPIDER-MAN: SPIDER-VERSE', 'Aventura', spidermanSinopsis, true, 'https://youtu.be/x2ex07fceig', '/assets/spiderman.jpg', 'EDITORIAL PANINI MARVEL', '8.26', 'Finalizado');
 
+if(listaComics.isNullArrayComic()){
+    /**Cargamos comic de prueba */
+    listaComics.addArrayComic(spiderman.toJson());
+    listaComics.addArrayComic(starwarsII.toJson());
+    listaComics.addArrayComic(xmenIII.toJson());
+    listaComics.addArrayComic(starwars.toJson());
+    listaComics.addArrayComic(avengerII.toJson());
+    listaComics.addArrayComic(wolverine.toJson());
+    listaComics.addArrayComic(milesmorales.toJson());
+    listaComics.addArrayComic(guardianes.toJson());
+    listaComics.addArrayComic(xmenII.toJson());
+    listaComics.addArrayComic(avenger.toJson());
+    listaComics.addArrayComic(daredevil.toJson());
+    listaComics.addArrayComic(xmen.toJson());
+    listaComics.addArrayComic(sevenSins.toJson());
+    listaComics.addArrayComic(saintSeiya.toJson());
+    listaComics.addArrayComic(onePunch.toJson());
+    listaComics.addArrayComic(onePiece.toJson());
+
+    /**Ponemos un comic favorito por default */
+    listaComics.addComicFavorite(spiderman.toJson().id); 
+}
 
 

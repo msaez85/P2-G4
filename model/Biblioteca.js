@@ -19,6 +19,9 @@ class Biblioteca {
     get getArrayComic(){
         return this.#arrayComics;
     }
+    isNullArrayComic(){
+        return this.#arrayComics.length == 0 ? true : false;
+    }
     deleteComic(id){
         let deleteComic = this.#arrayComics.find(comics => comics.id == id); 
         if(deleteComic !== undefined){
@@ -32,6 +35,7 @@ class Biblioteca {
     addComicFavorite(idComic){
         let favoriteComic = this.#arrayComics.find(comics => comics.id == idComic); 
         if(favoriteComic !== undefined){
+            this.#favoriteComic = favoriteComic;
             localStorage.setItem("comicFavorite", JSON.stringify(favoriteComic)); 
             return 'Comic Agregado Como Favorito!'; 
         }else{
@@ -41,6 +45,48 @@ class Biblioteca {
     get getComicFavorite(){
         return this.#favoriteComic;
     }
+    clearLocalStorage(){
+        localStorage.clear(); 
+    }
+    updatePublics(idComic){
+        if(this.isNullArrayComic){
+            this.#arrayComics.map(comic => this.#changePublics(comic, idComic)); 
+            localStorage.setItem("listComic", JSON.stringify(this.#arrayComics)); 
+            return "Publicacion del Comic Modificada! "; 
+        }else{
+            return "Lista Vacía de Comic!"
+        }
+    }
+    #changePublics(comic, idComic){
+        if(comic.id === idComic){
+            if(comic.publics === true){
+                comic.publics = false; 
+            }else{
+                comic.publics = true; 
+            }
+        }
+    }
+    updateComic(idComic,updateComic){
+        if(this.isNullArrayComic){
+        this.#arrayComics.map(comic => this.#changeComic(idComic,updateComic,comic)); 
+        localStorage.setItem("listComic", JSON.stringify(this.#arrayComics)); 
+         return "Publicacion del Comic Modificado! "; 
+        }else{
+            return "Lista Vacía de Comic!"; 
+        }
+    }
+    #changeComic(idComic , updateComic,comic){
+           if(comic.id === idComic){
+            comic.name = updateComic.name; 
+            comic.category = updateComic.category; 
+            comic.synopsis = updateComic.synopsis;
+            comic.price = updateComic.price; 
+            comic.editorial = updateComic.editorial; 
+            comic.status = updateComic.status; 
+            comic.urlVideo = updateComic.urlVideo;
+            comic.urlImage = updateComic.urlImage; 
+        }
+       }
 }
 
 export{Biblioteca}
