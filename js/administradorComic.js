@@ -212,7 +212,7 @@ function cambiarPublicado(){
   checkbox.addEventListener("change", function (){
     const fila = checkbox.parentNode.parentNode,
     idComic = fila.cells[1].textContent;
-    alert(listaComics.updateChangePublics(idComic)); 
+    alert(listaComics.updatePublics(idComic)); 
   });
 });
 }
@@ -236,4 +236,3 @@ function guardarModificacionComic(event){
   alert(listaComics.updateComic(idComicModificar,newUpdateComic.toUpdateComic()));
   fromModificarComic.reset(); 
 }
-//MARVEL

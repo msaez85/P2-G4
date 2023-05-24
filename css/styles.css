@@ -94,14 +94,29 @@ body{
 .main {
     padding-top: 25px;
   }
-  #tituloAdministrarComic , #textoSynopsis{
+  #tituloAdministrarComic , #textoSynopsis,#tituloContacto{
     color:#f8f9fa
+  }
+  #tituloContacto {
+    animation: aparecerAnimacion 1s ease-in-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes aparecerAnimacion {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 main{
   flex-grow: 1;
   background-color: rgb(39, 35, 33);
 }
-.mainAdministrador{
+.mainAdministrador, .mainContacto{
   padding-top: 220px;
 }
   /**fin main y body*/
@@ -173,6 +188,7 @@ table {
   background-color: rgb(127, 124, 123) !important;
 }
 /***Fin de la modal***/
+
 
 @media (max-width: 1475px){
     /*inicio css media-query navbar*/

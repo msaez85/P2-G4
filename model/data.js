@@ -96,6 +96,7 @@ const spidermanSinopsis = `May “Mayday” Parker, Spider-Gwen, Ben Reilly, Kai
 let spiderman = new Comic('SPIDER-MAN: SPIDER-VERSE', 'Aventura', spidermanSinopsis, true, 'https://youtu.be/x2ex07fceig', '/assets/spiderman.jpg', 'EDITORIAL PANINI MARVEL', '8.26', 'Finalizado');
 
 if(listaComics.isNullArrayComic()){
+    /**Cargamos comic de prueba */
     listaComics.addArrayComic(spiderman.toJson());
     listaComics.addArrayComic(starwarsII.toJson());
     listaComics.addArrayComic(xmenIII.toJson());
@@ -112,18 +113,9 @@ if(listaComics.isNullArrayComic()){
     listaComics.addArrayComic(saintSeiya.toJson());
     listaComics.addArrayComic(onePunch.toJson());
     listaComics.addArrayComic(onePiece.toJson());
-}
-let com = listaComics.getArrayComic
-console.log(com);
-let falsoComic = [ spiderman.toUpdateComic(), avengerII.toUpdateComic()]; 
-console.log(falsoComic)
-let idMod = "j2ZeqN8E"; 
-updateComic(idMod )
 
-function updateComic(idComic ){
- let existingComic = com.find(comic => comic.id == idComic); 
-    if(existingComic !== undefined){
-        existingComic.name = "hola"; 
-        console.log(existingComic);   
- }
+    /**Ponemos un comic favorito por default */
+    listaComics.addComicFavorite(spiderman.toJson().id); 
 }
+
+

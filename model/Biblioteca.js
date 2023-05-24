@@ -47,7 +47,7 @@ class Biblioteca {
     clearLocalStorage(){
         localStorage.clear(); 
     }
-    updateChangePublics(idComic){
+    updatePublics(idComic){
         if(this.isNullArrayComic){
             this.#arrayComics.map(comic => this.#changePublics(comic, idComic)); 
             localStorage.setItem("listComic", JSON.stringify(this.#arrayComics)); 
@@ -65,25 +65,25 @@ class Biblioteca {
             }
         }
     }
-    updateComic(idComic,uptComic ){
+    updateComic(idComic,updateComic){
         if(this.isNullArrayComic){
-        this.#arrayComics.map(comic => this.#updateChangeComic(idComic,uptComic ,comic)); 
+        this.#arrayComics.map(comic => this.#changeComic(idComic,updateComic,comic)); 
         localStorage.setItem("listComic", JSON.stringify(this.#arrayComics)); 
          return "Publicacion del Comic Modificado! "; 
         }else{
             return "Lista Vacía de Comic!"; 
         }
     }
-    #updateChangeComic(idComic , uptComic,comic){
+    #changeComic(idComic , updateComic,comic){
            if(comic.id === idComic){
-            comic.name = uptComic.name; 
-            comic.category = uptComic.category; 
-            comic.synopsis = uptComic.synopsis;
-            comic.price = uptComic.price; 
-            comic.editorial = uptComic.editorial; 
-            comic.status = uptComic.status; 
-            comic.urlVideo = uptComic.urlVideo;
-            comic.urlImage = uptComic.urlImage; 
+            comic.name = updateComic.name; 
+            comic.category = updateComic.category; 
+            comic.synopsis = updateComic.synopsis;
+            comic.price = updateComic.price; 
+            comic.editorial = updateComic.editorial; 
+            comic.status = updateComic.status; 
+            comic.urlVideo = updateComic.urlVideo;
+            comic.urlImage = updateComic.urlImage; 
         }
        }
 }
