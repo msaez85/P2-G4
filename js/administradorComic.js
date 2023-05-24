@@ -1,18 +1,21 @@
 import { validarComic, deleteChildNode, parsearBoolean} from "../helpers/help.js";
-import {agregarInformacionParrafo,cargarEstadoComic, obtenerEstado,agregarVideo} from"../helpers/helpAdministracion.js"; 
+import {agregarInformacionParrafo,cargarEstadoComic, obtenerEstado,agregarVideo,cargarEstadoModificacion} from"../helpers/helpAdministracion.js"; 
 import{listaComics } from "../model/data.js"
 import { Comic } from "../model/Comic.js";
 
 const formAgregarComic = document.getElementById("formAgregarModal"),
-formModificarComic = document.getElementById('formModificarModal'),
-btnCancelar = document.getElementById('btnCancelar'),
+fromModificarComic = document.getElementById("formModificarModal"),
 bodyTablaComic = document.getElementById('bodyListComic'),
 listEstadoComic = document.getElementById('estadoComic'),
-btnFavoriteComic= document.getElementsByClassName('btnFavoriteComic');; 
+listEstadoModificarComic = document.getElementById('estadoComicModificar'), 
+btnCancelar = document.getElementById('btnCancelar'),
+btnFavoriteComic= document.getElementsByClassName('btnFavoriteComic'),
+btnGuardarModificacionComic = document.getElementById('btnGuardarModificacionComic');
 /**Funciones que donde inicializamos la carga de los comic y los estados del comic para crear uno nuevo */
 listarComics(); 
 cargarEstadoComic(listEstadoComic);
 comicFavorito(); 
+
 /**Validamos el form de  agregar nuevo comic**/
 formAgregarComic.addEventListener("submit", validarFormularioAgregarComic);
 function validarFormularioAgregarComic(event) {
@@ -35,7 +38,7 @@ function agregarComic(event){
    category = document.getElementById("categoriaComic").value,
    synopsis = document.getElementById("sipnosisComic").value, 
    opcion = parsearBoolean(document.querySelector('input[name="radio-stacked"]:checked').value),
-   status = obtenerEstado(),
+   status = obtenerEstado('estadoComic'),
    price = document.getElementById("precioComic").value, 
    editorial = document.getElementById("editorialComic").value,
    urlVideo = document.getElementById("urlVideoComic").value, 
@@ -57,10 +60,11 @@ function agregarComic(event){
 
 function listarComics(){
   deleteChildNode(bodyTablaComic); 
-  listaComics.getArrayComic.forEach(comic => { 
+
+ listaComics.getArrayComic.forEach(comic => { 
      
     let row = document.createElement('tr'); 
-    if(comic.id == listaComics.getComicFavorite.id){
+   if(comic.id == listaComics.getComicFavorite.id){
       row.classList.toggle('paintRow');
     }
 
@@ -107,13 +111,14 @@ function listarComics(){
   row.appendChild(column);
 
   column = document.createElement("td"); 
-  column.innerText ='$ '+comic.price; 
+  column.innerText ='$'+ comic.price; 
   row.appendChild(column);
 
   column = document.createElement("td"); 
   let input = document.createElement("input");
   input.type = "checkbox"; 
   input.checked = comic.publics; 
+  input.classList.add('checkboxPublicado'); 
   column.appendChild(input); 
   row.appendChild(column); 
 
@@ -151,8 +156,8 @@ function listarComics(){
     let fila = event.target.parentNode.parentNode.parentNode,
     codigoComic =fila.getElementsByTagName('td')[1].innerText,
     estadoComic =fila.getElementsByTagName('td')[5].innerText;
-
-    modificarComic(codigoComic); 
+    localStorage.setItem("idComicModificar", JSON.stringify(codigoComic)); 
+    modificarComic(codigoComic,estadoComic); 
   }); 
   buttonUpdate.setAttribute('data-bs-toggle', 'modal');
   buttonUpdate.setAttribute('data-bs-target', '#modificarComicsModal');
@@ -167,12 +172,12 @@ function listarComics(){
 
   bodyTablaComic.appendChild(row);
 }); 
+cambiarPublicado(); 
 }
 
-function modificarComic(idComic){
-  formModificarComic.reset();
+function modificarComic(idComic,estadoComic){
+cargarEstadoModificacion(estadoComic,listEstadoModificarComic); 
  let comic =  listaComics.getArrayComic.find(comic => comic.id == idComic); 
- console.log(comic)
  document.getElementById("nombreComicModificar").value = comic.name; 
  document.getElementById("categoriaComicModificar").value = comic.category;
  document.getElementById("sipnosisComicModificar").value = comic.synopsis; 
@@ -188,16 +193,47 @@ function modificarComic(idComic){
     fila.remove(); 
   }
  }
+
  function comicFavorito(){
   Array.from( btnFavoriteComic).forEach(function(button) {
     button.addEventListener('click', function() {
       let row = this.parentNode.parentNode,
       idComic= row.getElementsByTagName('td')[1].innerText; 
-      if(listaComics.getComicFavorite.id!== idComic){
+      if(listaComics.getComicFavorite.id !== idComic){
         alert(listaComics.addComicFavorite(idComic));
       }
       row.classList.toggle('paintRow');
     });
   });
-
  }
+function cambiarPublicado(){
+ const checkboxesPublicados = document.querySelectorAll(".checkboxPublicado");
+ checkboxesPublicados.forEach(function(checkbox) {
+  checkbox.addEventListener("change", function (){
+    const fila = checkbox.parentNode.parentNode,
+    idComic = fila.cells[1].textContent;
+    alert(listaComics.updateChangePublics(idComic)); 
+  });
+});
+}
+btnGuardarModificacionComic.addEventListener('click', (event)=>{
+  guardarModificacionComic(event); 
+}); 
+function guardarModificacionComic(event){
+  event.preventDefault(); 
+  const idComicModificar = JSON.parse(localStorage.getItem("idComicModificar")),
+  name = document.getElementById("nombreComicModificar").value ,
+  category= document.getElementById("categoriaComicModificar").value,  
+  synopsis= document.getElementById("sipnosisComicModificar").value,  
+  price= document.getElementById("precioComicModificar").value, 
+  status = obtenerEstado('estadoComicModificar'),
+  editorial = document.getElementById("editorialComicModificar").value,
+ urlVideo  =  document.getElementById("urlVideoComicModificar").value, 
+ urlImage = document.getElementById("urlImagenComicModificar").value;
+
+ let newUpdateComic = new Comic(name,category,synopsis,false,urlVideo,urlImage,editorial,price,status); 
+
+  alert(listaComics.updateComic(idComicModificar,newUpdateComic.toUpdateComic()));
+  fromModificarComic.reset(); 
+}
+//MARVEL

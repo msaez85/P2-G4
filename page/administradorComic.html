@@ -53,7 +53,7 @@
                         <p class="h4 text-center" id="tituloAdministrarComic"> Administrar Comics </p>
                     </span>
                     <span class="col-xl-2 col-sm-4 col-md-4 col-lg-4 ">
-                        <button type="button" class="btn btn-primary d-flex" data-bs-toggle="modal" data-bs-target="#agregarComicsModal"> <i class="bi bi-plus-circle mx-1"></i> Nuevo Comic</button>
+                        <button type="button" class="btn btn-primary d-flex" id="btnNuevoComic" data-bs-toggle="modal" data-bs-target="#agregarComicsModal"> <i class="bi bi-plus-circle mx-1"></i> Nuevo Comic</button>
                     </span>
                 </article>
                 <article class="row my-4 d-flex justify-content-center table-responsive mx-1">
@@ -226,8 +226,6 @@
             <div class="mb-3">
               <label for="selectorEstado" class="form-label">Estado:</label>
               <select class="form-select" id="estadoComicModificar" name="selectorEstado" required >
-                <option selected disabled value="">Seleccionar Estado Comic</option>
-                <option value="c">c</option>
               </select>
               <div class="invalid-feedback">
                 Por favor, Seleccioná el Estado  de un Comic!.
@@ -259,7 +257,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="btnCancelar">Cancelar</button>
-              <button type="submit" class="btn btn-success" id="btnGuardarModificacionComic">Guardar Comic</button>
+              <button type="submit" class="btn btn-success" id="btnGuardarModificacionComic" >Guardar Comic</button>
             </div>
           </form>
         </div>

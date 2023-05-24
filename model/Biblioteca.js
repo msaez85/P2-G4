@@ -19,6 +19,9 @@ class Biblioteca {
     get getArrayComic(){
         return this.#arrayComics;
     }
+    isNullArrayComic(){
+        return this.#arrayComics.length == 0 ? true : false;
+    }
     deleteComic(id){
         let deleteComic = this.#arrayComics.find(comics => comics.id == id); 
         if(deleteComic !== undefined){
@@ -41,6 +44,48 @@ class Biblioteca {
     get getComicFavorite(){
         return this.#favoriteComic;
     }
+    clearLocalStorage(){
+        localStorage.clear(); 
+    }
+    updateChangePublics(idComic){
+        if(this.isNullArrayComic){
+            this.#arrayComics.map(comic => this.#changePublics(comic, idComic)); 
+            localStorage.setItem("listComic", JSON.stringify(this.#arrayComics)); 
+            return "Publicacion del Comic Modificada! "; 
+        }else{
+            return "Lista Vacía de Comic!"
+        }
+    }
+    #changePublics(comic, idComic){
+        if(comic.id === idComic){
+            if(comic.publics === true){
+                comic.publics = false; 
+            }else{
+                comic.publics = true; 
+            }
+        }
+    }
+    updateComic(idComic,uptComic ){
+        if(this.isNullArrayComic){
+        this.#arrayComics.map(comic => this.#updateChangeComic(idComic,uptComic ,comic)); 
+        localStorage.setItem("listComic", JSON.stringify(this.#arrayComics)); 
+         return "Publicacion del Comic Modificado! "; 
+        }else{
+            return "Lista Vacía de Comic!"; 
+        }
+    }
+    #updateChangeComic(idComic , uptComic,comic){
+           if(comic.id === idComic){
+            comic.name = uptComic.name; 
+            comic.category = uptComic.category; 
+            comic.synopsis = uptComic.synopsis;
+            comic.price = uptComic.price; 
+            comic.editorial = uptComic.editorial; 
+            comic.status = uptComic.status; 
+            comic.urlVideo = uptComic.urlVideo;
+            comic.urlImage = uptComic.urlImage; 
+        }
+       }
 }
 
 export{Biblioteca}

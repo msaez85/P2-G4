@@ -10,24 +10,15 @@ function agregarInformacionParrafo(texto, idContenedor){
 }
 
 function cargarEstadoComic(selector){
-    let nuevaOpcion = document.createElement("option");
-    nuevaOpcion.text = EstadosComic.Publicandose;
-    nuevaOpcion.value = EstadosComic.Publicandose;
-    selector.appendChild(nuevaOpcion);
-
-    nuevaOpcion = document.createElement("option");
-    nuevaOpcion.text = EstadosComic.Emitiendose;
-    nuevaOpcion.value = EstadosComic.Emitiendose;
-    selector.appendChild(nuevaOpcion);
-
-    nuevaOpcion = document.createElement("option");
-    nuevaOpcion.text = EstadosComic.Finalizado;
-    nuevaOpcion.value = EstadosComic.Finalizado;
-    selector.appendChild(nuevaOpcion);
-}
-
-function obtenerEstado(){
-    let selector = document.querySelector('#estadoComic'); 
+    for(let estado in EstadosComic){
+        let nuevaOpcion = document.createElement("option");
+         nuevaOpcion.text = EstadosComic[estado];
+         nuevaOpcion.value = EstadosComic[estado];
+         selector.appendChild(nuevaOpcion);
+        }
+    }
+function obtenerEstado(nombreSelector){
+    let selector = document.querySelector(`#${nombreSelector}`); 
     let opcion = selector.options[selector.selectedIndex];
     return opcion.textContent;
 }
@@ -48,7 +39,23 @@ function agregarVideo(urlVideo,idcontenedor){
     iframe.src = nuevoTexto;
     ratioVideo.appendChild(iframe); 
 }
-function cargarEstadoModificacion (estado){
-    
+function cargarEstadoModificacion (estadoComic, selector){
+    deleteChildNode(selector)
+    for(let estado in EstadosComic){
+        let nuevaOpcion = document.createElement("option");
+        if (EstadosComic[estado] === estadoComic) {
+            nuevaOpcion = document.createElement("option");
+            nuevaOpcion.text = EstadosComic[estado];
+            nuevaOpcion.value = EstadosComic[estado];
+            nuevaOpcion.selected = true; 
+            selector.appendChild(nuevaOpcion);
+          } else {
+            nuevaOpcion = document.createElement("option");
+            nuevaOpcion.text = EstadosComic[estado];
+            nuevaOpcion.value = EstadosComic[estado];
+            selector.appendChild(nuevaOpcion);
+          }  
+        
+    }
 }
-export {agregarInformacionParrafo,cargarEstadoComic, obtenerEstado,agregarVideo}; 
+export {agregarInformacionParrafo,cargarEstadoComic, obtenerEstado,agregarVideo, cargarEstadoModificacion}; 
