@@ -35,6 +35,7 @@ class Biblioteca {
     addComicFavorite(idComic){
         let favoriteComic = this.#arrayComics.find(comics => comics.id == idComic); 
         if(favoriteComic !== undefined){
+            this.#favoriteComic = favoriteComic;
             localStorage.setItem("comicFavorite", JSON.stringify(favoriteComic)); 
             return 'Comic Agregado Como Favorito!'; 
         }else{
