@@ -190,6 +190,13 @@ main{
   box-shadow: 0 0 25px rgba(0, 0, 0, 1);
   border: #333 solid;
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.iconoContacto{
+  padding: 0px 10px;
 }
 .panelMasInformacion:hover{
   background-color: #878c90;

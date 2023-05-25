@@ -55,41 +55,41 @@
         <section class="container">
             <div class="row  my-3 fondoContacto">
                 <div class="col-xl-6 col-lg-10 col-md-10 col-sm-12 formulario">
-                  <form class="row g-3  needs-validation " novalidate>
+                  <form class="row g-3  needs-validation " novalidate id="formEnviarComentario">
                   <p class="h3 " id="tituloContacto" >¡Contáctanos!</p>
                   <div class="col-md-12  position-relative">
                     <label for="validationTooltip01" class="form-label">Nombre y Apellido</label>
-                    <input type="text" class="form-control" id="validationTooltip01" placeholder="Mark Roson" required>
-                    <div class="valid-tooltip">
-                      Looks good!
+                    <input type="text" class="form-control" id="validationTooltip01" placeholder="Mark Roson"  minlength="1" maxlength="20" required>
+                    <div class="invalid-feedback">
+                     Por Favor, Ingrese un Nombre y Apellido! 
                     </div>
                   </div>
                   <div class="col-md-12 position-relative">
                     <label for="validationTooltip02" class="form-label">E-mail</label>
-                    <input type="email" class="form-control" id="validationTooltip02" placeholder="ejemplo.numero1@gmail.com" required>
-                    <div class="valid-tooltip">
-                      Looks good!
+                    <input type="email" class="form-control" id="validationTooltip02" placeholder="ejemplo.numero1@gmail.com"   minlength="1" maxlength="20" required>
+                    <div class="invalid-feedback">
+                      Por Favor, Ingrese un E-mail!
                     </div>
                   </div>
-                  <div class="col-md-12position-relative">
-                    <label for="validationTooltip03" class="form-label">Número</label>
-                    <input type="text" class="form-control" id="validationTooltip03" required>
-                    <div class="invalid-tooltip">
-                      Please provide a valid city.
+                  <div class="col-md-12 position-relative">
+                    <label for="numeroContacto" class="form-label">Número</label>
+                    <input type="text" class="form-control" id="numeroContacto" placeholder="+(54)-9-381-34567" required minlength="1" maxlength="20">
+                    <div class="invalid-feedback">
+                      Por Favor, Ingrese un Número!
                     </div>
                   </div>
                     <div class="col-md-12">
-                      <label for="validationTooltip03" class="form-label">Asunto</label>
-                      <input type="text" class="form-control" id="validationTooltip03" required>
-                      <div class="invalid-tooltip">
-                        Please provide a valid city.
+                      <label for="asuntoContacto" class="form-label">Asunto</label>
+                      <input type="text" class="form-control" id="asuntoContacto"  minlength="1" maxlength="20" placeholder="Excelente Comic! " required >
+                      <div class="invalid-feedback">
+                        Por Favor, Ingrese un Asunto! 
                       </div>
                   </div>
                   <div class="col-md-12 position-relative">
-                    <label for="validationTooltip05" class="form-label">Mensaje</label>
-                    <textarea type="text" class="form-control" id="sipnosisComic"  cols="20" rows="5" required minlength="1" maxlength="2000" ></textarea>
-                    <div class="invalid-tooltip">
-                      Please provide a valid zip.
+                    <label for="mensajeContacto" class="form-label">Mensaje</label>
+                    <textarea type="text" class="form-control" id="mensajeContacto"  cols="20" rows="5" required placeholder="Comentatrio y/o sugerencias...." minlength="1" maxlength="200" ></textarea>
+                    <div class="invalid-feedback">
+                    Por Favor, Ingrese un Mensaje!
                     </div>
                   </div>
                   <div class="col-12 d-flex justify-content-center">
@@ -101,26 +101,26 @@
               <ul id="listaContacto" class="">
                   <p class="h3 subtituloContacto">Mas Información</p>
                   <li>
-                    <i class="fas fa-map-marker-alt"></i> General Paz 576, San
-                    Miguel de Tucuman
+                    <i class="fas fa-map-marker-alt iconoContacto"></i> General Paz 576 - San
+                    Miguel de Tucumán
                   </li>
-                  <li ><i class="fas fa-phone"></i> (0800) 666-5066</li>
+                  <li ><i class="fas fa-phone iconoContacto"></i> (0800) 666-5066</li>
                   <li>
-                    <i class="fas fa-envelope-open-text"></i> Mandanos un mail:
+                    <i class="fas fa-envelope-open-text iconoContacto"></i> Mándanos un mail:
                     comicMania@gmail.com
                   </li>
-                  <li > <a href="/page/error404.html"><i class="fab fa-whatsapp"></i> WhatsApp</a> </li>
+                  <li > <a href="/page/error404.html"><i class="fab fa-whatsapp iconoContacto" ></i>  WhatsApp</a> </li>
                   <li >
-                    <a href="/page/error404.html"> <i class="fab fa-facebook"></i>Facebook</a>
+                    <a href="/page/error404.html"> <i class="fab fa-facebook iconoContacto" ></i>Facebook</a>
                   </li>
                   <li>
-                   <a href="/page/error404.html"> <i class="fab fa-twitter"></i>Twitter</a>
+                   <a href="/page/error404.html"> <i class="fab fa-twitter iconoContacto" ></i>Twitter</a>
                   </li>
                 <li>
-                  <a href="/page/error404.html"><i class="bi bi-instagram"></i> Instagram</a>
+                  <a href="/page/error404.html"><i class="bi bi-instagram iconoContacto" ></i> Instagram</a>
                 </li>
                 <li>
-                  <a href="/page/error404.html"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                  <a href="/page/error404.html"><i class="bi bi-linkedin iconoContacto" ></i> LinkedIn</a>
                 </li>
               </ul>
                 <p  class="parrafoFinal">
