@@ -122,7 +122,7 @@ body{
     text-align: center !important;
   }
   }
-  #tituloAdministrarComic , #textoSynopsis,#tituloContacto, .subtituloContacto{
+  #tituloAdministrarComic , #textoSynopsis,#tituloContacto, .subtituloContacto,.p{
     color:#f8f9fa
   }
   #tituloContacto {
@@ -140,12 +140,68 @@ body{
       transform: translateY(0);
     }
   }
+#listaContacto li {
+  list-style: none;
+  font-size: 18px;
+  padding: 5px;
+  margin:  0px 2px;
+}
+#listaContacto li a{
+  color: #e0e0e0;
+  text-decoration: none;
+}
+#listaContacto li i {
+  font-size: 20px;
+}
+.fondoContacto{
+  background-color: #7c706a;
+  margin: 10px 10px;
+  padding: 10px 10px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 1);
+  border: #333 solid;
+  border-radius: 20px;
+}
+.parrafoFinal{
+  font-size: 18px;
+  margin: 15px 0px;
+  font-style: italic;
+  color: #e0e0e0;
+}
+.btnEnviarComentario{
+  width: 70%;
+  background-color: #2e3337;
+  color: #e0e0e0;
+  border: #2e3337;
+}
+.btnEnviarComentario:hover{
+  background-color: #5c636a;
+}
 main{
   flex-grow: 1;
   background-color: rgb(39, 35, 33);
 }
-.mainAdministrador, .mainContacto{
+.mainContacto{
+  padding-top: 200px;
+}
+.panelMasInformacion{
+  background-color: #5d534e;
+  padding: 15px;
+  margin: 0px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 1);
+  border: #333 solid;
+  border-radius: 20px;
+}
+.panelMasInformacion:hover{
+  background-color: #878c90;
+}
+.formulario input:hover{
+  background-color: #abaeb0;
+}
+.mainAdministrador {
   padding-top: 220px;
+}
+.formulario label {
+  color: #e0e0e0;
 }
   /**fin main y body*/
 
@@ -208,6 +264,10 @@ table {
 #btnNuevoComic:hover {
   background-color: #ddd;
 }
+.formulario{
+  margin: 3px;
+  padding: auto;
+}
 /** fin de tablas***/
 /**Modal***/
 #sipnosisComic{
@@ -223,6 +283,12 @@ table {
     /*inicio css media-query navbar*/
     .contenido{
         width: 80% !important;
+    }
+    .formulario{
+      margin: 0 auto;
+    }
+    .panelMasInformacion{
+      margin: 0 auto;
     }
 }
 
@@ -268,6 +334,9 @@ table {
         flex-direction: column !important;
         justify-content: center !important;
         
+    }
+    .panelMasInformacion{
+      margin-top: 10px ;
     }
 }
 
