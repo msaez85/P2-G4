@@ -1,5 +1,7 @@
 import { Comic } from "./Comic.js";
 import { Biblioteca } from "./Biblioteca.js";
+import { Usuario, Usuarios } from "./Usuario.js";
+import {Estado, TipoRoles} from "./Emun.js"; 
 
 let listaComics = new Biblioteca();
 
@@ -117,5 +119,11 @@ if(listaComics.isNullArrayComic()){
     /**Ponemos un comic favorito por default */
     listaComics.addComicFavorite(spiderman.toJson().id); 
 }
+
+let usuarioRegular1 = new Usuario('Mario Antonio Saez', 'msaez@gmail.com', '123', , estado);
+let usuarioRegular2 = new Usuario('Pricila Moya','pmoya@gmail.com', '123');
+let usuarioRegular3 = new Usuario('Luciano Duran','lduran@gmail.com', '123');
+let usuarioRegular4 = new Usuario('Guillermo Craven','gcraven@mail.com', '123');
+
 
 

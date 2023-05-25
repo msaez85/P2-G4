@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/4d7920e24b.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/registrarse.css">
+  <link rel="stylesheet" href="../css/registrarse.css">
   <title>Registrarse en ComicMania</title>
 </head>
 
@@ -20,7 +20,7 @@
   <header class="header">
     <nav class="navbar navbar-expand-lg position-fixed top-0 start-0 z-3">
       <div class="container-fluid nav-container">
-        <a href="./index.html"><img src="./assets/icono.jpg" class="img-fluid mx-1 nav-img" alt="brand"></a>
+        <a href="../index.html"><img src="../assets/icono.jpg" class="nav-img img-fluid mx-1" alt="brand"></a>
         <button class="navbar-toggler btn btn-secondary" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
           aria-label="Toggle navigation">
@@ -29,15 +29,15 @@
         <div class="collapse navbar-collapse  justify-content-evenly menu-navbar" id="navbarNavDropdown">
           <ul class="navbar-nav justify-content-center">
             <li class="nav-item">
-              <a class="nav-link active mx-2 fs-5 fw-semibold text-white" aria-current="page" href="index.html">Inicio</a>
+              <a class="nav-link active mx-2 fw-semibold text-white" aria-current="page" href="./index.html">Inicio</a>
             </li>
-            <li class="nav-item mx-2 fs-5 fw-semibold">
+            <li class="nav-item mx-2 fw-semibold">
               <a class="nav-link text-white" href="">Acerca de</a>
             </li>
-            <li class="nav-item mx-2 fs-5 fw-semibold">
+            <li class="nav-item mx-2 fw-semibold">
               <a class="nav-link text-white" href="">Contacto</a>
             </li>
-            <li class="nav-item mx-2 fs-5 fw-semibold">
+            <li class="nav-item mx-2 fw-semibold">
               <a class="nav-link text-white" href="">Categorias</a>
             </li>
           </ul>
@@ -51,7 +51,6 @@
                 href="">Suscribirse</a></button>
           </form>
         </div>
-
       </div>
     </nav>
     <!-- Modal -->
@@ -75,19 +74,18 @@
             <div class="redes-modal-login">
               <ul>
                 <li>
-                  <a class="redes-modal-login-text" href="/page/error404.html"><i class="bi bi-facebook"></i> Iniciar con Facebook</a>
+                  <a class="redes-modal-login-text" href="./page/error404.html"><i class="bi bi-facebook"></i> Iniciar
+                    con Facebook</a>
                 </li>
                 <li>
-                  <a class="redes-modal-login-text"href="/page/error404.html"><i class="bi bi-google"></i> Iniciar con Google</a>
+                  <a class="redes-modal-login-text" href="./page/error404.html"><i class="bi bi-google"></i> Iniciar con
+                    Google</a>
                 </li>
-                
               </ul>
             </div>
-            
-            
-            
-            <span style="color: white">¿No tienes cuenta? </span><a class="register-link" href="">Regístrate aquí</a>
-          
+            <span style="color: white">¿No tienes cuenta? </span><a class="register-link"
+              href="./page/registrarse.html">Regístrate aquí</a>
+
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-dark">Entrar</button>
@@ -97,28 +95,22 @@
       </div>
     </div>
     <!-- Fin modal -->
-    
-    
   </header>
-  <main class="main" >
-    <div class="register-div-h2">
+  <main class="main">
+    <div class="register-div-h2 container-fluid d-flex justify-content-center">
       <h2 class="text-white fw-bold fs-1 text-center my-5">Registrarse en ComicManía</h2>
-    </div>  
-    <div class="register-form d-flex flex-column m-3">
-      <input class="mb-4 register-input" type="text" placeholder="Nombre">
-      <input class="mb-4 register-input" type="text" placeholder="Apellido">
-      <input class="mb-4 register-input" type="text" placeholder="Nombre de Usuario">
-      <input class="mb-4 register-input" type="email" placeholder="Correo electrónico">
-      <input class="mb-4 register-input" type="password" placeholder="Contraseña">
-      <div class="d-flex flex-row">
-        <button class="register-btn"> Iniciar </button>
-        <a class="have-account-link" href="error404.html"> Ya tengo una cuenta</a>
-      </div>
-      
     </div>
-      
-    
-
+    <div class="register-form d-flex flex-column justify-content-center align-items-center m-3">
+      <input class="mb-4 register-input" type="text" placeholder="Nombre" required minlength="1" maxlength="20">
+      <input class="mb-4 register-input" type="text" placeholder="Apellido" required minlength="1" maxlength="20">
+      <input class="mb-4 register-input" type="email" placeholder="Correo electrónico" required minlength="1"
+        maxlength="30">
+      <input class="mb-4 register-input" type="password" placeholder="Contraseña" required minlength="1" maxlength="20">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <button class="register-btn btn btn-secondary">Iniciar</button>
+        <a class="have-account-link my-4" href="error404.html"> Ya tengo una cuenta</a>
+      </div>
+    </div>
   </main>
   <footer>
     <section class="container-fluid bg-black">
@@ -136,35 +128,35 @@
           <ul>
             <li><a href="/page/quienesSomos.html">Quienes Somos</a></li>
             <li><a href="/index.html">Inicio</a></li>
-            <li><a href="/page/error404.html">Contactanos</a></li>
-            <li><a href="/page/error404.html">Nuestra Historia</a></li>
+            <li><a href="error404.html">Contactanos</a></li>
+            <li><a href="error404.html">Nuestra Historia</a></li>
           </ul>
         </aside>
         <aside class="col-xl-3 col-sm-3 col-md-3">
           <p class="h5">Legal</p>
           <ul>
-            <li><a href="/page/error404.html">Terminos y condiciones</a></li>
-            <li><a href="/page/error404.html">Politica de privacidad</a></li>
+            <li><a href="error404.html">Terminos y condiciones</a></li>
+            <li><a href="error404.html">Politica de privacidad</a></li>
             <li>
-              <a href="/page/error404.html">Politica de derecho de autor</a>
+              <a href="error404.html">Politica de derecho de autor</a>
             </li>
-            <li><a href="/page/error404.html">Descargar App Movil</a></li>
+            <li><a href="error404.html">Descargar App Movil</a></li>
           </ul>
         </aside>
         <aside class="col-xl-3 col-sm-3 col-md-3">
           <p class="h5">Redes Sociales</p>
           <ul>
             <li>
-              <a href="/page/error404.html"><i class="bi bi-facebook"></i> Facebook</a>
+              <a href="error404.html"><i class="bi bi-facebook"></i> Facebook</a>
             </li>
             <li>
-              <a href="/page/error404.html"><i class="bi bi-twitter"></i> Twitter</a>
+              <a href="error404.html"><i class="bi bi-twitter"></i> Twitter</a>
             </li>
             <li>
-              <a href="/page/error404.html"><i class="bi bi-instagram"></i> Instagram</a>
+              <a href="error404.html"><i class="bi bi-instagram"></i> Instagram</a>
             </li>
             <li>
-              <a href="/page/error404.html"><i class="bi bi-linkedin"></i> LinkedIn</a>
+              <a href="error404.html"><i class="bi bi-linkedin"></i> LinkedIn</a>
             </li>
           </ul>
         </aside>
@@ -175,7 +167,7 @@
     </section>
   </footer>
 
-  <script type="module" src="/model/data.js" ></script>
+  <script type="module" src="../js/registro.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
