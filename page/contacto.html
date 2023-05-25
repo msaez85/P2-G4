@@ -16,7 +16,7 @@
     <header>
         <nav class="navbar navbar-expand-lg position-fixed top-0 start-0 z-3">
             <div class="container-fluid nav-container">
-              <a href="./index.html"><img src="/assets/icono.jpg" class="img-fluid mx-1 nav-img" alt="brand"></a>
+              <a href="../index.html"><img src="/assets/icono.jpg" class="img-fluid mx-1 nav-img" alt="brand"></a>
               <button class="navbar-toggler btn btn-secondary" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -25,16 +25,16 @@
               <div class="collapse navbar-collapse  justify-content-evenly menu-navbar" id="navbarNavDropdown">
                 <ul class="navbar-nav justify-content-center">
                   <li class="nav-item">
-                    <a class="nav-link active mx-2 fs-5 fw-semibold text-white" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link active mx-2 fs-5 fw-semibold text-white" aria-current="page" href="../index.html">Inicio</a>
                   </li>
                   <li class="nav-item mx-2 fs-5 fw-semibold">
-                    <a class="nav-link text-white" href="">Acerca de</a>
+                    <a class="nav-link text-white" href="/page/quienesSomos.html">Acerca de</a>
                   </li>
                   <li class="nav-item mx-2 fs-5 fw-semibold">
-                    <a class="nav-link text-white" href="">Contacto</a>
+                    <a class="nav-link text-white" href="/page/contacto.html">Contacto</a>
                   </li>
                   <li class="nav-item mx-2 fs-5 fw-semibold">
-                    <a class="nav-link text-white" href="">Categorias</a>
+                    <a class="nav-link text-white" href="/page/error404.html">Categorias</a>
                   </li>
                 </ul>
                 <form class="d-flex btn-navbar" role="sign">
@@ -53,60 +53,81 @@
     </header>
     <main class="mainContacto">
         <section class="container">
-          <p class="h1 text-center" id="tituloContacto" >¡Contáctanos!</p>
-          <div class="contact-wrapper animated bounceInUp">
-            <div class="contact-form">
-              <h3 class="p">Contactanos!</h3>
-              <form action="">
-                <p>
-                  <label class="p">Nombre y Apellido</label>
-                  <input type="text" name="fullname" />
-                </p>
-                <p>
-                  <label class="p">E-mail</label>
-                  <input type="email" name="email" />
-                </p>
-                <p>
-                  <label class="p">Numero de Telefono</label>
-                  <input type="tel" name="phone" />
-                </p>
-                <p>
-                  <label class="p">Asunto</label>
-                  <input type="text" name="affair" />
-                </p>
-                <p class="block">
-                  <label class="p">Mensaje</label>
-                  <textarea name="message" rows="3"></textarea>
-                </p>
-                <p class="block">
-                  <button>Enviar</button>
-                </p>
-              </form>
+            <div class="row  my-3 fondoContacto">
+                <div class="col-xl-6 col-lg-10 col-md-10 col-sm-12 formulario">
+                  <form class="row g-3  needs-validation " novalidate id="formEnviarComentario">
+                  <p class="h3 " id="tituloContacto" >¡Contáctanos!</p>
+                  <div class="col-md-12  position-relative">
+                    <label for="nombreApellidoContacto" class="form-label">Nombre y Apellido</label>
+                    <input type="text" class="form-control" id="nombreApellidoContacto" name="nombre_y_apellido" placeholder="Mark Roson"  minlength="1" maxlength="40" required>
+                    <div class="invalid-feedback">
+                     Por Favor, Ingrese un Nombre y Apellido! 
+                    </div>
+                  </div>
+                  <div class="col-md-12 position-relative">
+                    <label for="emailContacto" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="emailContacto"  name="email" placeholder="ejemplo.numero1@gmail.com"   minlength="1" maxlength="40" required>
+                    <div class="invalid-feedback">
+                      Por Favor, Ingrese un E-mail!
+                    </div>
+                  </div>
+                  <div class="col-md-12 position-relative">
+                    <label for="numeroContacto" class="form-label">Número</label>
+                    <input type="text" class="form-control" id="numeroContacto" name="numero" placeholder="+(54)-9-381-34567" required minlength="1" maxlength="20">
+                    <div class="invalid-feedback">
+                      Por Favor, Ingrese un Número!
+                    </div>
+                  </div>
+                    <div class="col-md-12">
+                      <label for="asuntoContacto" class="form-label">Asunto</label>
+                      <input type="text" class="form-control" id="asuntoContacto" name="asunto" minlength="1" maxlength="20" placeholder="Excelente Comic! " required >
+                      <div class="invalid-feedback">
+                        Por Favor, Ingrese un Asunto! 
+                      </div>
+                  </div>
+                  <div class="col-md-12 position-relative">
+                    <label for="mensajeContacto" class="form-label">Mensaje</label>
+                    <textarea type="text" class="form-control" id="mensajeContacto" name="mensaje" cols="20" rows="5" required placeholder="Comentatrio y/o sugerencias...." minlength="1" maxlength="200" ></textarea>
+                    <div class="invalid-feedback">
+                    Por Favor, Ingrese un Mensaje!
+                    </div>
+                  </div>
+                  <div class="col-12 d-flex justify-content-center">
+                    <button class="btn btn-primary btnEnviarComentario " type="submit" id="enviarComentario" >Enviar Comentario</button>
+                  </div>
+                </form>
             </div>
-            <div class="contact-info">
-              <h4 class="p2">Mas Informacion</h4>
-              <ul>
-                <li class="p2">
-                  <i class="fas fa-map-marker-alt"></i> General Paz 576, San
-                  Miguel de Tucuman
+            <div class="col-xl-6 col-lg-10 col-md-10 col-sm-12 panelMasInformacion">
+              <ul id="listaContacto" class="">
+                  <p class="h3 subtituloContacto">Mas Información</p>
+                  <li>
+                    <i class="fas fa-map-marker-alt iconoContacto"></i> General Paz 576 - San
+                    Miguel de Tucumán
+                  </li>
+                  <li ><i class="fas fa-phone iconoContacto"></i> (0800) 666-5066</li>
+                  <li>
+                    <i class="fas fa-envelope-open-text iconoContacto"></i> Mándanos un mail:
+                    comicMania@gmail.com
+                  </li>
+                  <li > <a href="/page/error404.html"><i class="fab fa-whatsapp iconoContacto" ></i>  WhatsApp</a> </li>
+                  <li >
+                    <a href="/page/error404.html"> <i class="fab fa-facebook iconoContacto" ></i>Facebook</a>
+                  </li>
+                  <li>
+                   <a href="/page/error404.html"> <i class="fab fa-twitter iconoContacto" ></i>Twitter</a>
+                  </li>
+                <li>
+                  <a href="/page/error404.html"><i class="bi bi-instagram iconoContacto" ></i> Instagram</a>
                 </li>
-                <li class="p2"><i class="fas fa-phone"></i> (0800) 666-5066</li>
-                <li class="p2">
-                  <i class="fas fa-envelope-open-text"></i> Mandanos un mail:
-                  tucson-play@gmail.com
-                </li>
-                <li class="p2"><i class="fab fa-whatsapp"></i> 3814855695</li>
-                <li class="p2">
-                  <i class="fab fa-facebook"></i> www.facebook.com/tucsonplay
-                </li>
-                <li class="p2">
-                  <i class="fab fa-twitter"></i> https://twitter.com/tucsonplay
+                <li>
+                  <a href="/page/error404.html"><i class="bi bi-linkedin iconoContacto" ></i> LinkedIn</a>
                 </li>
               </ul>
-              <p class="p2">
-                Horarios de Atencion: Lunes a Viernes de 08:00 a 18:30 hrs
-              </p>
-              <p class="p2">www.tucsonplay.com</p>
+                <p  class="parrafoFinal">
+                  Horarios de Atencion: Lunes a Viernes de 08:00 a 18:30 hrs. 
+                  <br>
+                  sitioWeb: <a href="/index.html">www.comicMania.com</a>
+                </p>
             </div>
           </div>
         </section>
@@ -127,7 +148,7 @@
                 <ul>
                   <li><a href="/page/quienesSomos.html">Quienes Somos</a></li>
                   <li><a href="/index.html">Inicio</a></li>
-                  <li><a href="/page/error404.html">Contactanos</a></li>
+                  <li><a href="/page/contacto.html">Contáctanos</a></li>
                   <li><a href="/page/error404.html">Nuestra Historia</a></li>
                 </ul>
               </aside>
@@ -166,6 +187,12 @@
           </section>
     </footer>
     <script type="module" src="/js/contacto.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
+  <script type="text/javascript">
+    emailjs.init('Vza7tJpPbfn6v0_k5');
+  </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
