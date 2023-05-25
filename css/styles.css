@@ -111,11 +111,15 @@ body{
   }
 
   .main-title{
-    margin: 0 !important;
+    margin-top: 40px !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     display: flex !important;
     flex-direction: row !important;
     justify-content: center !important;
     align-items: center !important;
+    text-align: center !important;
   }
   
   #tituloAdministrarComic , #textoSynopsis,#tituloContacto{
