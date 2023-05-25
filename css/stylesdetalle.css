@@ -17,7 +17,7 @@
   }
 
 .navbar {
-    height: 200px !important;
+    height: 180px !important;
     width: 100% !important;
     background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url('../assets/background.jpg') repeat-x;
     background-size: cover;
@@ -38,8 +38,8 @@
 
 .nav-img{
   height: 100px !important;
-  width: 200px !important;
-  max-width: 200px !important;
+  width: 180px !important;
+  max-width: 180px !important;
 }
 
 .modal-suscribe{
@@ -54,7 +54,7 @@
 
 .detalle{
     width: 70% !important;
-    margin-top:200px;
+    margin-top:180px;
     background-color: rgb(225, 225, 225);
     display: flex;
     flex-direction: row;
@@ -145,8 +145,8 @@ body{
 
     .nav-img{
         height: 100px !important;
-        width: 200px !important;
-        max-width: 200px !important;
+        width: 180px !important;
+        max-width: 180px !important;
     }
 
     .btn-navbar{
@@ -182,6 +182,14 @@ body{
     .descripcion-detalle{
         width: 80% !important;
     }
+
+    .img-detalle{
+        width: 80% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important; 
+    }
 }
 
 @media (max-width: 768px){
@@ -196,8 +204,8 @@ body{
 
     .nav-img{
         height: 100px !important;
-        width: 200px !important;
-        max-width: 200px !important;
+        width: 180px !important;
+        max-width: 180px !important;
       }
     
     .menu-navbar{
@@ -220,6 +228,10 @@ body{
         align-items: center;
     }
 
+    .descripcion-detalle{
+        width: 100% !important;
+    }
+
     /*fin del css detalle*/
 }
 
@@ -232,8 +244,8 @@ body{
 
       .nav-img{
         height: 100px !important;
-        width: 200px !important;
-        max-width: 200px !important;
+        width: 180px !important;
+        max-width: 180px !important;
       }
       /*fin css media-query navbar*/
       /*inicio del css detalle*/
@@ -246,15 +258,12 @@ body{
         align-items: center;
     }
 
-      /*fin del css detalle*/
-}
-
-@media (max-width: 410px){
-    body{
-        width: 410px !important;
+    .img-main{
+        width: 90%;
     }
 
-    .main{
-        width: 110% !important;
+    iframe{
+        width: 100% !important;
     }
+    /*fin del css detalle*/
 }

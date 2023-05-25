@@ -11,7 +11,7 @@ class Comic {
     #editorial; 
     #price;
     #status;
-    constructor(name, category, synopsis, publics, urlVideo, urlImage, editorial = 'EDITORIAL PANINI', price = '9.99', status = 'Publicandose') {
+    constructor(name, category, synopsis, publics, urlVideo, urlImage, editorial, price, status) {
         this.#id = generarID();
         this.#name = name;
         this.#category = category;

@@ -7,7 +7,7 @@ function cargarDestacado(comicDestacado) {
   elementoDestacadoNuevo.classList.add('destacado', 'container-fluid');
   elementoDestacadoNuevo.innerHTML = `
           <div class="img-main">
-            <h2 class="text-white fw-bold ms-5 mt-5">Destacado de la semana</h2>
+            <h2 class="main-title text-white fw-bold ms-5 mt-5">Destacado de la semana</h2>
             <img src="${comicDestacado.urlImage}" class="img-fluid img-main m-5" alt="main">
           </div>
           <div class="container-fluid d-flex flex-column justify-content-evenly m-5 w-50 text-white descripcion">
@@ -22,8 +22,8 @@ function cargarDestacado(comicDestacado) {
             <br>
             <hr>
             <br>
-            <div class="container-fluid d-flex">
-              <button href="#" class=" detalle btn btn-secondary me-4 mb-2">Detalles</button>
+            <div class="btn-destacados container-fluid d-flex">
+              <button href="#" class="detalle-btn btn btn-secondary me-4 mb-2" id="${comicDestacado.id}">Detalles</button>
               <button href="#" class="btn btn-secondary mb-2">Favorito</button>
             </div>
           </div>
