@@ -3,7 +3,7 @@ const Estado = {
     pendiente: "pendiente"
 }
 const TipoRoles = {
-    administrador: "administrativo",
+    administrador: "administrador",
     usuario: "usuario"
 }
 const EstadosComic = {

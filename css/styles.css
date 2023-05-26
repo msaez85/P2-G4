@@ -296,6 +296,11 @@ table {
     .panelMasInformacion{
       margin: 0 auto;
     }
+    .btn-navbar{
+      margin-left: 2rem !important;
+      justify-content: center !important;
+      align-items: center !important;
+  }
 }
 
 
@@ -315,6 +320,7 @@ table {
 
     .btn-navbar{
         margin-left: 2rem;
+        justify-content: center !important;
     }
     
     .menu-navbar{

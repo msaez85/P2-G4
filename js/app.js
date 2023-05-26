@@ -1,4 +1,6 @@
 import { listaComics } from "../model/data.js";
+import { loginUsuario, cargarPaginaUsuario } from "../helpers/help.js";
+
 
 function cargarDestacado(comicDestacado) {
   const elementoDestacadoViejo = document.querySelector('.destacado');
@@ -55,7 +57,7 @@ function cargarContenido(comics) {
   });
 }
 
-function cargarBotonesDetalle() {
+function cargarBotones() {
   const listaBotones = document.querySelectorAll('.detalle-btn');
   listaBotones.forEach(boton => {
     boton.onclick = function () {
@@ -63,12 +65,16 @@ function cargarBotonesDetalle() {
       window.open(url, "_blank");
     };
   });
+  const btnLogin = document.getElementById('btn-login');
+  btnLogin.onclick = function () { loginUsuario() };
 }
 
 window.onload = function () {
   cargarDestacado(listaComics.getComicFavorite);
   cargarContenido(listaComics.getArrayComic);
-  cargarBotonesDetalle();
+  cargarBotones();
+  cargarPaginaUsuario();
 }
+
 
 

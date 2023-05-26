@@ -1,11 +1,9 @@
 import { Comic } from "./Comic.js";
 import { Biblioteca } from "./Biblioteca.js";
 import { Usuario, Usuarios } from "./Usuario.js";
-import {Estado, TipoRoles} from "./Emun.js"; 
+import { Estado, TipoRoles } from "./Emun.js";
 
 let listaComics = new Biblioteca();
-
-export { listaComics };  
 
 const gantzSinopsis = `Kei Kurono es un estudiante egoísta y apático que se ve obligado a salvar a una persona de morir atropellada por un tren subterráneo debido a que su compañero de la infancia Masaru Kato lo llama para que le ayude. Como consecuencia él y Kato mueren en el intento.
 Posteriormente aparecen en un apartamento visualmente normal con otras personas igual de desconcertadas que ellos. Allí, una misteriosa esfera negra les obliga a participar de un sádico juego y para ello les pone a su disposición todo un exótico arsenal futurista que deberán aprender a usar para combatir a diversas especies de alienígenas y otras amenazas que para la gente común pasan desapercibidas.
@@ -97,7 +95,16 @@ let starwarsII = new Comic('STAR WARS 04 - REINO ESCARLATA', 'Ciencia Ficcion', 
 const spidermanSinopsis = `May “Mayday” Parker, Spider-Gwen, Ben Reilly, Kaine, Spider-Ham, Silk, Miguel OHara, Superior Spider-Man, Capitán Universo, Spider-U.K., Spider-Man Noir... todos tus héroes arácnidos favoritos están en esta aventura. Si no conoces a alguno, aún estás a tiempo de hacerlo... pero date prisa, porque no todos sobrevivirán al encuentro con Los Herederos.`;
 let spiderman = new Comic('SPIDER-MAN: SPIDER-VERSE', 'Aventura', spidermanSinopsis, true, 'https://www.youtube.com/embed/x2ex07fceig', './assets/spiderman.jpg', 'EDITORIAL PANINI MARVEL', '8.26', 'Finalizado');
 
-if(listaComics.isNullArrayComic()){
+let usuarioRegular1 = new Usuario('Mario Antonio Saez', 'msaez@gmail.com', '123', TipoRoles.usuario, Estado.aprobado);
+let usuarioRegular2 = new Usuario('Pricila Moya', 'pmoya@gmail.com', '123', TipoRoles.usuario, Estado.aprobado);
+let usuarioRegular3 = new Usuario('Luciano Duran', 'lduran@gmail.com', '123', TipoRoles.usuario, Estado.aprobado);
+let usuarioRegular4 = new Usuario('Guillermo Craven', 'gcraven@gmail.com', '123', TipoRoles.usuario, Estado.aprobado);
+let usuarioAdmin = new Usuario('Usuario Administrador', 'admin@gmail.com', '456', TipoRoles.administrador, Estado.aprobado);
+
+let listaUsuariosComics = new Usuarios();
+
+
+if (listaComics.isNullArrayComic()) {
     /**Cargamos comic de prueba */
     listaComics.addArrayComic(spiderman.toJson());
     listaComics.addArrayComic(starwarsII.toJson());
@@ -115,15 +122,27 @@ if(listaComics.isNullArrayComic()){
     listaComics.addArrayComic(saintSeiya.toJson());
     listaComics.addArrayComic(onePunch.toJson());
     listaComics.addArrayComic(onePiece.toJson());
+    listaComics.addArrayComic(gantz.toJson());
+    listaComics.addArrayComic(attackTitan.toJson());
+    listaComics.addArrayComic(bleach.toJson());
+    listaComics.addArrayComic(demonSlayer.toJson());
+    listaComics.addArrayComic(dragonBallS.toJson());
+    listaComics.addArrayComic(heroAcademy.toJson());
+    listaComics.addArrayComic(hunterX.toJson());
+    listaComics.addArrayComic(naruto.toJson());
 
     /**Ponemos un comic favorito por default */
-    listaComics.addComicFavorite(spiderman.toJson().id); 
+    listaComics.addComicFavorite(spiderman.toJson().id);
 }
 
-let usuarioRegular1 = new Usuario('Mario Antonio Saez', 'msaez@gmail.com', '123', , estado);
-let usuarioRegular2 = new Usuario('Pricila Moya','pmoya@gmail.com', '123');
-let usuarioRegular3 = new Usuario('Luciano Duran','lduran@gmail.com', '123');
-let usuarioRegular4 = new Usuario('Guillermo Craven','gcraven@mail.com', '123');
 
+if (listaUsuariosComics.listaUsuarios.length == 0) {
+    listaUsuariosComics.agregarUsuario(usuarioRegular1);
+    listaUsuariosComics.agregarUsuario(usuarioRegular2);
+    listaUsuariosComics.agregarUsuario(usuarioRegular3);
+    listaUsuariosComics.agregarUsuario(usuarioRegular4);
+    listaUsuariosComics.agregarUsuario(usuarioAdmin);
+}
+export { listaComics, listaUsuariosComics };
 
 
