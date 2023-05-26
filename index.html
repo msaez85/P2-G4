@@ -18,36 +18,40 @@
   <!-- Inicio navBar -->
   <header class="header">
     <nav class="navbar navbar-expand-lg position-fixed top-0 start-0 z-3">
-      <div class="container-fluid nav-container">
-        <a href="./index.html"><img src="./assets/icono.jpg" class="nav-img img-fluid mx-1" alt="brand"></a>
+      <div class="container-fluid nav-container d-flex align-items-center">
+        <a href="./index.html"><img src="./assets/icono.jpg" class="nav-img img-fluid ms-1 me-5" alt="brand"></a>
         <button class="navbar-toggler btn btn-secondary" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
           aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse  justify-content-evenly menu-navbar" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse justify-content-evenly menu-navbar" id="navbarNavDropdown">
           <ul class="navbar-nav justify-content-center">
             <li class="nav-item">
               <a class="nav-link active mx-2 fw-semibold text-white" aria-current="page" href="./index.html">Inicio</a>
             </li>
             <li class="nav-item mx-2 fw-semibold">
-              <a class="nav-link text-white" href="">Acerca de</a>
+              <a class="nav-link text-white" href="./page/quienesSomos.html">Acerca de</a>
             </li>
             <li class="nav-item mx-2 fw-semibold">
-              <a class="nav-link text-white" href="">Contacto</a>
+              <a class="nav-link text-white" href="./page/contacto.html">Contacto</a>
             </li>
             <li class="nav-item mx-2 fw-semibold">
-              <a class="nav-link text-white" href="">Categorias</a>
+              <a class="nav-link text-white" href="./page/error404.html">Categorias</a>
+            </li>
+            <li class="nav-item mx-2 fw-semibold" id="admin-Tab">
+              <a class="nav-link text-white" href=""></a>
             </li>
           </ul>
           <form class="d-flex btn-navbar" role="sign">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-secondary mx-2 fs-5 fw-semibold" data-bs-toggle="modal"
+            <h5 class="text-white text-end" id="nombre-usuario"></h5>
+            <button type="button" class="btn btn-secondary mx-2 fs-5 fw-semibold" id="login" data-bs-toggle="modal"
               data-bs-target="#staticBackdrop">
               <a class="dropdown-item text-white" href="#">Entrar</a>
             </button>
-            <button class="btn btn-secondary mx-2 fs-5 fw-semibold" type="submit"><a class="dropdown-item text-white"
-                href="">Suscribirse</a></button>
+            <button class="btn btn-secondary mx-2 fs-5 fw-semibold" type="submit" id="suscribe"><a
+                class="dropdown-item text-white" href="./page/registrarse.html">Registrarme</a></button>
           </form>
         </div>
       </div>
@@ -64,7 +68,7 @@
           <div class="modal-body">
             <div class="mb-3">
               <label for="FormControlText" class="form-label fw-semibold text-white">Usuario</label>
-              <input type="text" class="form-control" id="FormControlText" placeholder="Juan.Perez">
+              <input type="text" class="form-control" id="FormControlText" placeholder="usuario@gmail.com">
             </div>
             <div class="mb-3">
               <label for="FormControlpassword" class="form-label fw-semibold text-white">Contraseña</label>
@@ -73,35 +77,28 @@
             <div class="redes-modal-login">
               <ul>
                 <li>
-                  <a class="redes-modal-login-text" href="/page/error404.html"><i class="bi bi-facebook"></i> Iniciar
+                  <a class="redes-modal-login-text" href="./page/error404.html"><i class="bi bi-facebook"></i> Iniciar
                     con Facebook</a>
                 </li>
                 <li>
-                  <a class="redes-modal-login-text" href="/page/error404.html"><i class="bi bi-google"></i> Iniciar con
+                  <a class="redes-modal-login-text" href="./page/error404.html"><i class="bi bi-google"></i> Iniciar con
                     Google</a>
                 </li>
 
               </ul>
             </div>
-
-
-
             <span style="color: white">¿No tienes cuenta? </span><a class="register-link"
-              href="registrarse.html">Regístrate aquí</a>
+              href="./page/registrarse.html">Regístrate aquí</a>
 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-dark">Entrar</button>
+            <button type="button" class="btn btn-dark" id="btn-login" data-bs-dismiss="modal">Entrar</button>
             <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
           </div>
         </div>
       </div>
     </div>
-
-
     <!-- Fin modal -->
-
-
     <div class="destacado container-fluid">
       <div class="img-main">
         <img src="" class="img-fluid img-main m-5" alt="main">

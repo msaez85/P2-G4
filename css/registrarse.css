@@ -5,10 +5,23 @@
 }
 
 /*inicio del css del navbar*/
+
+@keyframes movingBackground {
+    0% {
+      background-position: 0 50%
+    }
+  
+    100% {
+      background-position: -100% 50%;
+    }
+  }
+
 .navbar {
-    height: 200px;
-    background-color: black;
-    width: 100%;
+    height: 180px !important;
+    width: 100% !important;
+    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url('../assets/background.jpg') repeat-x;
+    background-size: cover;
+    animation: movingBackground 30s linear infinite;
 }
 
 .btn-navbar{
@@ -16,7 +29,7 @@
 }
 
 .nav-container{
-    background-color: rgb(93, 83, 78) !important;
+    background-color: rgba(93, 83, 78, 0.9) !important;
 }
 
 .menu-navbar{
@@ -25,8 +38,8 @@
 
 .nav-img{
   height: 100px !important;
-  width: 200px !important;
-  max-width: 200px !important;
+  width: 180px !important;
+  max-width: 180px !important;
 }
 
 .modal-suscribe{
@@ -85,8 +98,6 @@ body{
 
 .register-div-h2{
     width: 100% !important;
-    /* justify-content: center !important; */
-    /* align-items: center !important; */
     margin-top: 200px;
 }
 
@@ -118,9 +129,9 @@ body{
     color: rgb(98, 82, 168);
     text-decoration: underline;
 }
+
+
 /* inicio Footer **/
-
-
 #copyrightFooter {
     text-align: center;
     color: #e0e0e0;
@@ -138,60 +149,19 @@ body{
   }
 /**fin del footer**/
 
-/** tablas***/
-table,td,th {
-	border: 1px solid black;
-    background-color: #f8f9fa;
-    color: black;
-}
-/** fin de tablas***/
-/**Modal***/
-#sipnosisComic{
-  resize: none;
-}
-.modalAgregarComics, .modalVideoComic{
-  background-color: rgb(127, 124, 123) !important;
-}
-/***Fin de la modal***/
-/**video reproduccion**/
-.video{
-    position: relative;
-    padding-bottom: 700px;
-    padding-top: 0px;
-    height: 0;
-    overflow: hidden;
-}
-
-.video iframe{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 80%;
-}
-/**fin de video reproduccion**/
-
-
-@media (max-width: 1475px){
-    /*inicio css media-query navbar*/
-    .contenido{
-        width: 80% !important;
-    }
-}
-
 
 @media (max-width: 1300px){
     /*inicio css media-query navbar*/
     .nav-container{
         background-color: rgb(93, 83, 78) !important;
-        width: 90% !important;
+        width: 100% !important;
         border-radius: 5px;
     }
 
     .nav-img{
         height: 100px !important;
-        width: 200px !important;
-        max-width: 200px !important;
+        width: 180px !important;
+        max-width: 180px !important;
     }
 
     .btn-navbar{
@@ -208,26 +178,12 @@ table,td,th {
         padding: 0 !important;
     } 
     /*fin css media-query navbar*/
-
-    .contenido{
-        width: 80% !important;
-    }
-}
-
-@media (max-width: 870px){
-    /*inicio css media-query navbar*/
-    .contenido{
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-        
-    }
 }
 
 @media (max-width: 768px){
-    /*inicio css media-query navbar*/
-    .nav-container{
-        width: 90% !important;
+      /*inicio css media-query navbar*/
+      .nav-container{
+        width: 100% !important;
     }
 
     .btn-navbar{
@@ -236,8 +192,8 @@ table,td,th {
 
     .nav-img{
         height: 100px !important;
-        width: 200px !important;
-        max-width: 200px !important;
+        width: 180px !important;
+        max-width: 180px !important;
       }
     
     .menu-navbar{
@@ -250,20 +206,6 @@ table,td,th {
         padding: 0 !important;
     }
     /*fin css media-query navbar*/
-    /*inicio del css destacado*/
-
-    .destacado{
-        width: 100% !important;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .contenido{
-        width: 100% !important;
-    }
-    /*fin del css destacado*/
 }
 
 @media (max-width: 576px){
@@ -279,21 +221,4 @@ table,td,th {
         max-width: 200px !important;
       }
       /*fin css media-query navbar*/
-      /*inicio del css destacado*/
-
-      .destacado{
-        width: 100% !important;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-      /*fin del css destacado*/
-}
-
-@media (max-width: 410px){
-    body{
-        width: 410px !important;
-    }
 }

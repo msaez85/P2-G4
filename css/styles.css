@@ -286,7 +286,7 @@ table {
 
 
 @media (max-width: 1475px){
-    /*inicio css media-query navbar*/
+    /*inicio css media-query contenido*/
     .contenido{
         width: 80% !important;
     }
@@ -296,6 +296,11 @@ table {
     .panelMasInformacion{
       margin: 0 auto;
     }
+    .btn-navbar{
+      margin-left: 2rem !important;
+      justify-content: center !important;
+      align-items: center !important;
+  }
 }
 
 
@@ -315,6 +320,7 @@ table {
 
     .btn-navbar{
         margin-left: 2rem;
+        justify-content: center !important;
     }
     
     .menu-navbar{
@@ -334,7 +340,7 @@ table {
 }
 
 @media (max-width: 870px){
-    /*inicio css media-query navbar*/
+    /*inicio css media-query contenido*/
     .contenido{
         display: flex !important;
         flex-direction: column !important;
