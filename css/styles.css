@@ -109,7 +109,11 @@ body{
     padding-top: 25px;
     background-color: rgb(39, 35, 33);
   }
-
+.mainQuienesSomos{
+  flex-grow: 1;
+  padding-top: 150px;
+  background-color: rgb(39, 35, 33);
+}
   .main-title{
     margin-top: 40px !important;
     margin-bottom: 0 !important;
@@ -224,7 +228,16 @@ main{
     width: 100% !important;
 }
 
-
+.quienesSomos {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: block;
+  margin: 10% auto;
+  border: auto;
+  padding: 7p 0px;
+  object-fit: cover;
+}
 /* inicio Footer **/
 
 
@@ -337,6 +350,7 @@ table {
     .contenido{
         width: 80% !important;
     }
+   
 }
 
 @media (max-width: 870px){
@@ -350,6 +364,7 @@ table {
     .panelMasInformacion{
       margin-top: 10px ;
     }
+
 }
 
 @media (max-width: 768px){
@@ -407,6 +422,24 @@ table {
       align-items: center;
     }
     /*fin del css destacado*/
+    .quienesSomos {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      display: block;
+      margin: auto;
+      padding: 7px 5px;
+    }
+    .mainQuienesSomos{
+      padding-top: 180px;
+    }
+    .nombreequipo {
+      color:rgb(127, 124, 123);
+      font-size: 20px;
+    }
+    .descripcionEquipo{
+      font-size: 15px;
+    }
 }
 
 @media (max-width: 576px){
@@ -440,4 +473,12 @@ table {
     }
 
       /*fin del css destacado*/
+}
+
+
+.nombreequipo {
+  color:black
+}
+.descripcionEquipo{
+  border-radius: 20px;
 }
