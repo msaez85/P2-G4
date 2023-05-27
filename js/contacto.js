@@ -17,7 +17,7 @@ function validarFormularioAgregarComic(event) {
   
     btnEnviarMensaje.innerText = 'Enviando...';
     const serviceID = 'default_service';
-    const templateID = 'template_pcxppz7';
+    const templateID = 'template_xw0urmb';
   
     emailjs.sendForm(serviceID, templateID, this)
       .then(() => {
