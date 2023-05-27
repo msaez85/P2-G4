@@ -136,7 +136,7 @@ if (listaComics.isNullArrayComic()) {
 }
 
 
-if (listaUsuariosComics.listaUsuarios.length == 0) {
+if (listaUsuariosComics.isNullListadoUsuarios()) {
     listaUsuariosComics.agregarUsuario(usuarioRegular1);
     listaUsuariosComics.agregarUsuario(usuarioRegular2);
     listaUsuariosComics.agregarUsuario(usuarioRegular3);

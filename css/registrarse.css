@@ -97,13 +97,13 @@ body{
   /**fin main y body*/
 
 .register-div-h2{
-    width: 100% !important;
-    margin-top: 200px;
+    /*width: 100% !important;*/
+    margin-top: 160px;
 }
 
 .register-input{
-    width: 350px !important;
-    border-radius: 2%;
+   /* width: 350px !important;*/
+    border-radius: 10px;
     border-style: double;
     border: 3px solid black;
     height: 40px;
@@ -113,15 +113,14 @@ body{
 }
 
 .register-btn{
-    width: 200px !important;
-    height: 45px;
+   width: 200px;
     font-size: large;
 }
 .register-btn:hover{
     border: 4px solid black;
 }
 .have-account-link{
-    margin-left: 20px !important;
+  /*  margin-left: 9px !important;*/
     text-decoration: underline;
     color: rgb(255, 255, 255);
 }

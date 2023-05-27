@@ -63,7 +63,7 @@ function loginUsuario() {
     let usuarioEncontrado = null;
     const usuarioForm = document.getElementById('FormControlText').value,
         passForm = document.getElementById('FormControlpassword').value;
-    listaUsuariosComics.listaUsuarios.forEach(usuario => {
+    listaUsuariosComics.listadoUsuarios.forEach(usuario => {
         if (usuario.correo == usuarioForm && usuario.pass == passForm && usuario.estado == "aprobado") {
             usuarioEncontrado = new Usuario(usuario.nombre, usuario.correo, usuario.pass, usuario.tipo, usuario.estado);
             localStorage.setItem("usuarioActual", JSON.stringify(usuarioEncontrado));
