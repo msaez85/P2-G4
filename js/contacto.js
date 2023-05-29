@@ -1,4 +1,5 @@
-import {validarFormulario} from'../helpers/help.js'; 
+import { validarFormulario, loginUsuario, cargarPaginaUsuario } from '../helpers/help.js';
+
 const formEnviarComentario = document.getElementById('formEnviarComentario'),
   btnEnviarMensaje = document.getElementById('enviarComentario');
 
@@ -9,20 +10,20 @@ function validarFormularioAgregarComic(event) {
     event.stopPropagation();
     formEnviarComentario.classList.add('was-validated');
   } else {
-    const respuesta = validarInformacionFormulario(); 
+    const respuesta = validarInformacionFormulario();
     if (respuesta !== null) {
       formEnviarComentario.reset();
-      return alert(respuesta); 
+      return alert(respuesta);
     }
-  
+
     btnEnviarMensaje.innerText = 'Enviando...';
     const serviceID = 'default_service';
     const templateID = 'template_xw0urmb';
-  
+
     emailjs.sendForm(serviceID, templateID, this)
       .then(() => {
         btnEnviarMensaje.innerText = 'Enviar Comentario';
-        alert('Mensaje Enviado!'); 
+        alert('Mensaje Enviado!');
         formEnviarComentario.reset();
       }, (err) => {
         btnEnviarMensaje.innerText = 'Enviar Comentario';
@@ -32,11 +33,17 @@ function validarFormularioAgregarComic(event) {
   }
 
 }
-function validarInformacionFormulario(){
-const nombreApellido = document.getElementById('nombreApellidoContacto').value,
-email = document.getElementById('emailContacto').value, 
-numero = document.getElementById('numeroContacto').value, 
-asunto = document.getElementById('asuntoContacto').value, 
-mensaje = document.getElementById('mensajeContacto').value;
-return validarFormulario(nombreApellido, email, numero, asunto, mensaje); 
+function validarInformacionFormulario() {
+  const nombreApellido = document.getElementById('nombreApellidoContacto').value,
+    email = document.getElementById('emailContacto').value,
+    numero = document.getElementById('numeroContacto').value,
+    asunto = document.getElementById('asuntoContacto').value,
+    mensaje = document.getElementById('mensajeContacto').value;
+  return validarFormulario(nombreApellido, email, numero, asunto, mensaje);
+}
+
+window.onload = function () {
+  cargarPaginaUsuario();
+  const btnLogin = document.getElementById('btn-login');
+  btnLogin.onclick = function () { loginUsuario() };
 }

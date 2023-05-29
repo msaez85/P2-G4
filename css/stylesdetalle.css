@@ -50,6 +50,31 @@
   z-index: 0 !important;
 }
 /*fin del css del navbar*/
+/* Modal */
+.register-link{
+    color: rgb(0, 0, 85);
+    text-decoration: none;
+
+}
+.register-link:hover{
+    color: rgb(0, 17, 255);
+    font-size: 16.5px;
+}
+
+.redes-modal-login ul{
+    list-style-type: none;
+}
+.redes-modal-login-text{
+    color: rgb(0, 0, 85);
+    text-decoration: none;   
+}
+
+.redes-modal-login-text:hover{
+    color: rgb(0, 17, 255);
+    font-size: 16.5px;
+}
+
+/* Fin modal */
 /*inicio del css detalle*/
 
 .detalle{
@@ -81,7 +106,6 @@
 .img-main{
     border-radius: 30px;
 }
-
 /*fin del css detalle*/
 /** main y body*/
 body{
@@ -133,12 +157,54 @@ body{
     .contenido{
         width: 80% !important;
     }
+
+    @keyframes movingBackground {
+        0% {
+          background-position: 0 50%
+        }
+      
+        100% {
+          background-position: -100% 50%;
+        }
+      }
+    
+      .navbar {
+        height: 180px !important;
+        width: 100% !important;
+        background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url('../assets/background.jpg') repeat-x;
+        background-size: cover;
+        animation: movingBackground 30s linear infinite;
+      }
+
+    .btn-navbar{
+          margin-left: 2rem !important;
+          justify-content: center !important;
+          align-items: center !important;
+    }
 }
 
 @media (max-width: 1300px){
     /*inicio css media-query navbar*/
+    @keyframes movingBackground {
+        0% {
+          background-position: 0 50%
+        }
+      
+        100% {
+          background-position: -100% 50%;
+        }
+      }
+    
+      .navbar {
+        height: 180px !important;
+        width: 100% !important;
+        background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url('../assets/background.jpg') repeat-x;
+        background-size: cover;
+        animation: movingBackground 30s linear infinite;
+      }
+
     .nav-container{
-        background-color: rgb(93, 83, 78) !important;
+        background-color: rgba(93, 83, 78, 0.9) !important;
         width: 100% !important;
         border-radius: 5px;
     }
@@ -151,6 +217,7 @@ body{
 
     .btn-navbar{
         margin-left: 2rem;
+        justify-content: center !important;
     }
     
     .menu-navbar{
@@ -171,6 +238,24 @@ body{
 
 @media (max-width: 870px){
     /*inicio css media-query navbar*/
+    @keyframes movingBackground {
+        0% {
+          background-position: 0 50%
+        }
+      
+        100% {
+          background-position: -100% 50%;
+        }
+      }
+    
+      .navbar {
+        height: 180px !important;
+        width: 100% !important;
+        background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url('../assets/background.jpg') repeat-x;
+        background-size: cover;
+        animation: movingBackground 30s linear infinite;
+      }
+
     .detalle{
         width: 100% !important;
         display: flex !important;
@@ -194,8 +279,27 @@ body{
 
 @media (max-width: 768px){
     /*inicio css media-query navbar*/
+    @keyframes movingBackground {
+        0% {
+          background-position: 0 50%
+        }
+      
+        100% {
+          background-position: -100% 50%;
+        }
+      }
+    
+      .navbar {
+        height: 180px !important;
+        width: 100% !important;
+        background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url('../assets/background.jpg') repeat-x;
+        background-size: cover;
+        animation: movingBackground 30s linear infinite;
+      }
+
     .nav-container{
         width: 100% !important;
+        background-color: rgba(93, 83, 78, 0.9) !important;
     }
 
     .btn-navbar{
@@ -238,8 +342,27 @@ body{
 @media (max-width: 576px){
 
       /*inicio css media-query navbar*/
+      @keyframes movingBackground {
+        0% {
+          background-position: 0 50%
+        }
+      
+        100% {
+          background-position: -100% 50%;
+        }
+      }
+    
+      .navbar {
+        height: 180px !important;
+        width: 100% !important;
+        background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url('../assets/background.jpg') repeat-x;
+        background-size: cover;
+        animation: movingBackground 30s linear infinite;
+      }
+
       .nav-container{
          width: 100% !important;
+         background-color: rgba(93, 83, 78, 0.9) !important;
       }
 
       .nav-img{

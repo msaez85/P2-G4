@@ -69,9 +69,9 @@
 }
 .redes-modal-login-text{
     color: rgb(0, 0, 85);
-    text-decoration: none;
-    
+    text-decoration: none;   
 }
+
 .redes-modal-login-text:hover{
     color: rgb(0, 17, 255);
     font-size: 16.5px;
@@ -309,6 +309,25 @@ table {
 
 @media (max-width: 1475px){
     /*inicio css media-query contenido*/
+
+    @keyframes movingBackground {
+      0% {
+        background-position: 0 50%
+      }
+    
+      100% {
+        background-position: -100% 50%;
+      }
+    }
+  
+    .navbar {
+      height: 180px !important;
+      width: 100% !important;
+      background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url('../assets/background.jpg') repeat-x;
+      background-size: cover;
+      animation: movingBackground 30s linear infinite;
+    }
+
     .contenido{
         width: 80% !important;
     }
@@ -328,8 +347,26 @@ table {
 
 @media (max-width: 1300px){
     /*inicio css media-query navbar*/
+    @keyframes movingBackground {
+      0% {
+        background-position: 0 50%
+      }
+    
+      100% {
+        background-position: -100% 50%;
+      }
+    }
+  
+    .navbar {
+      height: 180px !important;
+      width: 100% !important;
+      background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url('../assets/background.jpg') repeat-x;
+      background-size: cover;
+      animation: movingBackground 30s linear infinite;
+    }
+
     .nav-container{
-        background-color: rgb(93, 83, 78) !important;
+        background-color: rgba(93, 83, 78, 0.9) !important;
         width: 100% !important;
         border-radius: 5px;
     }
@@ -364,6 +401,24 @@ table {
 
 @media (max-width: 870px){
     /*inicio css media-query contenido*/
+    @keyframes movingBackground {
+      0% {
+        background-position: 0 50%
+      }
+    
+      100% {
+        background-position: -100% 50%;
+      }
+    }
+  
+    .navbar {
+      height: 180px !important;
+      width: 100% !important;
+      background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url('../assets/background.jpg') repeat-x;
+      background-size: cover;
+      animation: movingBackground 30s linear infinite;
+    }
+
     .contenido{
         display: flex !important;
         flex-direction: column !important;
@@ -380,6 +435,7 @@ table {
     /*inicio css media-query navbar*/
     .nav-container{
         width: 100% !important;
+        background-color: rgba(93, 83, 78, 0.9) !important;
     }
 
     .btn-navbar{
@@ -454,8 +510,27 @@ table {
 @media (max-width: 576px){
 
       /*inicio css media-query navbar*/
+      @keyframes movingBackground {
+        0% {
+          background-position: 0 50%
+        }
+      
+        100% {
+          background-position: -100% 50%;
+        }
+      }
+    
+      .navbar {
+        height: 180px !important;
+        width: 100% !important;
+        background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url('../assets/background.jpg') repeat-x;
+        background-size: cover;
+        animation: movingBackground 30s linear infinite;
+      }
+
       .nav-container{
          width: 100% !important;
+         background-color: rgba(93, 83, 78, 0.9) !important;
       }
 
       .nav-img{
