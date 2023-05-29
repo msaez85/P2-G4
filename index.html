@@ -43,7 +43,7 @@
               <a class="nav-link text-white" href=""></a>
             </li>
           </ul>
-          <form class="d-flex btn-navbar" role="sign">
+          <form class="btn-navbar d-flex" role="sign">
             <!-- Button trigger modal -->
             <h5 class="text-white text-end" id="nombre-usuario"></h5>
             <button type="button" class="btn btn-secondary mx-2 fs-5 fw-semibold" id="login" data-bs-toggle="modal"
@@ -99,6 +99,21 @@
       </div>
     </div>
     <!-- Fin modal -->
+    <!-- search bar -->
+    <div class="section-main">
+      <div class="container-fluid d-flex justify-content-center align-items-center">
+        <form action="" class="form-main form-inline nofloat-xs pull-right pull-left-sm">
+          <div class="form-group form-input-fields form-group-lg has-feedback container-fluid d-flex flex-row justify-content-center align-items-center">
+            <label class="sr-only" for="search">Search</label>
+            <div class="input-group">
+              <input type="text" class="form-control fs-5 input-search" name="q" id="buscar" placeholder="buscar">
+            </div>
+            <button type="submit" class="btn-buscar btn btn-secondary mx-2 fs-5 fw-semibold">Buscar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- search bar End -->
     <div class="destacado container-fluid">
       <div class="img-main">
         <img src="" class="img-fluid img-main m-5" alt="main">
@@ -115,7 +130,7 @@
   </header>
   <main class="main">
     <h2 class="text-white text-center fw-bold fs-1 my-5 actualizacion">Ultimas actualizaciones</h2>
-    <div class="contenido container-fluid d-flex flex-row justify-content-between align-items-center flex-wrap">
+    <div class="contenido container-fluid d-flex flex-row justify-content-around align-items-center flex-wrap">
     </div>
   </main>
   <footer>

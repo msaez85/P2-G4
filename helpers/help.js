@@ -91,7 +91,7 @@ function cargarPaginaUsuario() {
         btnSuscribe.style.width = "100px";
         btnSuscribe.style.height = "44px";
         if (usuarioLogin.tipo == "administrador") {
-            if (window.location.href.includes('index')) {
+            if (window.location.href.includes('index') || window.location.href.endsWith('app')) {
                 adminTab.innerHTML = `<a class="nav-link text-white" href="./page/administradorComic.html">Administracion</a>`;
             } else {
                 adminTab.innerHTML = `<a class="nav-link text-white" href="./administradorComic.html">Administracion</a>`;
@@ -107,11 +107,13 @@ function desloguearUsuario(event) {
     const btnSuscribe = document.getElementById('suscribe');
     const nombreUsuario = document.getElementById('nombre-usuario');
     const adminTab = document.getElementById('admin-Tab');
+    const btnNavbar = document.querySelector('.btn-navbar');
     let usuarioLogin = localStorage.getItem("usuarioActual") ? JSON.parse(localStorage.getItem("usuarioActual")) : null;
+    localStorage.removeItem("usuarioActual");
     btnLogin.style.visibility = "visible";
     btnLogin.style.width = "94px";
     nombreUsuario.style.visibility = "hidden";
-    if (window.location.href.includes('index')) {
+    if (window.location.href.includes('index') || window.location.href.endsWith('app')) {
         btnSuscribe.innerHTML = `<a class="dropdown-item text-white" href="./page/registrarse.html">Registrarme</a>`;
         btnSuscribe.onclick = function () { window.open("./page/registrarse.html", "_self"); };
     } else {
@@ -121,10 +123,11 @@ function desloguearUsuario(event) {
     btnSuscribe.style.width = "140px";
     btnSuscribe.style.height = "44px";
     btnLogin.style.height = "44px";
+    btnNavbar.style.justifyContent = "center";
+    btnNavbar.setAttribute('style', 'margin-left: -8rem !important');
     if (usuarioLogin.tipo == "administrador") {
         adminTab.innerHTML = `<a class="nav-link text-white" href=""></a>`;
     }
-    localStorage.removeItem("usuarioActual");
 }
 
 export { generarID, validarComic, deleteChildNode, parsearBoolean, validarFormulario, validarUsuario, loginUsuario, cargarPaginaUsuario }; 

@@ -12,26 +12,24 @@ class Usuario {
 }
 
 class Usuarios {
-    #listaUsuarios; 
+    #listaUsuarios;
     constructor() {
         this.#listaUsuarios = localStorage.getItem("listaUsuarios") ? JSON.parse(localStorage.getItem("listaUsuarios")) : [];
     }
 
     agregarUsuario(usuario) {
         let existe = false;
-        if (this.#listaUsuarios.length != 0) {
-            this.#listaUsuarios.forEach(u => {
-                if (u.nombre == usuario.nombre && u.correo == usuario.correo && u.tipo == usuario.tipo) {
-                    existe = true;
-                }
-            });
-        }
+        this.#listaUsuarios?.forEach(u => {
+            if (u.nombre == usuario.nombre && u.correo == usuario.correo && u.tipo == usuario.tipo) {
+                existe = true;
+            }
+        });
         if (existe) {
-           return 'Su usuario ya fue registrado anteriormente';
+            return 'Su usuario ya fue registrado anteriormente';
         } else {
             this.#listaUsuarios.push(usuario);
             localStorage.setItem("listaUsuarios", JSON.stringify(this.#listaUsuarios));
-            return 'Usuario Registrado'; 
+            return 'Usuario Registrado';
         }
     }
 
@@ -53,11 +51,11 @@ class Usuarios {
             alert('el usuario que intenta eliminar no existe');
         }
     }
-    get listadoUsuarios(){
-        return this.#listaUsuarios; 
+    get listadoUsuarios() {
+        return this.#listaUsuarios;
     }
-    isNullListadoUsuarios(){
-        return this.#listaUsuarios.length == 0 ? true : false; 
+    isNullListadoUsuarios() {
+        return this.#listaUsuarios.length == 0 ? true : false;
     }
 }
 

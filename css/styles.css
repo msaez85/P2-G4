@@ -69,22 +69,30 @@
 }
 .redes-modal-login-text{
     color: rgb(0, 0, 85);
-    text-decoration: none;
-    
+    text-decoration: none;   
 }
+
 .redes-modal-login-text:hover{
     color: rgb(0, 17, 255);
     font-size: 16.5px;
 }
 
 /* Fin modal */
-
+/* search bar*/
+.section-main {
+  margin-top:180px;
+  background-color: rgba(45, 42, 42, 0.9);
+  padding: 20px 0;
+}
+.form-control{
+  height: 44px;
+}
+/*search bar End*/
 
 /*inicio del css destacado*/
 
 .destacado{
     width: 100% !important;
-    margin-top:180px;
     background-color: rgb(39, 35, 33);
     display: flex;
     flex-direction: row;
@@ -144,13 +152,17 @@ body{
     }
   }
 
+  .error404-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-#error404-img{
-  width: 100% ;
-  margin-top: 180px;
-  height: 100%;
-}
-
+  #error404-img{
+    width: 925px ;
+    margin-top: 180px;
+  }
 
   #listaContacto li {
   list-style: none;
@@ -309,6 +321,25 @@ table {
 
 @media (max-width: 1475px){
     /*inicio css media-query contenido*/
+
+    @keyframes movingBackground {
+      0% {
+        background-position: 0 50%
+      }
+    
+      100% {
+        background-position: -100% 50%;
+      }
+    }
+  
+    .navbar {
+      height: 180px !important;
+      width: 100% !important;
+      background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url('../assets/background.jpg') repeat-x;
+      background-size: cover;
+      animation: movingBackground 30s linear infinite;
+    }
+
     .contenido{
         width: 80% !important;
     }
@@ -328,8 +359,26 @@ table {
 
 @media (max-width: 1300px){
     /*inicio css media-query navbar*/
+    @keyframes movingBackground {
+      0% {
+        background-position: 0 50%
+      }
+    
+      100% {
+        background-position: -100% 50%;
+      }
+    }
+  
+    .navbar {
+      height: 180px !important;
+      width: 100% !important;
+      background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url('../assets/background.jpg') repeat-x;
+      background-size: cover;
+      animation: movingBackground 30s linear infinite;
+    }
+
     .nav-container{
-        background-color: rgb(93, 83, 78) !important;
+        background-color: rgba(93, 83, 78, 0.9) !important;
         width: 100% !important;
         border-radius: 5px;
     }
@@ -362,8 +411,36 @@ table {
    
 }
 
+@media (max-width: 925px){
+    #error404-img{
+      width: 100% ;
+      margin-top: 180px;
+      margin-bottom: 0px;
+      margin-left: 0px;
+      margin-left: 0px;
+    }
+}
+
 @media (max-width: 870px){
     /*inicio css media-query contenido*/
+    @keyframes movingBackground {
+      0% {
+        background-position: 0 50%
+      }
+    
+      100% {
+        background-position: -100% 50%;
+      }
+    }
+  
+    .navbar {
+      height: 180px !important;
+      width: 100% !important;
+      background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url('../assets/background.jpg') repeat-x;
+      background-size: cover;
+      animation: movingBackground 30s linear infinite;
+    }
+
     .contenido{
         display: flex !important;
         flex-direction: column !important;
@@ -380,6 +457,7 @@ table {
     /*inicio css media-query navbar*/
     .nav-container{
         width: 100% !important;
+        background-color: rgba(93, 83, 78, 0.9) !important;
     }
 
     .btn-navbar{
@@ -454,8 +532,27 @@ table {
 @media (max-width: 576px){
 
       /*inicio css media-query navbar*/
+      @keyframes movingBackground {
+        0% {
+          background-position: 0 50%
+        }
+      
+        100% {
+          background-position: -100% 50%;
+        }
+      }
+    
+      .navbar {
+        height: 180px !important;
+        width: 100% !important;
+        background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),url('../assets/background.jpg') repeat-x;
+        background-size: cover;
+        animation: movingBackground 30s linear infinite;
+      }
+
       .nav-container{
          width: 100% !important;
+         background-color: rgba(93, 83, 78, 0.9) !important;
       }
 
       .nav-img{
