@@ -133,7 +133,7 @@ body{
     align-items: center !important;
     text-align: center !important;
   }
-  #tituloAdministrarComic , #textoSynopsis,#tituloContacto, .subtituloContacto,.p{
+  #tituloAdministrarComic , #textoSynopsis,#tituloContacto, .subtituloContacto,.p , #tituloAdministrarUsuarios{
     color:#f8f9fa
   }
   #tituloContacto {
@@ -580,7 +580,6 @@ table {
 
       /*fin del css destacado*/
 }
-
 
 .nombreequipo {
   color:black

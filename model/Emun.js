@@ -1,6 +1,7 @@
 const Estado = {
     aprobado: "aprobado",
-    pendiente: "pendiente"
+    pendiente: "pendiente",
+    suspendido: "suspendido"
 }
 const TipoRoles = {
     administrador: "administrador",

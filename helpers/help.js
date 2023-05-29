@@ -1,13 +1,14 @@
 import { listaUsuariosComics } from "../model/data.js";
 import { Usuario } from "../model/Usuario.js";
 
-const ExpRegNombre = "^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$",
+const ExpRegNombre =  /^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$/,
+    ExpRegTitulo = /^[\w\s():\-?!¡¿"]+$/i,
     ExpRegURL = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/,
     ExpRegEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/,
     ExpRegTelefono = /^\+(?:[0-9] ?){6,14}[0-9]$/,
     ExpRegAsunto = /^[A-Za-z0-9\s\-\_\.\,\!\?\']+$/,
     ExpRegMensaje = /^[A-Za-z0-9\s\-\_\.\,\!\?\']+$/,
-    ExpRegTexto = /^[A-Za-z\s]+$/,
+    ExpRegTexto = /^[A-Za-z\s\-()!¡¿?&""0-9]+$/,
     ExpRegPass = /^[A-Za-z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
 
 function generarID() {
@@ -21,13 +22,24 @@ function generarID() {
     return id;
 }
 function validarComic(comic) {
-    if (comic.name.length == 1 || comic.name.match(ExpRegNombre) == null) return "Ingrese Nombre Correcto del Comic! ";
-    if (comic.category.length == 1 || comic.category.match(ExpRegTexto) == null) return "Ingrese Categoría Correcta del Comic! ";
-    if (comic.synopsis.length == 1) return "Ingrese Sinopsis Correcta del Comic! ";
+    if (comic.name.length == 1 || comic.name.match(ExpRegTitulo) == null) return "Ingrese Nombre Correcto del Comic! ";
+    if (comic.category.length == 1 || comic.category.match(ExpRegTitulo) == null) return "Ingrese Categoría Correcta del Comic! ";
+    if (comic.synopsis.length == 1 ||comic.synopsis.match(ExpRegTexto) ) return "Ingrese Sinopsis Correcta del Comic! ";
     if (comic.publics == null) return "Seleccioná una opcion de publicacion!";
     if (comic.status == "") return "Seleccioná un Estado! ";
     if (comic.price.length == 1 || comic.price.includes(',')) return "Ingrese un precio correcto!";
-    if (comic.editorial.length == 1 || comic.editorial.match(ExpRegTexto) == null) return "Ingrese Editorial Correcta del Comic!";
+    if (comic.editorial.length == 1 || comic.editorial.match(ExpRegTitulo) == null) return "Ingrese Editorial Correcta del Comic!";
+    if (comic.urlVideo.length == 1 || comic.urlVideo.match(ExpRegURL) == null) return "Ingrese URL de Video Correcta del Comic!";
+    if (comic.urlImage.length == 1 || comic.urlImage.match(ExpRegURL) == null) return "Ingrese URL de Imagen Correcta del Comic!";
+    return null;
+}
+function validarComicModificacion(comic) {
+    if (comic.name.length == 1 || comic.name.match(ExpRegTitulo) == null) return "Ingrese Nombre Correcto del Comic! ";
+    if (comic.category.length == 1 || comic.category.match(ExpRegTitulo) == null) return "Ingrese Categoría Correcta del Comic! ";
+    if (comic.synopsis.length == 1 ||comic.synopsis.match(ExpRegTexto)) return "Ingrese Sinopsis Correcta del Comic! ";
+    if (comic.status == "") return "Seleccioná un Estado! ";
+    if (comic.price.length == 1 || comic.price.includes(',')) return "Ingrese un precio correcto!";
+    if (comic.editorial.length == 1 || comic.editorial.match(ExpRegTitulo) == null) return "Ingrese Editorial Correcta del Comic!";
     if (comic.urlVideo.length == 1 || comic.urlVideo.match(ExpRegURL) == null) return "Ingrese URL de Video Correcta del Comic!";
     if (comic.urlImage.length == 1 || comic.urlImage.match(ExpRegURL) == null) return "Ingrese URL de Imagen Correcta del Comic!";
     return null;
@@ -57,7 +69,11 @@ function validarUsuario(nombre, email, pass) {
     if (pass.length == 1 || pass.match(ExpRegPass) == null) return "Ingrese un correcto, solo letras, numeros y/o caracteres especiales";
     return null;
 }
-
+function validarUsuarioModificado(usuario){
+    if (usuario.estado == "") return "Seleccioná un Estado de Usuario! ";
+    if(usuario.tipo == "") return "Seleccioná un Rol  de Usuario! ";
+    return null; 
+} 
 function loginUsuario() {
     localStorage.removeItem("usuarioActual");
     let usuarioEncontrado = null;
@@ -130,4 +146,4 @@ function desloguearUsuario(event) {
     }
 }
 
-export { generarID, validarComic, deleteChildNode, parsearBoolean, validarFormulario, validarUsuario, loginUsuario, cargarPaginaUsuario }; 
+export { generarID, validarComic,validarComicModificacion,deleteChildNode, parsearBoolean, validarFormulario, validarUsuario, loginUsuario, cargarPaginaUsuario ,validarUsuarioModificado}; 

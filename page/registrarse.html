@@ -44,7 +44,7 @@
               <a class="nav-link text-white" href=""></a>
             </li>
           </ul>
-          <form class="btn-navbar d-flex" role="sign">
+          <form class="d-flex btn-navbar" role="sign">
             <!-- Button trigger modal -->
             <h5 class="text-white text-end" id="nombre-usuario"></h5>
             <button type="button" class="btn btn-secondary mx-2 fs-5 fw-semibold" id="login" data-bs-toggle="modal"
@@ -63,8 +63,7 @@
       <div class="modal-dialog">
         <div class="modal-content modal-suscribe">
           <div class="modal-header">
-            <h1 class="modal-title fs-5  fw-semibold text-white" id="staticBackdropLabel">Iniciar Sesión
-            </h1>
+            <h1 class="modal-title fs-5  fw-semibold text-white" id="staticBackdropLabel">Iniciar Sesión</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -127,13 +126,23 @@
             <div class="invalid-feedback">
               <strong>Por favor, Ingrese Apellido!</strong>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-sm-6 col-xl-4 mb-4">
-            <label for="validationCustom01" class="form-label text-light">Correo Electronico: </label>
-            <input class=" register-input form-control" type="email" placeholder="usuario@email.com" required
-              minlength="1" maxlength="30" id="correo" name="email">
-            <div class="invalid-feedback">
-              <strong>Por favor, Ingrese Correo!</strong>
+                  <strong> Por favor , Ingrese Nombre! </strong>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-sm-6 col-xl-4 mb-4">
+              <label for="validationCustom01" class="form-label text-light">Apellido:</label>
+              <input class=" register-input form-control" type="text" placeholder="Ronson" required minlength="1" maxlength="20"
+                id="apellido" name="apellido">
+                <div class="invalid-feedback">
+                  <strong >Por favor, Ingrese Apellido!</strong>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-sm-6 col-xl-4 mb-4">
+              <label for="validationCustom01" class="form-label text-light">Correo Electronico: </label>
+              <input class=" register-input form-control" type="email" placeholder="usuario@email.com" required minlength="1"
+                maxlength="40" id="correo" name="email">
+                <div class="invalid-feedback">
+                  <strong>Por favor, Ingrese Correo!</strong>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 col-sm-6 col-xl-4 mb-4">
