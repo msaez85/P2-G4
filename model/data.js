@@ -21,7 +21,7 @@ let bleach = new Comic('Bleach', 'Sobrenatural', bleachSinopsis, true, 'https://
 
 
 const demonSlayerSinopsis = `El escenario es la era Taisho de Japón. Tanjirou es un joven de buen corazón que vivió en paz con su familia como vendedor de carbón. Su vida normal cambia completamente cuando su familia es asesinada por demonios. La única otra sobreviviente, la hermana menor de Tanjirou, Nezuko, se ha convertido en un demonio feroz. Para devolver a Nezuko a la normalidad y vengarse del demonio que mató a su familia, los dos parten en un viaje. De un joven talento, comienza una historia de aventuras de sangre y espadas.`;
-let demonSlayer = new Comic('Kimetsu no Yaiba', 'Sobrenatural', demonSlayerSinopsis, true, 'https://www.youtube.com/embed/GgS2q9qjJ4s', './assets/demonSlayer.jpg', 'EDITORIAL PANINI MANGA', '7.84', 'Finalizado');
+let demonSlayer = new Comic('Kimetsu no Yaiba', 'Sobrenatural', demonSlayerSinopsis, true, 'https://www.youtube.com/embed/AGEuQ3Q6Tm4', './assets/demonSlayer.jpg', 'EDITORIAL PANINI MANGA', '7.84', 'Finalizado');
 
 
 const dragonBallSSinopsis = `Dragon Ball Super es la secuela del Manga y anime de Dragon Ball Z después de la Saga de Majin Buu, y está enlazada con las películas Dragon Ball Z: La Batalla de los Dioses y Dragon Ball Z: La Resurrección de F.`;
@@ -53,7 +53,7 @@ let saintSeiya = new Comic('Saint Seiya', 'Mitologia', saintSeiyaSinopsis, true,
 
 
 const sevenSinsSinopsis = `Elizabeth Liones, la tercera princesa del Reino de Liones, tras el golpe de estado hecho por los Caballeros Sagrados decide huir y buscar a los ya desaparecidos caballeros que se hacen llamar Los Siete Pecados Capitales, cuya orden está conformado por los peores criminales del reino. Un día cae desmayada en una taberna, los clientes que ya habían escuchado sobre una Armadura andante oxidada, creen que es uno de los Sietes Pecados y todos menos el propietario y su compañero Hawk, huyen asustados.`;
-let sevenSins = new Comic('Nanatsu no Taizai', 'Aventura', sevenSinsSinopsis, true, 'https://www.youtube.com/embed/cvt_u4OZyGw', './assets/sevenSins.jpg', 'EDITORIAL PANINI MANGA', '8.26', 'Finalizado');
+let sevenSins = new Comic('Nanatsu no Taizai', 'Aventura', sevenSinsSinopsis, true, 'https://www.youtube.com/embed/5B0Y6p9mBRA', './assets/sevenSins.jpg', 'EDITORIAL PANINI MANGA', '8.26', 'Finalizado');
 
 
 const xmenSinopsis = `Hace poco, los Nuevos Mutantes regresaron de una misión en el espacio Shiar y trajeron con ellos un fascinante y extraño objeto que será la causa de una terrible lucha para evitar la destrucción total de su hogar. Mientras tanto, Forge se entera que su antiguo invento, del cual se arrepiente y avergüenza de haber creado, está siendo usado por los enemigos de la raza mutante para eliminarla.
@@ -93,7 +93,7 @@ const starwarsIISinopsis = `Mientras la Rebelión intenta reunir sus fuerzas par
 let starwarsII = new Comic('STAR WARS 04 - REINO ESCARLATA', 'Ciencia Ficcion', starwarsIISinopsis, true, 'https://www.youtube.com/embed/_9FcJaEWIgg', './assets/starwarsII.jpg', 'EDITORIAL PANINI COMIC', '8.26', 'Finalizado');
 
 const spidermanSinopsis = `May “Mayday” Parker, Spider-Gwen, Ben Reilly, Kaine, Spider-Ham, Silk, Miguel OHara, Superior Spider-Man, Capitán Universo, Spider-U.K., Spider-Man Noir... todos tus héroes arácnidos favoritos están en esta aventura. Si no conoces a alguno, aún estás a tiempo de hacerlo... pero date prisa, porque no todos sobrevivirán al encuentro con Los Herederos.`;
-let spiderman = new Comic('SPIDER-MAN: SPIDER-VERSE', 'Aventura', spidermanSinopsis, true, 'https://www.youtube.com/embed/6Tcjsxqn3ms', './assets/spiderman.jpg', 'EDITORIAL PANINI MARVEL', '8.26', 'Finalizado');
+let spiderman = new Comic('SPIDER-MAN: SPIDER-VERSE', 'Aventura', spidermanSinopsis, true, 'https://www.youtube.com/embed/80m8TyyXf0E', './assets/spiderman.jpg', 'EDITORIAL PANINI MARVEL', '8.26', 'Finalizado');
 
 let usuarioRegular1 = new Usuario('Mario Antonio Saez', 'msaez@gmail.com', '123', TipoRoles.usuario, Estado.aprobado);
 let usuarioRegular2 = new Usuario('Pricila Moya', 'pmoya@gmail.com', '123', TipoRoles.usuario, Estado.aprobado);
