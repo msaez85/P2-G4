@@ -4,14 +4,12 @@ import{listaComics } from "../model/data.js"
 import { Comic } from "../model/Comic.js";
 
 const formAgregarComic = document.getElementById("formAgregarModal"),
-fromModificarComic = document.getElementById("formModificarModal"),
 bodyTablaComic = document.getElementById('bodyListComic'),
 listEstadoComic = document.getElementById('estadoComic'),
 listEstadoModificarComic = document.getElementById('estadoComicModificar'), 
 btnCancelar = document.getElementById('btnCancelar'),
 btnFavoriteComic= document.getElementsByClassName('btnFavoriteComic'),
-formModificarComic = document.getElementById("formModificarComicModal"),
-btnGuardarModificacionComic = document.getElementById('btnGuardarModificacionComic');
+formModificarComic = document.getElementById("formModificarComicModal"); 
 
 /**Funciones que donde inicializamos la carga de los comic y los estados del comic para crear uno nuevo */
 listarComics();
@@ -227,10 +225,6 @@ function cambiarPublicado() {
       alert(listaComics.updatePublics(idComic));
     });
   });
-}
-btnGuardarModificacionComic.addEventListener('click', (event) => {
-  guardarModificacionComic(event);
-});
 }
 
 function guardarModificacionComic(event){

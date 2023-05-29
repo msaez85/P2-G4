@@ -1,414 +1,750 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4d7920e24b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>RollingCode Proyecto 2 - Grupo 4</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/4d7920e24b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Administración de Comic</title>
-</head>
-
-<body>
-  <!-- Inicio navBar -->
-  <header class="header">
-    <nav class="navbar navbar-expand-lg position-fixed top-0 start-0 z-3">
-      <div class="container-fluid nav-container d-flex align-items-center">
-        <a href="../index.html"><img src="../assets/icono.jpg" class="nav-img img-fluid ms-1 me-5" alt="brand"></a>
-        <button class="navbar-toggler btn btn-secondary" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-evenly menu-navbar" id="navbarNavDropdown">
-          <ul class="navbar-nav justify-content-center">
-            <li class="nav-item">
-              <a class="nav-link active mx-2 fw-semibold text-white" aria-current="page" href="../index.html">Inicio</a>
-            </li>
-            <li class="nav-item mx-2 fw-semibold">
-              <a class="nav-link text-white" href="./quienesSomos.html">Acerca de</a>
-            </li>
-            <li class="nav-item mx-2 fw-semibold">
-              <a class="nav-link text-white" href="./contacto.html">Contacto</a>
-            </li>
-            <li class="nav-item mx-2 fw-semibold">
-              <a class="nav-link text-white" href="./error404.html">Categorias</a>
-            </li>
-            <li class="nav-item mx-2 fw-semibold" id="admin-Tab">
-              <a class="nav-link text-white" href=""></a>
-            </li>
-          </ul>
-          <form class="btn-navbar d-flex" role="sign">
-            <!-- Button trigger modal -->
-            <h5 class="text-white text-end" id="nombre-usuario"></h5>
-            <button type="button" class="btn btn-secondary mx-2 fs-5 fw-semibold" id="login" data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop">
-              <a class="dropdown-item text-white" href="#">Entrar</a>
-            </button>
-        <section class="container-fluid nav-container">
-            <a href="../index.html"><img src="/assets/icono.jpg" class="img-fluid mx-1 nav-img" alt="brand"></a>
-            <button class="navbar-toggler btn btn-secondary" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse  justify-content-evenly menu-navbar" id="navbarNavDropdown">
-                <ul class="navbar-nav justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link active mx-2 fw-semibold text-white" aria-current="page"
-                            href="/index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item mx-2  fw-semibold">
-                        <a class="nav-link text-white" href="./quienesSomos.html">Acerca de</a>
-                    </li>
-                    <li class="nav-item mx-2  fw-semibold">
-                        <a class="nav-link text-white" href="./contacto.html">Contacto</a>
-                    </li>
-                    <li class="nav-item mx-2  fw-semibold">
-                        <a class="nav-link active text-white" href="/page/administradorComic.html">Administración Comic</a>
-                    </li>
-                    <li class="nav-item mx-2  fw-semibold">
-                      <a class="nav-link active text-white" href="/page/administradorUsuarios.html">Administración Usuario</a>
+  <body>
+    <!-- Inicio navBar -->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg position-fixed top-0 start-0 z-3">
+        <div class="container-fluid nav-container d-flex align-items-center">
+          <a href="../index.html"
+            ><img
+              src="../assets/icono.jpg"
+              class="nav-img img-fluid ms-1 me-5"
+              alt="brand"
+          /></a>
+          <button
+            class="navbar-toggler btn btn-secondary"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-evenly menu-navbar"
+            id="navbarNavDropdown"
+          >
+            <ul class="navbar-nav justify-content-center">
+              <li class="nav-item">
+                <a
+                  class="nav-link active mx-2 fw-semibold text-white"
+                  aria-current="page"
+                  href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item mx-2 fw-semibold">
+                <a class="nav-link text-white" href="./quienesSomos.html"
+                  >Acerca de</a
+                >
+              </li>
+              <li class="nav-item mx-2 fw-semibold">
+                <a class="nav-link text-white" href="./contacto.html"
+                  >Contacto</a
+                >
+              </li>
+              <li class="nav-item mx-2 fw-semibold">
+                <a class="nav-link text-white" href="./error404.html"
+                  >Categorias</a
+                >
+              </li>
+              <li class="nav-item mx-2 fw-semibold" id="admin-Tab">
+                <a class="nav-link text-white" href=""></a>
+              </li>
+            </ul>
+            <form class="btn-navbar d-flex" role="sign">
+              <!-- Button trigger modal -->
+              <h5 class="text-white text-end" id="nombre-usuario"></h5>
+              <button
+                type="button"
+                class="btn btn-secondary mx-2 fs-5 fw-semibold"
+                id="login"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+              >
+                <a class="dropdown-item text-white" href="#">Entrar</a>
+              </button>
+              <button
+                class="btn btn-secondary mx-2 fs-5 fw-semibold"
+                type="submit"
+                id="suscribe"
+              >
+                <a class="dropdown-item text-white" href="./registrarse.html"
+                  >Registrarme</a
+                >
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content modal-suscribe">
+            <div class="modal-header">
+              <h1
+                class="modal-title fs-5 fw-semibold text-white"
+                id="staticBackdropLabel"
+              >
+                Iniciar Sesión
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label
+                  for="FormControlText"
+                  class="form-label fw-semibold text-white"
+                  >Usuario</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="FormControlText"
+                  placeholder="usuario@gmail.com"
+                />
+              </div>
+              <div class="mb-3">
+                <label
+                  for="FormControlpassword"
+                  class="form-label fw-semibold text-white"
+                  >Contraseña</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="FormControlpassword"
+                />
+              </div>
+              <div class="redes-modal-login">
+                <ul>
+                  <li>
+                    <a class="redes-modal-login-text" href="./error404.html"
+                      ><i class="bi bi-facebook"></i> Iniciar con Facebook</a
+                    >
+                  </li>
+                  <li>
+                    <a class="redes-modal-login-text" href="./error404.html"
+                      ><i class="bi bi-google"></i> Iniciar con Google</a
+                    >
                   </li>
                 </ul>
-      
+              </div>
+              <span style="color: white">¿No tienes cuenta? </span
+              ><a class="register-link" href="./registrarse.html"
+                >Regístrate aquí</a
+              >
             </div>
-        </section>
-    </nav>
-    <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-      aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content modal-suscribe">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5  fw-semibold text-white" id="staticBackdropLabel">Iniciar Sesión
-            </h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="mb-3">
-              <label for="FormControlText" class="form-label fw-semibold text-white">Usuario</label>
-              <input type="text" class="form-control" id="FormControlText" placeholder="usuario@gmail.com">
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-dark"
+                id="btn-login"
+                data-bs-dismiss="modal"
+              >
+                Entrar
+              </button>
+              <button
+                type="button"
+                class="btn btn-dark"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
             </div>
-            <div class="mb-3">
-              <label for="FormControlpassword" class="form-label fw-semibold text-white">Contraseña</label>
-              <input type="password" class="form-control" id="FormControlpassword">
-            </div>
-            <div class="redes-modal-login">
-              <ul>
-                <li>
-                  <a class="redes-modal-login-text" href="./error404.html"><i class="bi bi-facebook"></i> Iniciar
-                    con Facebook</a>
-                </li>
-                <li>
-                  <a class="redes-modal-login-text" href="./error404.html"><i class="bi bi-google"></i> Iniciar
-                    con
-                    Google</a>
-                </li>
-
-              </ul>
-            </div>
-            <span style="color: white">¿No tienes cuenta? </span><a class="register-link"
-              href="./registrarse.html">Regístrate aquí</a>
-
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-dark" id="btn-login" data-bs-dismiss="modal">Entrar</button>
-            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Fin modal -->
-  </header>
-  <main class="mainAdministrador">
-    <section class="container-fluid">
-      <article class="row ">
-        <span class="col-xl-10 col-sm-8 col-md-8 col-lg-8 ">
-          <p class="h4 text-center" id="tituloAdministrarComic"> Administrar Comics </p>
-        </span>
-        <span class="col-xl-2 col-sm-4 col-md-4 col-lg-4 ">
-          <button type="button" class="btn btn-primary d-flex" id="btnNuevoComic" data-bs-toggle="modal"
-            data-bs-target="#agregarComicsModal"> <i class="bi bi-plus-circle mx-1"></i> Nuevo Comic</button>
-        </span>
-      </article>
-      <article class="row my-4 d-flex justify-content-center table-responsive mx-1">
-        <table class="text-center table table-hover">
-          <thead>
-            <th scope="col"></th>
-            <th scope="col">Codigo</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Categoría</th>
-            <th scope="col">Sinopsis</th>
-            <th scope="col">Estado</th>
-            <th scope="col">Editorial</th>
-            <th scope="col">Precio</th>
-            <th scope="col">Publicado</th>
-            <th scope="col">Trailer</th>
-            <th scope="col">Opciones</th>
-          </thead>
-          <tbody id="bodyListComic"></tbody>
-        </table>
-
-      </article>
-    </section>
-    <!--Modal agregar comic-->
-    <div class="modal fade" id="agregarComicsModal" tabindex="-1" aria-labelledby="agregarComicsModalLabel"
-      aria-hidden="true">
-      <section class="modal-dialog">
-        <article class="modal-content modalAgregarComics">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="agregarComicsModalLabel">Agregar Nuevo Comic </h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form action="form-control" id="formAgregarModal" class="needs-validation" novalidate>
-              <div class="mb-3">
-                <label for="nombreComic" class="form-label">Nombre:</label>
-                <input type="text" class="form-control" id="nombreComic" required minlength="1" maxlength="30" placeholder="AVENGERS (2023) 05">
-                <div class="invalid-feedback">
-                  Por favor, ingrese el nombre de un Comic!.
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="categoriaComic" class="form-label">Categoría:</label>
-                <input type="text" class="form-control" id="categoriaComic" required minlength="1" maxlength="20" placeholder="Accion">
-                <div class="invalid-feedback">
-                  Por favor, ingrese categoría de un Comic!.
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="sipnosisComic" class="form-label">Sipnosis:</label>
-                <textarea type="text" class="form-control" id="sipnosisComic"  cols="20" rows="5" required minlength="1" maxlength="2000" placeholder="El cuartel general impenetrable de los Avengers....."></textarea>
-                <div class="invalid-feedback">
-                  Por favor, ingrese la sipnosis de un Comic!.
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="form-check" class="form-label">¿Publicar?</label>
-                <div class="form-check">
-                  <input type="radio" class="form-check-input" id="opcionSi" name="radio-stacked" value ="si" required>
-                  <label class="form-check-label" for="opcionSi">Sí</label>
-                </div>
-                <div class="form-check mb-3">
-                  <input type="radio" class="form-check-input" id="opcionNo" name="radio-stacked" value="no" required>
-                  <label class="form-check-label" for="opcionNo">No</label>
-                  <div class="invalid-feedback"> Por favor, seleccione una opcion!.</div>
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="selectorEstado" class="form-label">Estado:</label>
-                <select class="form-select" id="estadoComic" name="selectorEstado" required>
-                  <option selected disabled value="">Seleccionar Estado Comic</option>
-                </select>
-                <div class="invalid-feedback">
-                  Por favor, Seleccioná el Estado  de un Comic!.
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="precioComic" class="form-label">Precio: </label>
-                <input type="text" class="form-control" id="precioComic" required minlength="1" maxlength="10" placeholder="$8.26">
-                <div class="invalid-feedback">
-                  Por favor, ingresa Precio  de un Comic!.
-                </div>
-              </div>
+      <!-- Fin modal -->
+    </header>
+    <main class="mainAdministrador">
+      <section class="container-fluid">
+        <article class="row">
+          <span class="col-xl-10 col-sm-8 col-md-8 col-lg-8">
+            <p class="h4 text-center" id="tituloAdministrarComic">
+              Administrar Comics
+            </p>
+          </span>
+          <span class="col-xl-2 col-sm-4 col-md-4 col-lg-4">
+            <button
+              type="submit"
+              class="btn btn-primary d-flex"
+              id="btnNuevoComic"
+              data-bs-toggle="modal"
+              data-bs-target="#agregarComicsModal"
+            >
+              <i class="bi bi-plus-circle mx-1"></i> Nuevo Comic
+            </button>
+          </span>
+        </article>
+        <article
+          class="row my-4 d-flex justify-content-center table-responsive mx-1"
+        >
+          <table class="text-center table table-hover">
+            <thead>
+              <th scope="col"></th>
+              <th scope="col">Codigo</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Categoría</th>
+              <th scope="col">Sinopsis</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Editorial</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Publicado</th>
+              <th scope="col">Trailer</th>
+              <th scope="col">Opciones</th>
+            </thead>
+            <tbody id="bodyListComic"></tbody>
+          </table>
+        </article>
+      </section>
+      <!--Modal agregar comic-->
+      <div
+        class="modal fade"
+        id="agregarComicsModal"
+        tabindex="-1"
+        aria-labelledby="agregarComicsModalLabel"
+        aria-hidden="true"
+      >
+        <section class="modal-dialog">
+          <article class="modal-content modalAgregarComics">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="agregarComicsModalLabel">
+                Agregar Nuevo Comic
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form
+                action="form-control"
+                id="formAgregarComicModal"
+                class="needs-validation"
+                novalidate
+              >
                 <div class="mb-3">
-                  <label for="editorialComicComic" class="form-label">Editorial:</label>
-                  <input type="text" class="form-control" id="editorialComic" required minlength="1" maxlength="25" placeholder="EDITORIAL PANINI MARVEL">
+                  <label for="nombreComic" class="form-label">Nombre:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nombreComic"
+                    required
+                    minlength="1"
+                    maxlength="30"
+                    placeholder="AVENGERS (2023) 05"
+                  />
+                  <div class="invalid-feedback">
+                    Por favor, ingrese el nombre de un Comic!.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="categoriaComic" class="form-label"
+                    >Categoría:</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="categoriaComic"
+                    required
+                    minlength="1"
+                    maxlength="20"
+                    placeholder="Accion"
+                  />
+                  <div class="invalid-feedback">
+                    Por favor, ingrese categoría de un Comic!.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="sipnosisComic" class="form-label"
+                    >Sipnosis:</label
+                  >
+                  <textarea
+                    type="text"
+                    class="form-control"
+                    id="sipnosisComic"
+                    cols="20"
+                    rows="5"
+                    required
+                    minlength="1"
+                    maxlength="2000"
+                    placeholder="El cuartel general impenetrable de los Avengers....."
+                  ></textarea>
+                  <div class="invalid-feedback">
+                    Por favor, ingrese la sipnosis de un Comic!.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="form-check" class="form-label">¿Publicar?</label>
+                  <div class="form-check">
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      id="opcionSi"
+                      name="radio-stacked"
+                      value="si"
+                      required
+                    />
+                    <label class="form-check-label" for="opcionSi">Sí</label>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input
+                      type="radio"
+                      class="form-check-input"
+                      id="opcionNo"
+                      name="radio-stacked"
+                      value="no"
+                      required
+                    />
+                    <label class="form-check-label" for="opcionNo">No</label>
+                    <div class="invalid-feedback">
+                      Por favor, seleccione una opcion!.
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="selectorEstado" class="form-label">Estado:</label>
+                  <select
+                    class="form-select"
+                    id="estadoComic"
+                    name="selectorEstado"
+                    required
+                  >
+                    <option selected disabled value="">
+                      Seleccionar Estado Comic
+                    </option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Por favor, Seleccioná el Estado de un Comic!.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="precioComic" class="form-label">Precio: </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="precioComic"
+                    required
+                    minlength="1"
+                    maxlength="10"
+                    placeholder="$8.26"
+                  />
+                  <div class="invalid-feedback">
+                    Por favor, ingresa Precio de un Comic!.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="editorialComicComic" class="form-label"
+                    >Editorial:</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="editorialComic"
+                    required
+                    minlength="1"
+                    maxlength="25"
+                    placeholder="EDITORIAL PANINI MARVEL"
+                  />
                   <div class="invalid-feedback">
                     Por favor, ingresa Editorial de un Comic!.
                   </div>
                 </div>
-                  <div class="mb-3">
-                    <label for="urlVideoComic" class="form-label">URL Video:</label>
-                    <input type="text" class="form-control" id="urlVideoComic" required minlength="1" maxlength="50" placeholder="'https://www.youtube.com/.......">
-                    <div class="invalid-feedback">
-                      Por favor, ingresa el URL del Video  de un Comic!.
-                    </div>
-                  </div>
                 <div class="mb-3">
-                  <label for="urlImagenComic" class="form-label">URL Imagen Portada:</label>
-                  <input type="text" class="form-control" id="urlImagenComic" required minlength="1" maxlength="50" placeholder="https://unsplash.com/es/images">
+                  <label for="urlVideoComic" class="form-label"
+                    >URL Video:</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="urlVideoComic"
+                    required
+                    minlength="1"
+                    maxlength="50"
+                    placeholder="'https://www.youtube.com/......."
+                  />
+                  <div class="invalid-feedback">
+                    Por favor, ingresa el URL del Video de un Comic!.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="urlImagenComic" class="form-label"
+                    >URL Imagen Portada:</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="urlImagenComic"
+                    required
+                    minlength="1"
+                    maxlength="50"
+                    placeholder="https://unsplash.com/es/images"
+                  />
                   <div class="invalid-feedback">
                     Por favor, ingresa el URL de la Imagen Portada de un Comic!.
                   </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="btnCancelar">Cancelar</button>
-                <button type="submit" class="btn btn-success" id="btnAgregarComic">Agregar Comic</button>
-              </div>
-            </form>
-          </div>
-        </article>
-      </section>
-</div>
-<!-- Modal  ver video-->
-<div class="modal fade" id="viewVideoComic" data-bs-keyboard="false" tabindex="-1" aria-labelledby="viewVideoComicLabel" aria-hidden="true">
-  <section class="modal-dialog">
-    <article class="modal-content modalVideoComic">
-      <div class="modal-header">
-        <h5 class="modal-title" id="viewVideoComicLabel">trailer</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="viewComicClose"></button>
-      </div>
-      <div class="modal-body">
-        <div class="ratio ratio-16x9" id="contenedorVideo"></div>
-      </div>
-    </article>
-  </section>
-</div>
-<!-- Modal  ver sinopsis-->
-<div class="modal fade" id="viewSynopsisComic"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="viewSynopsisComicLabel" aria-hidden="true">
-  <section class="modal-dialog">
-    <article class="modal-content modalVideoComic">
-      <div class="modal-header">
-        <h5 class="modal-title" id="viewSynopsisComicLabel">Sipnosis</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="viewSynopsisClose"></button>
-      </div>
-      <div class="modal-body"  id="textoSynopsis"></div>
-    </article>
-  </section>
-</div>
-<!--Modal Modificar comic -->
-<div class="modal fade" id="modificarComicsModal" tabindex="-1" aria-labelledby="modificarComicsModalLabel" aria-hidden="true">
-  <section class="modal-dialog">
-      <article class="modal-content modalAgregarComics">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="modificarComicsModalLabel">Modificar Comic </h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form action="form-control" id="formModificarComicModal"  class="needs-validation" novalidate>
-            <div class="mb-3">
-              <label for="nombreComic" class="form-label">Nombre:</label>
-              <input type="text" class="form-control" id="nombreComicModificar" required minlength="1" maxlength="30" >
-              <div class="invalid-feedback">
-                Por favor, ingrese el nombre de un Comic!.
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="categoriaComic" class="form-label">Categoría:</label>
-              <input type="text" class="form-control" id="categoriaComicModificar" required minlength="1" maxlength="20">
-              <div class="invalid-feedback">
-                Por favor, ingrese categoría de un Comic!.
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="sipnosisComic" class="form-label">Sipnosis:</label>
-              <textarea type="text" class="form-control" id="sipnosisComicModificar"  cols="20" rows="5" required minlength="1" maxlength="2000" ></textarea>
-              <div class="invalid-feedback">
-                Por favor, ingrese la sipnosis de un Comic!.
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="selectorEstado" class="form-label">Estado:</label>
-              <select class="form-select" id="estadoComicModificar" name="selectorEstado" required >
-              </select>
-              <div class="invalid-feedback">
-                Por favor, Seleccioná el Estado  de un Comic!.
-              </div>
-            </div>
-              <div class="mb-3">
-                <label for="precioComic" class="form-label">Precio: </label>
-                <input type="text" class="form-control" id="precioComicModificar" required minlength="1" maxlength="10">
-                <div class="invalid-feedback">
-                  Por favor, ingresa Precio  de un Comic!.
                 </div>
-              </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-bs-dismiss="modal"
+                    id="btnCancelar"
+                  >
+                    Cancelar
+                  </button>
+                  <button
+                    type="submit"
+                    class="btn btn-success"
+                    id="btnAgregarComic"
+                  >
+                    Agregar Comic
+                  </button>
+                </div>
+              </form>
+            </div>
+          </article>
+        </section>
+      </div>
+      <!-- Modal  ver video-->
+      <div
+        class="modal fade"
+        id="viewVideoComic"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="viewVideoComicLabel"
+        aria-hidden="true"
+      >
+        <section class="modal-dialog">
+          <article class="modal-content modalVideoComic">
+            <div class="modal-header">
+              <h5 class="modal-title" id="viewVideoComicLabel">trailer</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                id="viewComicClose"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="ratio ratio-16x9" id="contenedorVideo"></div>
+            </div>
+          </article>
+        </section>
+      </div>
+      <!-- Modal  ver sinopsis-->
+      <div
+        class="modal fade"
+        id="viewSynopsisComic"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="viewSynopsisComicLabel"
+        aria-hidden="true"
+      >
+        <section class="modal-dialog">
+          <article class="modal-content modalVideoComic">
+            <div class="modal-header">
+              <h5 class="modal-title" id="viewSynopsisComicLabel">Sipnosis</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                id="viewSynopsisClose"
+              ></button>
+            </div>
+            <div class="modal-body" id="textoSynopsis"></div>
+          </article>
+        </section>
+      </div>
+      <!--Modal Modificar comic -->
+      <div
+        class="modal fade"
+        id="modificarComicsModal"
+        tabindex="-1"
+        aria-labelledby="modificarComicsModalLabel"
+        aria-hidden="true"
+      >
+        <section class="modal-dialog">
+          <article class="modal-content modalAgregarComics">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modificarComicsModalLabel">
+                Modificar Comic
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form
+                action="form-control"
+                id="formModificarComicModal"
+                class="needs-validation"
+                novalidate
+              >
                 <div class="mb-3">
-                  <label for="editorialComicComic" class="form-label">Editorial:</label>
-                  <input type="text" class="form-control" id="editorialComicModificar" required minlength="1" maxlength="25">
+                  <label for="nombreComic" class="form-label">Nombre:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nombreComicModificar"
+                    required
+                    minlength="1"
+                    maxlength="30"
+                  />
+                  <div class="invalid-feedback">
+                    Por favor, ingrese el nombre de un Comic!.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="categoriaComic" class="form-label"
+                    >Categoría:</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="categoriaComicModificar"
+                    required
+                    minlength="1"
+                    maxlength="20"
+                  />
+                  <div class="invalid-feedback">
+                    Por favor, ingrese categoría de un Comic!.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="sipnosisComic" class="form-label"
+                    >Sipnosis:</label
+                  >
+                  <textarea
+                    type="text"
+                    class="form-control"
+                    id="sipnosisComicModificar"
+                    cols="20"
+                    rows="5"
+                    required
+                    minlength="1"
+                    maxlength="2000"
+                  ></textarea>
+                  <div class="invalid-feedback">
+                    Por favor, ingrese la sipnosis de un Comic!.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="selectorEstado" class="form-label">Estado:</label>
+                  <select
+                    class="form-select"
+                    id="estadoComicModificar"
+                    name="selectorEstado"
+                    required
+                  ></select>
+                  <div class="invalid-feedback">
+                    Por favor, Seleccioná el Estado de un Comic!.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="precioComic" class="form-label">Precio: </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="precioComicModificar"
+                    required
+                    minlength="1"
+                    maxlength="10"
+                  />
+                  <div class="invalid-feedback">
+                    Por favor, ingresa Precio de un Comic!.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="editorialComicComic" class="form-label"
+                    >Editorial:</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="editorialComicModificar"
+                    required
+                    minlength="1"
+                    maxlength="25"
+                  />
                   <div class="invalid-feedback">
                     Por favor, ingresa Editorial de un Comic!.
                   </div>
                 </div>
-            <div class="mb-3">
-              <label for="urlVideoComic" class="form-label">URL Video:</label>
-              <input type="text" class="form-control" id="urlVideoComicModificar" required minlength="1" maxlength="50">
-              <div class="invalid-feedback">
-                Por favor, ingresa el URL del Video  de un Comic!.
-              </div>
-            </div>
-              <div class="mb-3">
-                <label for="urlImagenComic" class="form-label">URL Imagen Portada:</label>
-                <input type="text" class="form-control" id="urlImagenComicModificar" required minlength="1" maxlength="50">
-                <div class="invalid-feedback">
-                  Por favor, ingresa el URL de la Imagen Portada de un Comic!.
+                <div class="mb-3">
+                  <label for="urlVideoComic" class="form-label"
+                    >URL Video:</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="urlVideoComicModificar"
+                    required
+                    minlength="1"
+                    maxlength="50"
+                  />
+                  <div class="invalid-feedback">
+                    Por favor, ingresa el URL del Video de un Comic!.
+                  </div>
                 </div>
+                <div class="mb-3">
+                  <label for="urlImagenComic" class="form-label"
+                    >URL Imagen Portada:</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="urlImagenComicModificar"
+                    required
+                    minlength="1"
+                    maxlength="50"
+                  />
+                  <div class="invalid-feedback">
+                    Por favor, ingresa el URL de la Imagen Portada de un Comic!.
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-bs-dismiss="modal"
+                    id="btnCancelar"
+                  >
+                    Cancelar
+                  </button>
+                  <button
+                    type="submit"
+                    class="btn btn-success"
+                    id="btnGuardarModificacionComic"
+                  >
+                    Guardar Modificación
+                  </button>
+                </div>
+              </form>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="btnCancelar">Cancelar</button>
-              <button type="submit" class="btn btn-success" id="btnGuardarModificacionComic" >Guardar  Modificación </button>
-            </div>
-          </form>
-        </div>
-      </article>
-    </section>
-</div>
-            </main>
-            <footer>
-                <section class="container-fluid bg-black" >
-                    <article class="row" id="cuerpoFooter">
-                      <aside class="col-xl-3 col-sm-3 col-md-3">
-                        <p class="h5">ComicManía</p>
-                        <ul>
-                          <li>Direccion: Pueblo Paleta 1996</li>
-                          <li>telefono: + 34 726 731 724</li>
-                          <li>Email: geunnounn-7992@yopmail.com</li>
-                        </ul>
-                      </aside>
-                      <aside class="col-xl-3 col-sm-3 col-md-3">
-                        <p class="h5">Navegacion</p>
-                        <ul>
-                          <li><a href="/page/quienesSomos.html">Quienes Somos</a></li>
-                          <li><a href="/index.html">Inicio</a></li>
-                          <li><a href="/page/error404.html">Contactanos</a></li>
-                          <li><a href="/page/error404.html">Nuestra Historia</a></li>
-                        </ul>
-                      </aside>
-                      <aside class="col-xl-3 col-sm-3 col-md-3">
-                        <p class="h5">Legal</p>
-                        <ul>
-                          <li><a href="/page/error404.html">Terminos y condiciones</a></li>
-                          <li><a href="/page/error404.html">Politica de privacidad</a></li>
-                          <li>
-                            <a href="/page/error404.html">Politica de derecho de autor</a>
-                          </li>
-                          <li><a href="/page/error404.html">Descargar App Movil</a></li>
-                        </ul>
-                      </aside>
-                      <aside class="col-xl-3 col-sm-3 col-md-3">
-                        <p class="h5">Redes Sociales</p>
-                        <ul>
-                          <li>
-                            <a href="/page/error404.html"><i class="bi bi-facebook"></i> Facebook</a>
-                          </li>
-                          <li>
-                            <a href="/page/error404.html"><i class="bi bi-twitter"></i> Twiter</a>
-                          </li>
-                          <li>
-                            <a href="/page/error404.html"><i class="bi bi-instagram"></i> Instagram</a>
-                          </li>
-                          <li>
-                            <a href="/page/error404.html"><i class="bi bi-linkedin"></i> LinkedIn</a>
-                          </li>
-                        </ul>
-                      </aside>
-                    </article>
-                    <article class="row" id="copyrightFooter">
-                      <p class="h6 text-center">&copy; 2023 Grupo 4. Todos los derechos reservados.</p>
-      </article>
-    </section>
-  </footer>
+          </article>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <section class="container-fluid bg-black">
+        <article class="row" id="cuerpoFooter">
+          <aside class="col-xl-3 col-sm-3 col-md-3">
+            <p class="h5">ComicManía</p>
+            <ul>
+              <li>Direccion: Pueblo Paleta 1996</li>
+              <li>telefono: + 34 726 731 724</li>
+              <li>Email: geunnounn-7992@yopmail.com</li>
+            </ul>
+          </aside>
+          <aside class="col-xl-3 col-sm-3 col-md-3">
+            <p class="h5">Navegacion</p>
+            <ul>
+              <li><a href="./quienesSomos.html">Quienes Somos</a></li>
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a href="./error404.html">Contactanos</a></li>
+              <li><a href="./error404.html">Nuestra Historia</a></li>
+            </ul>
+          </aside>
+          <aside class="col-xl-3 col-sm-3 col-md-3">
+            <p class="h5">Legal</p>
+            <ul>
+              <li><a href="./error404.html">Terminos y condiciones</a></li>
+              <li><a href="./error404.html">Politica de privacidad</a></li>
+              <li>
+                <a href="./error404.html">Politica de derecho de autor</a>
+              </li>
+              <li><a href="./error404.html">Descargar App Movil</a></li>
+            </ul>
+          </aside>
+          <aside class="col-xl-3 col-sm-3 col-md-3">
+            <p class="h5">Redes Sociales</p>
+            <ul>
+              <li>
+                <a href="./error404.html"
+                  ><i class="bi bi-facebook"></i> Facebook</a
+                >
+              </li>
+              <li>
+                <a href="./error404.html"
+                  ><i class="bi bi-twitter"></i> Twiter</a
+                >
+              </li>
+              <li>
+                <a href="./error404.html"
+                  ><i class="bi bi-instagram"></i> Instagram</a
+                >
+              </li>
+              <li>
+                <a href="./error404.html"
+                  ><i class="bi bi-linkedin"></i> LinkedIn</a
+                >
+              </li>
+            </ul>
+          </aside>
+        </article>
+        <article class="row" id="copyrightFooter">
+          <p class="h6 text-center">
+            &copy; 2023 Grupo 4. Todos los derechos reservados.
+          </p>
+        </article>
+      </section>
+    </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
-  <script type="module" src="../js/administradorComic.js"></script>
-</body>
-
+    <script type="module" src="/js/administradorComic.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
