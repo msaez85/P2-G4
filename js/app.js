@@ -35,11 +35,12 @@ function cargarDestacado(comicDestacado) {
 }
 
 function cargarContenido(comics) {
+  limpiarContenido();
   const contenido = document.querySelector('.contenido');
-  comics.forEach(c => {
+  comics?.forEach(c => {
     if (c.publics) {
       const tarjetaManga = document.createElement('div');
-      tarjetaManga.classList.add('card', 'm-4');
+      tarjetaManga.classList.add('card-contenido', 'card', 'm-4');
       tarjetaManga.style.width = '18rem';
       tarjetaManga.innerHTML = `
       <img src="${c.urlImage}" class="card-img-top" alt="${c.name}">
@@ -57,6 +58,30 @@ function cargarContenido(comics) {
   });
 }
 
+function limpiarContenido(){
+  const contenido = document.querySelectorAll('.card-contenido');
+  contenido?.forEach(c => {
+    c.remove();
+  })
+}
+
+function buscarComic(event) {
+  event.preventDefault();
+  let textoBuscado = document.getElementById('buscar').value;
+  textoBuscado = textoBuscado.toLowerCase();
+  let comicFiltrados = [];
+  let comicCompletos = listaComics.getArrayComic;
+  comicCompletos.forEach(comic => {
+    let nombre = comic.name;
+    nombre = nombre.toLowerCase();;
+    if (nombre.includes(textoBuscado)) {
+      comicFiltrados.push(comic);
+    }
+  });
+  cargarContenido(comicFiltrados);
+  document.querySelector('.form-main').reset();
+}
+
 function cargarBotones() {
   const listaBotones = document.querySelectorAll('.detalle-btn');
   listaBotones.forEach(boton => {
@@ -67,6 +92,8 @@ function cargarBotones() {
   });
   const btnLogin = document.getElementById('btn-login');
   btnLogin.onclick = function () { loginUsuario() };
+  const btnBuscar = document.querySelector('.btn-buscar');
+  btnBuscar.onclick = function (event) { buscarComic(event) };
 }
 
 window.onload = function () {

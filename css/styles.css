@@ -78,13 +78,21 @@
 }
 
 /* Fin modal */
-
+/* search bar*/
+.section-main {
+  margin-top:180px;
+  background-color: rgba(45, 42, 42, 0.9);
+  padding: 20px 0;
+}
+.form-control{
+  height: 44px;
+}
+/*search bar End*/
 
 /*inicio del css destacado*/
 
 .destacado{
     width: 100% !important;
-    margin-top:180px;
     background-color: rgb(39, 35, 33);
     display: flex;
     flex-direction: row;
