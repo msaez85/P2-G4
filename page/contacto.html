@@ -15,237 +15,183 @@
 </head>
 
 <body>
-  <!-- Inicio navBar -->
-  <header class="header">
-    <nav class="navbar navbar-expand-lg position-fixed top-0 start-0 z-3">
-      <div class="container-fluid nav-container d-flex align-items-center">
-        <a href="../index.html"><img src="../assets/icono.jpg" class="nav-img img-fluid ms-1 me-5" alt="brand"></a>
-        <button class="navbar-toggler btn btn-secondary" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-evenly menu-navbar" id="navbarNavDropdown">
-          <ul class="navbar-nav justify-content-center">
-            <li class="nav-item">
-              <a class="nav-link active mx-2 fw-semibold text-white" aria-current="page" href="../index.html">Inicio</a>
-            </li>
-            <li class="nav-item mx-2 fw-semibold">
-              <a class="nav-link text-white" href="./quienesSomos.html">Acerca de</a>
-            </li>
-            <li class="nav-item mx-2 fw-semibold">
-              <a class="nav-link text-white" href="./contacto.html">Contacto</a>
-            </li>
-            <li class="nav-item mx-2 fw-semibold">
-              <a class="nav-link text-white" href="./error404.html">Categorias</a>
-            </li>
-            <li class="nav-item mx-2 fw-semibold" id="admin-Tab">
-              <a class="nav-link text-white" href=""></a>
-            </li>
-          </ul>
-          <form class="btn-navbar d-flex" role="sign">
-            <!-- Button trigger modal -->
-            <h5 class="text-white text-end" id="nombre-usuario"></h5>
-            <button type="button" class="btn btn-secondary mx-2 fs-5 fw-semibold" id="login" data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop">
-              <a class="dropdown-item text-white" href="#">Entrar</a>
-            </button>
-            <button class="btn btn-secondary mx-2 fs-5 fw-semibold" type="submit" id="suscribe"><a
-                class="dropdown-item text-white" href="./registrarse.html">Registrarme</a></button>
-          </form>
-        </div>
-      </div>
-    </nav>
-    <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-      aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content modal-suscribe">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5  fw-semibold text-white" id="staticBackdropLabel">Iniciar Sesión
-            </h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="mb-3">
-              <label for="FormControlText" class="form-label fw-semibold text-white">Usuario</label>
-              <input type="text" class="form-control" id="FormControlText" placeholder="usuario@gmail.com">
+    <header>
+        <nav class="navbar navbar-expand-lg position-fixed top-0 start-0 z-3">
+            <div class="container-fluid nav-container">
+              <a href="../index.html"><img src="/assets/icono.jpg" class="img-fluid mx-1 nav-img" alt="brand"></a>
+              <button class="navbar-toggler btn btn-secondary" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse  justify-content-evenly menu-navbar" id="navbarNavDropdown">
+                <ul class="navbar-nav justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link active mx-2  fw-semibold text-white" aria-current="page" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item mx-2  fw-semibold">
+                    <a class="nav-link text-white" href="/page/quienesSomos.html">Acerca de</a>
+                  </li>
+                  <li class="nav-item mx-2  fw-semibold">
+                    <a class="nav-link text-white" href="/page/contacto.html">Contacto</a>
+                  </li>
+                  <li class="nav-item mx-2  fw-semibold">
+                    <a class="nav-link text-white" href="/page/error404.html">Categorias</a>
+                  </li>
+                </ul>
+                <form class="d-flex btn-navbar" role="sign">
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-secondary mx-2 fs-5 fw-semibold" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
+                    <a class="dropdown-item text-white" href="#">Entrar</a>
+                  </button>
+                  <button class="btn btn-secondary mx-2 fs-5 fw-semibold" type="submit"><a class="dropdown-item text-white"
+                      href="">Suscribirse</a></button>
+                </form>
+              </div>
+      
             </div>
-            <div class="mb-3">
-              <label for="FormControlpassword" class="form-label fw-semibold text-white">Contraseña</label>
-              <input type="password" class="form-control" id="FormControlpassword">
+        </nav>
+    </header>
+    <main class="mainContacto">
+        <section class="container">
+            <div class="row  my-3 fondoContacto">
+                <div class="col-xl-6 col-lg-10 col-md-10 col-sm-12 formulario">
+                  <form class="row g-3  needs-validation " novalidate id="formEnviarComentario">
+                  <p class="h3 " id="tituloContacto" >¡Contáctanos!</p>
+                  <div class="col-md-12  position-relative">
+                    <label for="nombreApellidoContacto" class="form-label">Nombre y Apellido</label>
+                    <input type="text" class="form-control" id="nombreApellidoContacto" name="nombre_y_apellido" placeholder="Mark Ronson"  minlength="1" maxlength="40" required>
+                    <div class="invalid-feedback">
+                     Por Favor, Ingrese un Nombre y Apellido! 
+                    </div>
+                  </div>
+                  <div class="col-md-12 position-relative">
+                    <label for="emailContacto" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="emailContacto"  name="email" placeholder="ejemplo.numero1@gmail.com"   minlength="1" maxlength="40" required>
+                    <div class="invalid-feedback">
+                      Por Favor, Ingrese un E-mail!
+                    </div>
+                  </div>
+                  <div class="col-md-12 position-relative">
+                    <label for="numeroContacto" class="form-label">Número</label>
+                    <input type="text" class="form-control" id="numeroContacto" name="numero" placeholder="+(54)-9-381-34567" required minlength="1" maxlength="20">
+                    <div class="invalid-feedback">
+                      Por Favor, Ingrese un Número!
+                    </div>
+                  </div>
+                    <div class="col-md-12">
+                      <label for="asuntoContacto" class="form-label">Asunto</label>
+                      <input type="text" class="form-control" id="asuntoContacto" name="asunto" minlength="1" maxlength="20" placeholder="Excelente Comic! " required >
+                      <div class="invalid-feedback">
+                        Por Favor, Ingrese un Asunto! 
+                      </div>
+                  </div>
+                  <div class="col-md-12 position-relative">
+                    <label for="mensajeContacto" class="form-label">Mensaje</label>
+                    <textarea type="text" class="form-control" id="mensajeContacto" name="mensaje" cols="20" rows="5" required placeholder="Comentatrio y/o sugerencias...." minlength="1" maxlength="200" ></textarea>
+                    <div class="invalid-feedback">
+                    Por Favor, Ingrese un Mensaje!
+                    </div>
+                  </div>
+                  <div class="col-12 d-flex justify-content-center">
+                    <button class="btn btn-primary btnEnviarComentario " type="submit" id="enviarComentario" >Enviar Comentario</button>
+                  </div>
+                </form>
             </div>
-            <div class="redes-modal-login">
-              <ul>
+            <div class="col-xl-6 col-lg-10 col-md-10 col-sm-12 panelMasInformacion">
+              <ul id="listaContacto" class="">
+                  <p class="h3 subtituloContacto">Mas Información</p>
+                  <li>
+                    <i class="fas fa-map-marker-alt iconoContacto"></i> General Paz 576 - San
+                    Miguel de Tucumán
+                  </li>
+                  <li ><i class="fas fa-phone iconoContacto"></i> (0800) 666-5066</li>
+                  <li>
+                    <i class="fas fa-envelope-open-text iconoContacto"></i> Mándanos un mail:
+                    comicMania@gmail.com
+                  </li>
+                  <li > <a href="/page/error404.html"><i class="fab fa-whatsapp iconoContacto" ></i>  WhatsApp</a> </li>
+                  <li >
+                    <a href="/page/error404.html"> <i class="fab fa-facebook iconoContacto" ></i>Facebook</a>
+                  </li>
+                  <li>
+                   <a href="/page/error404.html"> <i class="fab fa-twitter iconoContacto" ></i>Twitter</a>
+                  </li>
                 <li>
-                  <a class="redes-modal-login-text" href="./error404.html"><i class="bi bi-facebook"></i> Iniciar
-                    con Facebook</a>
+                  <a href="/page/error404.html"><i class="bi bi-instagram iconoContacto" ></i> Instagram</a>
                 </li>
                 <li>
-                  <a class="redes-modal-login-text" href="./error404.html"><i class="bi bi-google"></i> Iniciar
-                    con
-                    Google</a>
+                  <a href="/page/error404.html"><i class="bi bi-linkedin iconoContacto" ></i> LinkedIn</a>
                 </li>
-
               </ul>
+                <p  class="parrafoFinal">
+                  Horarios de Atencion: Lunes a Viernes de 08:00 a 18:30 hrs. 
+                  <br>
+                  sitioWeb: <a href="/index.html">www.comicMania.com</a>
+                </p>
             </div>
-            <span style="color: white">¿No tienes cuenta? </span><a class="register-link"
-              href="./registrarse.html">Regístrate aquí</a>
-
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-dark" id="btn-login" data-bs-dismiss="modal">Entrar</button>
-            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Fin modal -->
-  </header>
-  <main class="mainContacto">
-    <section class="container">
-      <div class="row  my-3 fondoContacto">
-        <div class="col-xl-6 col-lg-10 col-md-10 col-sm-12 formulario">
-          <form class="row g-3  needs-validation " novalidate id="formEnviarComentario">
-            <p class="h3 " id="tituloContacto">¡Contáctanos!</p>
-            <div class="col-md-12  position-relative">
-              <label for="nombreApellidoContacto" class="form-label">Nombre y Apellido</label>
-              <input type="text" class="form-control" id="nombreApellidoContacto" name="nombre_y_apellido"
-                placeholder="Mark Ronson" minlength="1" maxlength="40" required>
-              <div class="invalid-feedback">
-                Por Favor, Ingrese un Nombre y Apellido!
-              </div>
-            </div>
-            <div class="col-md-12 position-relative">
-              <label for="emailContacto" class="form-label">E-mail</label>
-              <input type="email" class="form-control" id="emailContacto" name="email"
-                placeholder="ejemplo.numero1@gmail.com" minlength="1" maxlength="40" required>
-              <div class="invalid-feedback">
-                Por Favor, Ingrese un E-mail!
-              </div>
-            </div>
-            <div class="col-md-12 position-relative">
-              <label for="numeroContacto" class="form-label">Número</label>
-              <input type="text" class="form-control" id="numeroContacto" name="numero" placeholder="+(54)-9-381-34567"
-                required minlength="1" maxlength="20">
-              <div class="invalid-feedback">
-                Por Favor, Ingrese un Número!
-              </div>
-            </div>
-            <div class="col-md-12">
-              <label for="asuntoContacto" class="form-label">Asunto</label>
-              <input type="text" class="form-control" id="asuntoContacto" name="asunto" minlength="1" maxlength="20"
-                placeholder="Excelente Comic! " required>
-              <div class="invalid-feedback">
-                Por Favor, Ingrese un Asunto!
-              </div>
-            </div>
-            <div class="col-md-12 position-relative">
-              <label for="mensajeContacto" class="form-label">Mensaje</label>
-              <textarea type="text" class="form-control" id="mensajeContacto" name="mensaje" cols="20" rows="5" required
-                placeholder="Comentatrio y/o sugerencias...." minlength="1" maxlength="200"></textarea>
-              <div class="invalid-feedback">
-                Por Favor, Ingrese un Mensaje!
-              </div>
-            </div>
-            <div class="col-12 d-flex justify-content-center">
-              <button class="btn btn-primary btnEnviarComentario " type="submit" id="enviarComentario">Enviar
-                Comentario</button>
-            </div>
-          </form>
-        </div>
-        <div class="col-xl-6 col-lg-10 col-md-10 col-sm-12 panelMasInformacion">
-          <ul id="listaContacto" class="">
-            <p class="h3 subtituloContacto">Mas Información</p>
-            <li>
-              <i class="fas fa-map-marker-alt iconoContacto"></i> General Paz 576 - San
-              Miguel de Tucumán
-            </li>
-            <li><i class="fas fa-phone iconoContacto"></i> (0800) 666-5066</li>
-            <li>
-              <i class="fas fa-envelope-open-text iconoContacto"></i> Mándanos un mail:
-              comicMania@gmail.com
-            </li>
-            <li> <a href="./error404.html"><i class="fab fa-whatsapp iconoContacto"></i> WhatsApp</a> </li>
-            <li>
-              <a href="./error404.html"> <i class="fab fa-facebook iconoContacto"></i>Facebook</a>
-            </li>
-            <li>
-              <a href="./error404.html"> <i class="fab fa-twitter iconoContacto"></i>Twitter</a>
-            </li>
-            <li>
-              <a href="./error404.html"><i class="bi bi-instagram iconoContacto"></i> Instagram</a>
-            </li>
-            <li>
-              <a href="./error404.html"><i class="bi bi-linkedin iconoContacto"></i> LinkedIn</a>
-            </li>
-          </ul>
-          <p class="parrafoFinal">
-            Horarios de Atencion: Lunes a Viernes de 08:00 a 18:30 hrs.
-            <br>
-            sitioWeb: <a href="../index.html">www.comicMania.com</a>
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <section class="container-fluid bg-black">
-      <article class="row" id="cuerpoFooter">
-        <aside class="col-xl-3 col-sm-3 col-md-3">
-          <p class="h5">ComicManía</p>
-          <ul>
-            <li>Direccion: Pueblo Paleta 1996</li>
-            <li>telefono: + 34 726 731 724</li>
-            <li>Email: geunnounn-7992@yopmail.com</li>
-          </ul>
-        </aside>
-        <aside class="col-xl-3 col-sm-3 col-md-3">
-          <p class="h5">Navegacion</p>
-          <ul>
-            <li><a href="./quienesSomos.html">Quienes Somos</a></li>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./contacto.html">Contáctanos</a></li>
-            <li><a href="./error404.html">Nuestra Historia</a></li>
-          </ul>
-        </aside>
-        <aside class="col-xl-3 col-sm-3 col-md-3">
-          <p class="h5">Legal</p>
-          <ul>
-            <li><a href="./error404.html">Terminos y condiciones</a></li>
-            <li><a href="./error404.html">Politica de privacidad</a></li>
-            <li>
-              <a href="./error404.html">Politica de derecho de autor</a>
-            </li>
-            <li><a href="./error404.html">Descargar App Movil</a></li>
-          </ul>
-        </aside>
-        <aside class="col-xl-3 col-sm-3 col-md-3">
-          <p class="h5">Redes Sociales</p>
-          <ul>
-            <li>
-              <a href="./error404.html"><i class="bi bi-facebook"></i> Facebook</a>
-            </li>
-            <li>
-              <a href="./error404.html"><i class="bi bi-twitter"></i> Twiter</a>
-            </li>
-            <li>
-              <a href="./error404.html"><i class="bi bi-instagram"></i> Instagram</a>
-            </li>
-            <li>
-              <a href="./error404.html"><i class="bi bi-linkedin"></i> LinkedIn</a>
-            </li>
-          </ul>
-        </aside>
-      </article>
-      <article class="row" id="copyrightFooter">
-        <p class="h6 text-center">&copy; 2023 Grupo 4. Todos los derechos reservados.</p>
-      </article>
-    </section>
-  </footer>
-  <script type="module" src="../js/contacto.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
+        </section>
+      </main>
+    <footer>
+        <section class="container-fluid bg-black" >
+            <article class="row" id="cuerpoFooter">
+              <aside class="col-xl-3 col-sm-3 col-md-3">
+                <p class="h5">ComicManía</p>
+                <ul>
+                  <li>Direccion: Pueblo Paleta 1996</li>
+                  <li>telefono: + 34 726 731 724</li>
+                  <li>Email: geunnounn-7992@yopmail.com</li>
+                </ul>
+              </aside>
+              <aside class="col-xl-3 col-sm-3 col-md-3">
+                <p class="h5">Navegacion</p>
+                <ul>
+                  <li><a href="/page/quienesSomos.html">Quienes Somos</a></li>
+                  <li><a href="/index.html">Inicio</a></li>
+                  <li><a href="/page/contacto.html">Contáctanos</a></li>
+                  <li><a href="/page/error404.html">Nuestra Historia</a></li>
+                </ul>
+              </aside>
+              <aside class="col-xl-3 col-sm-3 col-md-3">
+                <p class="h5">Legal</p>
+                <ul>
+                  <li><a href="/page/error404.html">Terminos y condiciones</a></li>
+                  <li><a href="/page/error404.html">Politica de privacidad</a></li>
+                  <li>
+                    <a href="/page/error404.html">Politica de derecho de autor</a>
+                  </li>
+                  <li><a href="/page/error404.html">Descargar App Movil</a></li>
+                </ul>
+              </aside>
+              <aside class="col-xl-3 col-sm-3 col-md-3">
+                <p class="h5">Redes Sociales</p>
+                <ul>
+                  <li>
+                    <a href="/page/error404.html"><i class="bi bi-facebook"></i> Facebook</a>
+                  </li>
+                  <li>
+                    <a href="/page/error404.html"><i class="bi bi-twitter"></i> Twiter</a>
+                  </li>
+                  <li>
+                    <a href="/page/error404.html"><i class="bi bi-instagram"></i> Instagram</a>
+                  </li>
+                  <li>
+                    <a href="/page/error404.html"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                  </li>
+                </ul>
+              </aside>
+            </article>
+            <article class="row" id="copyrightFooter">
+              <p class="h6 text-center">&copy; 2023 Grupo 4. Todos los derechos reservados.</p>
+            </article>
+          </section>
+    </footer>
+    <script type="module" src="/js/contacto.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
   <script type="text/javascript">
     emailjs.init('Vza7tJpPbfn6v0_k5');
   </script>

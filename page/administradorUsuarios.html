@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4d7920e24b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Administración de Usuarios</title>
+</head>
+
+<body>
+    <!-- Inicio navBar -->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg position-fixed top-0 start-0 z-3">
+        <div class="container-fluid nav-container d-flex align-items-center">
+          <a href="../index.html"
+            ><img
+              src="../assets/icono.jpg"
+              class="nav-img img-fluid ms-1 me-5"
+              alt="brand"
+          /></a>
+          <button
+            class="navbar-toggler btn btn-secondary"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-evenly menu-navbar"
+            id="navbarNavDropdown"
+          >
+            <ul class="navbar-nav justify-content-center">
+              <li class="nav-item">
+                <a
+                  class="nav-link active mx-2 fw-semibold text-white"
+                  aria-current="page"
+                  href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item mx-2 fw-semibold">
+                <a class="nav-link text-white" href="./quienesSomos.html"
+                  >Acerca de</a
+                >
+              </li>
+              <li class="nav-item mx-2 fw-semibold">
+                <a class="nav-link text-white" href="./contacto.html"
+                  >Contacto</a
+                >
+              </li>
+              <li class="nav-item mx-2 fw-semibold">
+                <a class="nav-link text-white" href="./error404.html"
+                  >Categorias</a
+                >
+              </li>
+              <li class="nav-item mx-2 fw-semibold">
+                <a class="nav-link text-white" href="./administradorComic.html"
+                  >Administración Comic</a
+                >
+              </li>
+              <li class="nav-item mx-2 fw-semibold">
+                <a class="nav-link text-white" href="./administradorUsuarios.html"
+                  >Administración Usuarios</a
+                >
+              </li>
+              <li class="nav-item mx-2 fw-semibold" id="admin-Tab">
+                <a class="nav-link text-white" href=""></a>
+              </li>
+            </ul>
+            <form class="btn-navbar d-flex" role="sign">
+              <!-- Button trigger modal -->
+              <h5 class="text-white text-end" id="nombre-usuario"></h5>
+              <button
+                type="button"
+                class="btn btn-secondary mx-2 fs-5 fw-semibold"
+                id="login"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+              >
+                <a class="dropdown-item text-white" href="#">Entrar</a>
+              </button>
+              <button
+                class="btn btn-secondary mx-2 fs-5 fw-semibold"
+                type="submit"
+                id="suscribe"
+              >
+                <a class="dropdown-item text-white" href="./registrarse.html"
+                  >Registrarme</a
+                >
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content modal-suscribe">
+            <div class="modal-header">
+              <h1
+                class="modal-title fs-5 fw-semibold text-white"
+                id="staticBackdropLabel"
+              >
+                Iniciar Sesión
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label
+                  for="FormControlText"
+                  class="form-label fw-semibold text-white"
+                  >Usuario</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="FormControlText"
+                  placeholder="usuario@gmail.com"
+                />
+              </div>
+              <div class="mb-3">
+                <label
+                  for="FormControlpassword"
+                  class="form-label fw-semibold text-white"
+                  >Contraseña</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="FormControlpassword"
+                />
+              </div>
+              <div class="redes-modal-login">
+                <ul>
+                  <li>
+                    <a class="redes-modal-login-text" href="./error404.html"
+                      ><i class="bi bi-facebook"></i> Iniciar con Facebook</a
+                    >
+                  </li>
+                  <li>
+                    <a class="redes-modal-login-text" href="./error404.html"
+                      ><i class="bi bi-google"></i> Iniciar con Google</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <span style="color: white">¿No tienes cuenta? </span
+              ><a class="register-link" href="./registrarse.html"
+                >Regístrate aquí</a
+              >
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-dark"
+                id="btn-login"
+                data-bs-dismiss="modal"
+              >
+                Entrar
+              </button>
+              <button
+                type="button"
+                class="btn btn-dark"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fin modal -->
+    </header>
+            <main class="mainAdministrador"> 
+               <section class="container-fluid">
+                <article class="row ">
+                    <span class="col-xl-12 col-sm-8 col-md-8 col-lg-8 ">
+                        <p class="h4 text-center" id="tituloAdministrarUsuarios"> Administrar Usuarios </p>
+                    </span>
+                </article>
+                <article class="row my-4 d-flex justify-content-center table-responsive mx-1">
+                        <table class="text-center table table-hover">
+                            <thead>
+                                <th scope="col">ID</th>
+                                <th scope="col">Nombre y Apellido </th>
+                                <th scope="col">Correo</th>
+                                <th scope="col">Contraseña</th>
+                                <th scope="col">Rol</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Opciones</th>
+                            </thead>
+                            <tbody id="bodyListUsuarios"></tbody>
+                        </table>   
+              
+                </article>
+               </section>
+<!--Modal Modificar comic -->
+<div class="modal fade" id="modificarUsuarioModal" tabindex="-1" aria-labelledby="modificarUsuarioModalLabel" aria-hidden="true">
+  <section class="modal-dialog">
+      <article class="modal-content modalAgregarComics">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modificarUsuarioModalLabel">Modificar Usuario </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="form-control" id="formModificarUsuarioModal"  class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label for="nombreComic" class="form-label">Nombre y Apellido :</label>
+              <input type="text" class="form-control" id="nombreApellidoUsuario" required minlength="1" maxlength="20" placeholder="" disabled>
+            </div>
+              <label for="selectorEstado" class="form-label">Rol del Usuario:</label>
+              <select class="form-select" id="rolUsuarioModificar" name="selectorEstado" required >
+                <option selected disabled value="">Seleccionar Rol Usuario</option>
+              </select>
+              <div class="invalid-feedback">
+                Por favor, Seleccioná el Rol de un Usuario!.
+              </div>
+              <label for="selectorEstado" class="form-label">Estado del usuario :</label>
+              <select class="form-select" id="estadoUsuarioModificar" name="selectorEstado" required >
+                <option selected disabled value="">Seleccionar Estado Usuario</option>
+              </select>
+              <div class="invalid-feedback">
+                Por favor, Seleccioná el Estado  de un Usuario!.
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="btnCancelar">Cancelar</button>
+              <button type="submit" class="btn btn-success" id="btnGuardarModificacionUsuario" >Guardar Modificación</button>
+            </div>
+          </form>
+        </div>
+      </article>
+    </section>
+</div>
+            </main>
+            <footer>
+                <section class="container-fluid bg-black" >
+                    <article class="row" id="cuerpoFooter">
+                      <aside class="col-xl-3 col-sm-3 col-md-3">
+                        <p class="h5">ComicManía</p>
+                        <ul>
+                          <li>Direccion: Pueblo Paleta 1996</li>
+                          <li>telefono: + 34 726 731 724</li>
+                          <li>Email: geunnounn-7992@yopmail.com</li>
+                        </ul>
+                      </aside>
+                      <aside class="col-xl-3 col-sm-3 col-md-3">
+                        <p class="h5">Navegacion</p>
+                        <ul>
+                          <li><a href="./quienesSomos.html">Quienés Somos</a></li>
+                          <li><a href="/index.html">Inicio</a></li>
+                          <li><a href="./contacto.html">Contactanos</a></li>
+                          <li><a href="./error404.html">Nuestra Historia</a></li>
+                        </ul>
+                      </aside>
+                      <aside class="col-xl-3 col-sm-3 col-md-3">
+                        <p class="h5">Legal</p>
+                        <ul>
+                          <li><a href="./error404.html">Terminos y condiciones</a></li>
+                          <li><a href="./error404.html">Politica de privacidad</a></li>
+                          <li>
+                            <a href="./error404.html">Politica de derecho de autor</a>
+                          </li>
+                          <li><a href="./error404.html">Descargar App Movil</a></li>
+                        </ul>
+                      </aside>
+                      <aside class="col-xl-3 col-sm-3 col-md-3">
+                        <p class="h5">Redes Sociales</p>
+                        <ul>
+                          <li>
+                            <a href="./error404.html"><i class="bi bi-facebook"></i> Facebook</a>
+                          </li>
+                          <li>
+                            <a href="./error404.html"><i class="bi bi-twitter"></i> Twiter</a>
+                          </li>
+                          <li>
+                            <a href="./error404.html"><i class="bi bi-instagram"></i> Instagram</a>
+                          </li>
+                          <li>
+                            <a href="./error404.html"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                          </li>
+                        </ul>
+                      </aside>
+                    </article>
+                    <article class="row" id="copyrightFooter">
+                      <p class="h6 text-center">&copy; 2023 Grupo 4. Todos los derechos reservados.</p>
+                    </article>
+                  </section>
+            </footer>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+            <script type="module" src="/js/administradorUsuarios.js"></script>
+</body>
+
+</html>

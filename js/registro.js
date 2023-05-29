@@ -3,8 +3,8 @@ import { Usuario } from "../model/Usuario.js";
 import { Estado, TipoRoles } from "../model/Emun.js";
 import { listaUsuariosComics } from "../model/data.js";
 
-const formularioRegistro = document.getElementById('formularioRegistro'),
-btnRegistrase = document.getElementById('registrar-usuario'); 
+const formularioRegistro = document.getElementById('formularioRegistro');
+
 formularioRegistro.addEventListener("submit",validarFormularioRegistro)
 
 function validarFormularioRegistro(event){
@@ -31,7 +31,7 @@ function validarFormularioRegistro(event){
      alert(`Mensaje No Enviado!. Error: ${JSON.stringify(err)}`);
      formularioRegistro.reset();
    });
-   
+
   }
 }
 function registrarUsuario() {
@@ -39,7 +39,7 @@ function registrarUsuario() {
     apellido = document.getElementById('apellido').value,
     correo = document.getElementById('correo').value,
     pass = document.getElementById('pass').value;
-
+    
   let nuevoUsuario = new Usuario(nombre + ' ' + apellido, correo, pass, TipoRoles.usuario, Estado.pendiente);
   return nuevoUsuario; 
 }
