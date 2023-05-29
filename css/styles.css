@@ -152,13 +152,17 @@ body{
     }
   }
 
+  .error404-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-#error404-img{
-  width: 100% ;
-  margin-top: 180px;
-  height: 100%;
-}
-
+  #error404-img{
+    width: 925px ;
+    margin-top: 180px;
+  }
 
   #listaContacto li {
   list-style: none;
@@ -405,6 +409,16 @@ table {
         width: 80% !important;
     }
    
+}
+
+@media (max-width: 925px){
+    #error404-img{
+      width: 100% ;
+      margin-top: 180px;
+      margin-bottom: 0px;
+      margin-left: 0px;
+      margin-left: 0px;
+    }
 }
 
 @media (max-width: 870px){
