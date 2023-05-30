@@ -311,7 +311,10 @@ table {
 /** fin de tablas***/
 /**Modal***/
 #sipnosisComic{
-  resize: none;
+  resize: none ;
+}
+.sipnosisComicModificar {
+  resize: none !important;
 }
 .modalAgregarComics, .modalVideoComic{
   background-color: rgb(127, 124, 123) !important;

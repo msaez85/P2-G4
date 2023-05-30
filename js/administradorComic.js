@@ -3,7 +3,7 @@ import {agregarInformacionParrafo,cargarEstadoComic, obtenerEstado,agregarVideo,
 import{listaComics } from "../model/data.js"
 import { Comic } from "../model/Comic.js";
 
-const formAgregarComic = document.getElementById("formAgregarModal"),
+const formAgregarComic = document.getElementById("formAgregarComicModal"),
 bodyTablaComic = document.getElementById('bodyListComic'),
 listEstadoComic = document.getElementById('estadoComic'),
 listEstadoModificarComic = document.getElementById('estadoComicModificar'), 
@@ -30,8 +30,9 @@ function validarFormularioAgregarComic(event) {
 /**Validamos el from de modificar un comic */
 formModificarComic.addEventListener("submit", validarFormularioModificarComic);
 function validarFormularioModificarComic(event) {
+  debugger
+  event.preventDefault();
     if (!formModificarComic.checkValidity()) {
-      event.preventDefault();
       event.stopPropagation();
       formModificarComic.classList.add('was-validated');
     }else{
@@ -238,16 +239,6 @@ function guardarModificacionComic(event){
     editorial = document.getElementById("editorialComicModificar").value,
     urlVideo = document.getElementById("urlVideoComicModificar").value,
     urlImage = document.getElementById("urlImagenComicModificar").value;
-
-  name = document.getElementById("nombreComicModificar").value ,
-  category= document.getElementById("categoriaComicModificar").value,  
-  synopsis= document.getElementById("sipnosisComicModificar").value,  
-  price= document.getElementById("precioComicModificar").value, 
-  status = obtenerEstado('estadoComicModificar'),
-  editorial = document.getElementById("editorialComicModificar").value,
- urlVideo  =  document.getElementById("urlVideoComicModificar").value, 
- urlImage = document.getElementById("urlImagenComicModificar").value;
-
  let newUpdateComic = new Comic(name,category,synopsis,false,urlVideo,urlImage,editorial,price,status), 
  respuesta = validarComicModificacion(newUpdateComic.toUpdateComic()); 
  if(respuesta != null){
