@@ -108,7 +108,7 @@ function cargarPaginaUsuario() {
         btnSuscribe.style.width = "100px";
         btnSuscribe.style.height = "44px";
         if (usuarioLogin.tipo == "administrador") {
-            if (window.location.href.includes('index') || window.location.href == 'https://rollingcode-comicverse.netlify.app') {
+            if (window.location.href.includes('index') || window.location.href == 'https://rollingcode-comicverse.netlify.app/#') {
                 adminComic.innerHTML = `<a class="nav-link text-primary fw-bold" href="./page/administradorComic.html">Comics &#9881</a>`;
                 adminUser.innerHTML = `<a class="nav-link text-primary fw-bold" href="./page/administradorUsuarios.html">Usuarios &#9881</a>`;
             } else {
@@ -133,7 +133,7 @@ function desloguearUsuario(event) {
     btnLogin.style.visibility = "visible";
     btnLogin.style.width = "94px";
     nombreUsuario.style.visibility = "hidden";
-    if (window.location.href.includes('index') || window.location.href == 'https://rollingcode-comicverse.netlify.app') {
+    if (window.location.href.includes('index') || window.location.href == 'https://rollingcode-comicverse.netlify.app/#') {
         btnSuscribe.innerHTML = `<a class="dropdown-item text-white" href="./page/registrarse.html">Registrarme</a>`;
         btnSuscribe.onclick = function () { window.open("./page/registrarse.html", "_self"); };
     } else {
