@@ -117,6 +117,9 @@ body{
     padding-top: 25px;
     background-color: rgb(39, 35, 33);
   }
+  .text-favorito{
+    text-decoration: none !important;
+  }
 .mainQuienesSomos{
   flex-grow: 1;
   padding-top: 150px;

@@ -25,7 +25,7 @@ function updateDetalle(idComic) {
     });
     detalleDiv.innerHTML = `
       <div class="img-detalle">
-        <img src=".${comicDetalle.urlImage}" class="img-fluid img-main m-5" alt="detail">
+        <img src=".${comicDetalle.urlImage}" class="img-fluid img-main m-5" alt='${comicDetalle.urlImage.slice(9, comicDetalle.urlImage.indexOf(".jpg"))}'>
       </div>
       <div class="descripcion-detalle container-fluid d-flex flex-column justify-content-start align-items-center">
         <h3 class="text-black fs-5 text-center">${comicDetalle.editorial}</h3>
@@ -35,7 +35,7 @@ function updateDetalle(idComic) {
             <h4>Precio</h4>
             <h4>${comicDetalle.price} USD$</h4>
           </div>
-          <button type="button" class="btn btn-dark btn-carrito me-5">Agregar al Carrito</button>
+          <button type="button" class="btn btn-dark btn-carrito me-5"><a class= "text-favorito text-white" href="./error404.html">Agregar al Carrito</a></button>
         </div>
         <p class="sinopsis">${comicDetalle.synopsis}</p>
         <iframe class="my-5" width="520" height="315" src="${comicDetalle.urlVideo}">

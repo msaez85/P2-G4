@@ -100,7 +100,12 @@
 
 
 .btn-carrito{
-    width: 250px !important;
+    width: 170px !important;
+    height: 60px !important;
+}
+
+.text-favorito{
+  text-decoration: none !important;
 }
 
 .img-main{

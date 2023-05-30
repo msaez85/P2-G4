@@ -26,7 +26,7 @@ function cargarDestacado(comicDestacado) {
             <br>
             <div class="btn-destacados container-fluid d-flex">
               <button href="#" class="detalle-btn btn btn-secondary me-4 mb-2" id="${comicDestacado.id}">Detalles</button>
-              <button href="#" class="btn btn-secondary mb-2">Favorito</button>
+              <button href="#" class="btn btn-secondary mb-2"><a class= "text-favorito text-white" href="./page/error404.html">Favorito</a></button>
             </div>
           </div>
         `;
@@ -50,7 +50,7 @@ function cargarContenido(comics) {
         <p class="card-text text-white fw-bold">${c.category}</p>
         <p class="card-text text-white fw-bold">${c.status}</p>
         <button class="detalle-btn btn btn-secondary me-4 mb-2 position-absolute bottom-0" id="${c.id}">Detalles</button>
-        <button class="btn btn-secondary  mb-2 position-absolute bottom-0 start-50">Favorito</button>
+        <button class="btn btn-secondary mb-2 position-absolute bottom-0 start-50"><a class= "text-favorito text-white" href="./page/error404.html">Favorito</a></button>
      </div>
      `;
       contenido.appendChild(tarjetaManga);
