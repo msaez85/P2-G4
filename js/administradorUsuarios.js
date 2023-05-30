@@ -5,12 +5,25 @@ import { Usuario } from "../model/Usuario.js";
 const bodyListaUsuarios = document.getElementById('bodyListUsuarios'),
   listaEstadoUsuario = document.getElementById("estadoUsuarioModificar"),
   listaRolUsuario = document.getElementById("rolUsuarioModificar"),
-  fromModificarUsuario = document.getElementById("formModificarUsuarioModal");
+  fromModificarUsuario = document.getElementById("formModificarUsuarioModal"),
+  formIniciarSesion = document.getElementById('formIniciarSesion'); 
+
+  /**Validamos el form de iniciar sesion**/
+  formIniciarSesion.addEventListener('submit', validarFormulariInciarSesion)
+  function validarFormulariInciarSesion(event){
+    if (!formIniciarSesion.checkValidity()) {
+      event.preventDefault();
+      event.stopPropagation();
+      formIniciarSesion.classList.add('was-validated');
+    } else{
+      loginUsuario(event);
+      window.location.reload(); 
+    }
+  }
+
 
 window.onload = function () {
   cargarPaginaUsuario();
-  const btnLogin = document.getElementById('btn-login');
-  btnLogin.onclick = function () { loginUsuario() };
 }
 
 fromModificarUsuario.addEventListener("submit", validarFormularioModificarUsuario);

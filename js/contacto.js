@@ -1,8 +1,23 @@
 import { validarFormulario, loginUsuario, cargarPaginaUsuario } from '../helpers/help.js';
 
 const formEnviarComentario = document.getElementById('formEnviarComentario'),
-  btnEnviarMensaje = document.getElementById('enviarComentario');
+  btnEnviarMensaje = document.getElementById('enviarComentario'),
+  formIniciarSesion = document.getElementById('formIniciarSesion'); 
 
+  /**Validamos el form de iniciar sesion**/
+  formIniciarSesion.addEventListener('submit', validarFormulariInciarSesion)
+  function validarFormulariInciarSesion(event){
+    if (!formIniciarSesion.checkValidity()) {
+      event.preventDefault();
+      event.stopPropagation();
+      formIniciarSesion.classList.add('was-validated');
+    } else{
+      loginUsuario(event);
+      window.location.reload(); 
+    }
+  }
+
+/***Validamos el form de enviar comentario */
 formEnviarComentario.addEventListener("submit", validarFormularioAgregarComic);
 function validarFormularioAgregarComic(event) {
   event.preventDefault();
@@ -44,6 +59,4 @@ function validarInformacionFormulario() {
 
 window.onload = function () {
   cargarPaginaUsuario();
-  const btnLogin = document.getElementById('btn-login');
-  btnLogin.onclick = function () { loginUsuario() };
 }

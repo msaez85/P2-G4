@@ -9,12 +9,24 @@ const formAgregarComic = document.getElementById("formAgregarComicModal"),
   listEstadoModificarComic = document.getElementById('estadoComicModificar'),
   btnCancelar = document.getElementById('btnCancelar'),
   btnFavoriteComic = document.getElementsByClassName('btnFavoriteComic'),
-  formModificarComic = document.getElementById("formModificarComicModal");
+  formModificarComic = document.getElementById("formModificarComicModal"),
+  formIniciarSesion = document.getElementById('formIniciarSesion'); 
+
+  /**Validamos el form de iniciar sesion**/
+  formIniciarSesion.addEventListener('submit', validarFormulariInciarSesion)
+  function validarFormulariInciarSesion(event){
+    if (!formIniciarSesion.checkValidity()) {
+      event.preventDefault();
+      event.stopPropagation();
+      formIniciarSesion.classList.add('was-validated');
+    } else{
+      loginUsuario(event);
+      window.location.reload(); 
+    }
+  }
 
 window.onload = function () {
   cargarPaginaUsuario();
-  const btnLogin = document.getElementById('btn-login');
-  btnLogin.onclick = function () { loginUsuario() };
 }
 
 /**Funciones que donde inicializamos la carga de los comic y los estados del comic para crear uno nuevo */

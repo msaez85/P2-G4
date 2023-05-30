@@ -3,8 +3,23 @@ import { Usuario } from "../model/Usuario.js";
 import { Estado, TipoRoles } from "../model/Emun.js";
 import { listaUsuariosComics } from "../model/data.js";
 
-const formularioRegistro = document.getElementById('formularioRegistro');
+const formularioRegistro = document.getElementById('formularioRegistro'),
+formIniciarSesion = document.getElementById('formIniciarSesion'); 
 
+/**Validamos el form de iniciar sesion**/
+formIniciarSesion.addEventListener('submit', validarFormulariInciarSesion)
+function validarFormulariInciarSesion(event){
+  if (!formIniciarSesion.checkValidity()) {
+    event.preventDefault();
+    event.stopPropagation();
+    formIniciarSesion.classList.add('was-validated');
+  } else{
+    loginUsuario(event);
+    window.location.reload(); 
+  }
+}
+
+/**Validamos el form de Registro**/
 formularioRegistro.addEventListener("submit",validarFormularioRegistro)
 
 function validarFormularioRegistro(event){
