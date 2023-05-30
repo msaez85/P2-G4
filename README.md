@@ -18,7 +18,7 @@ git clone https://github.com/msaez85/P2-G4.git
 ```
  Y listo, ya puede ver la pagina de comicManía. 
 ## Autores
-- Duraán, Luciano
+- Durán, Luciano
 - Garcia Moya, Priscila
 - Saez, Mario 
 
