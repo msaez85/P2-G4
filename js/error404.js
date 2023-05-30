@@ -6,7 +6,6 @@ window.addEventListener('DOMContentLoaded', function () {
 }
 )
 
-
 window.onload = function () {
     cargarPaginaUsuario();
     const btnLogin = document.getElementById('btn-login');

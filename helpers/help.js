@@ -95,7 +95,8 @@ function cargarPaginaUsuario() {
     const btnLogin = document.getElementById('login');
     const btnSuscribe = document.getElementById('suscribe');
     const nombreUsuario = document.getElementById('nombre-usuario');
-    const adminTab = document.getElementById('admin-Tab');
+    const adminComic = document.getElementById('admin-comic');
+    const adminUser = document.getElementById('admin-user');
     let usuarioLogin = localStorage.getItem("usuarioActual") ? JSON.parse(localStorage.getItem("usuarioActual")) : null;
     if (usuarioLogin) {
         btnLogin.style.visibility = "hidden";
@@ -108,9 +109,11 @@ function cargarPaginaUsuario() {
         btnSuscribe.style.height = "44px";
         if (usuarioLogin.tipo == "administrador") {
             if (window.location.href.includes('index') || window.location.href.endsWith('app')) {
-                adminTab.innerHTML = `<a class="nav-link text-white" href="./page/administradorComic.html">Administracion</a>`;
+                adminComic.innerHTML = `<a class="nav-link text-primary fw-bold" href="./page/administradorComic.html">Comics &#9881</a>`;
+                adminUser.innerHTML = `<a class="nav-link text-primary fw-bold" href="./page/administradorUsuarios.html">Usuarios &#9881</a>`;
             } else {
-                adminTab.innerHTML = `<a class="nav-link text-white" href="./administradorComic.html">Administracion</a>`;
+                adminComic.innerHTML = `<a class="nav-link text-primary fw-bold" href="./administradorComic.html">Comics &#9881</a>`;
+                adminUser.innerHTML = `<a class="nav-link text-primary fw-bold" href="./administradorUsuarios.html">Usuarios &#9881</a>`;
             }
         }
         btnSuscribe.onclick = function (event) { desloguearUsuario(event); };
@@ -122,7 +125,8 @@ function desloguearUsuario(event) {
     const btnLogin = document.getElementById('login');
     const btnSuscribe = document.getElementById('suscribe');
     const nombreUsuario = document.getElementById('nombre-usuario');
-    const adminTab = document.getElementById('admin-Tab');
+    const adminComic = document.getElementById('admin-comic');
+    const adminUser = document.getElementById('admin-user');
     const btnNavbar = document.querySelector('.btn-navbar');
     let usuarioLogin = localStorage.getItem("usuarioActual") ? JSON.parse(localStorage.getItem("usuarioActual")) : null;
     localStorage.removeItem("usuarioActual");
@@ -142,7 +146,8 @@ function desloguearUsuario(event) {
     btnNavbar.style.justifyContent = "center";
     btnNavbar.setAttribute('style', 'margin-left: -8rem !important');
     if (usuarioLogin.tipo == "administrador") {
-        adminTab.innerHTML = `<a class="nav-link text-white" href=""></a>`;
+        adminComic.innerHTML = `<a class="nav-link text-danger fw-bold" href=""></a>`;
+        adminUser.innerHTML = `<a class="nav-link text-danger fw-bold" href=""></a>`;
     }
 }
 

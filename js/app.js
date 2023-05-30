@@ -71,10 +71,10 @@ function buscarComic(event) {
   textoBuscado = textoBuscado.toLowerCase();
   let comicFiltrados = [];
   let comicCompletos = listaComics.getArrayComic;
-  comicCompletos.forEach(comic => {
-    let nombre = comic.name;
-    nombre = nombre.toLowerCase();;
-    if (nombre.includes(textoBuscado)) {
+  comicCompletos?.forEach(comic => {
+    let textoComic = comic.name + ' ' + comic.category;
+    textoComic = textoComic.toLowerCase();;
+    if (textoComic.includes(textoBuscado)) {
       comicFiltrados.push(comic);
     }
   });
