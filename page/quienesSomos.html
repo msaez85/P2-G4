@@ -49,7 +49,7 @@
                         <!-- Button trigger modal -->
                         <h5 class="text-white text-end" id="nombre-usuario"></h5>
                         <button type="button" class="btn btn-secondary mx-2 fs-5 fw-semibold" id="login"
-                            data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            data-bs-toggle="modal" data-bs-target="#modalIniciarSesion">
                             <a class="dropdown-item text-white" href="#">Entrar</a>
                         </button>
                         <button class="btn btn-secondary mx-2 fs-5 fw-semibold" type="submit" id="suscribe"><a
@@ -59,54 +59,55 @@
             </div>
         </nav>
         <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content modal-suscribe">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5  fw-semibold text-white" id="staticBackdropLabel">Iniciar Sesión
-                        </h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label for="FormControlText" class="form-label fw-semibold text-white">Usuario</label>
-                            <input type="text" class="form-control" id="FormControlText"
-                                placeholder="usuario@gmail.com">
-                        </div>
-                        <div class="mb-3">
-                            <label for="FormControlpassword"
-                                class="form-label fw-semibold text-white">Contraseña</label>
-                            <input type="password" class="form-control" id="FormControlpassword">
-                        </div>
-                        <div class="redes-modal-login">
-                            <ul>
-                                <li>
-                                    <a class="redes-modal-login-text" href="./error404.html"><i
-                                            class="bi bi-facebook"></i> Iniciar
-                                        con Facebook</a>
-                                </li>
-                                <li>
-                                    <a class="redes-modal-login-text" href="./error404.html"><i
-                                            class="bi bi-google"></i> Iniciar
-                                        con
-                                        Google</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                        <span style="color: white">¿No tienes cuenta? </span><a class="register-link"
-                            href="./registrarse.html">Regístrate aquí</a>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-dark" id="btn-login"
-                            data-bs-dismiss="modal">Entrar</button>
-                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
+        <div class="modal fade" id="modalIniciarSesion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+        <div class="modal-dialog">
+          <div class="modal-content modal-suscribe">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5  fw-semibold text-white" id="staticBackdropLabel">Iniciar Sesión</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <div class="modal-body">
+              <form class="row g-3 needs-validation" novalidate id="formIniciarSesion">
+              <div class="mb-3">
+                <label for="FormControlText" class="form-label fw-semibold text-white">Usuario</label>
+                <input type="email" class="form-control" id="FormControlText" placeholder="usuario@gmail.com" required  minlength="1" maxlength="40">
+                <div class="invalid-feedback">
+                  <strong>Por Favor, Ingrese un E-mail!</strong> 
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="FormControlpassword" class="form-label fw-semibold text-white">Contraseña</label>
+                <input type="password" class="form-control" id="FormControlpassword"  placeholder="*********" required minlength="1"
+                maxlength="20">
+                <div class="invalid-feedback">
+                 <strong>Por favor, Ingrese Contraseña!</strong> 
+                </div>
+              </div>
+              <div class="redes-modal-login">
+                <ul>
+                  <li>
+                    <a class="redes-modal-login-text" href="./page/error404.html"><i class="bi bi-facebook"></i> Iniciar
+                      con Facebook</a>
+                  </li>
+                  <li>
+                    <a class="redes-modal-login-text" href="./page/error404.html"><i class="bi bi-google"></i> Iniciar con
+                      Google</a>
+                  </li>
+  
+                </ul>
+              </div>
+              <span style="color: white">¿No tienes cuenta? </span><a class="register-link"
+                href="./page/registrarse.html">Regístrate aquí</a>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-dark" id="btn-login" >Entrar</button>
+                  <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
         <!-- Fin modal -->
     </header>
     <main class="mainQuienesSomos">

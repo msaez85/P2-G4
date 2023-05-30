@@ -74,7 +74,8 @@ function validarUsuarioModificado(usuario){
     if(usuario.tipo == "") return "Seleccioná un Rol  de Usuario! ";
     return null; 
 } 
-function loginUsuario() {
+function loginUsuario(event) {
+    event.preventDefault(); 
     localStorage.removeItem("usuarioActual");
     let usuarioEncontrado = null;
     const usuarioForm = document.getElementById('FormControlText').value,

@@ -1,7 +1,18 @@
 import { listaComics } from "../model/data.js";
 import { loginUsuario, cargarPaginaUsuario } from "../helpers/help.js";
+const formIniciarSesion = document.getElementById('formIniciarSesion'); 
 
-
+formIniciarSesion.addEventListener('submit', validarFormulariInciarSesion)
+function validarFormulariInciarSesion(event){
+  if (!formIniciarSesion.checkValidity()) {
+    event.preventDefault();
+    event.stopPropagation();
+    formIniciarSesion.classList.add('was-validated');
+  } else{
+    loginUsuario(event);
+    window.location.reload(); 
+  }
+}
 function cargarDestacado(comicDestacado) {
   const elementoDestacadoViejo = document.querySelector('.destacado');
   elementoDestacadoViejo.remove();
@@ -90,8 +101,8 @@ function cargarBotones() {
       window.open(url, "_blank");
     };
   });
-  const btnLogin = document.getElementById('btn-login');
-  btnLogin.onclick = function () { loginUsuario() };
+  /*const btnLogin = document.getElementById('btn-login');
+  btnLogin.onclick = function () { };*/
   const btnBuscar = document.querySelector('.btn-buscar');
   btnBuscar.onclick = function (event) { buscarComic(event) };
 }
