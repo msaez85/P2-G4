@@ -91,6 +91,7 @@ function listarComics() {
     let img = document.createElement('img');
     img.style.width = '5rem';
     img.src = `.${comic.urlImage}`;
+    img.alt = `portada_${comic.urlImage.slice(9,comic.urlImage.indexOf(".jpg"))}`
     column.appendChild(img);
     row.appendChild(column);
 
