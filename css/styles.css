@@ -256,8 +256,12 @@ main{
   display: block;
   margin: 10% auto;
   border: auto;
-  padding: 7p 0px;
+  padding: 7px 0px;
   object-fit: cover;
+}
+.descripcionEquipo{
+  border-radius: 20px;
+  height: 139px;
 }
 /* inicio Footer **/
 
@@ -422,6 +426,19 @@ table {
       margin-left: 0px;
       margin-left: 0px;
     }
+    .quienesSomos {
+      width: 168px;
+      height: 172px;
+      border-radius: 50%;
+      display: block;
+      margin: 10% auto;
+      border: auto;
+      padding: 7px 0px;
+      object-fit: cover;
+  }
+  .descripcionEquipo{
+    height: 194px;
+  }
 }
 
 @media (max-width: 870px){
@@ -530,6 +547,9 @@ table {
     .descripcionEquipo{
       font-size: 15px;
     }
+    .descripcionEquipo{
+      height: 150px;
+    }
 }
 
 @media (max-width: 576px){
@@ -582,11 +602,10 @@ table {
     }
 
       /*fin del css destacado*/
+      .descripcionEquipo{
+        height: 106px;
+      }
 }
-
 .nombreequipo {
   color:black
-}
-.descripcionEquipo{
-  border-radius: 20px;
 }

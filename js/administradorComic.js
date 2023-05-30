@@ -90,7 +90,7 @@ function listarComics() {
     column.setAttribute('scope', 'row');
     let img = document.createElement('img');
     img.style.width = '5rem';
-    img.src = comic.urlImage;
+    img.src = `.${comic.urlImage}`;
     column.appendChild(img);
     row.appendChild(column);
 
