@@ -110,11 +110,11 @@ function cargarPaginaUsuario() {
         btnSuscribe.style.height = "44px";
         if (usuarioLogin.tipo == "administrador") {
             if (window.location.href.includes('index') || window.location.href.endsWith('.app/#')) {
-                adminComic.innerHTML = `<a class="nav-link text-primary fw-bold" href="./page/administradorComic.html">Comics &#9881</a>`;
-                adminUser.innerHTML = `<a class="nav-link text-primary fw-bold" href="./page/administradorUsuarios.html">Usuarios &#9881</a>`;
+                adminComic.innerHTML = `<a class="nav-link text-primary text-center fw-bold" href="./page/administradorComic.html">Comics &#9881</a>`;
+                adminUser.innerHTML = `<a class="nav-link text-primary text-center fw-bold" href="./page/administradorUsuarios.html">Usuarios &#9881</a>`;
             } else {
-                adminComic.innerHTML = `<a class="nav-link text-primary fw-bold" href="./administradorComic.html">Comics &#9881</a>`;
-                adminUser.innerHTML = `<a class="nav-link text-primary fw-bold" href="./administradorUsuarios.html">Usuarios &#9881</a>`;
+                adminComic.innerHTML = `<a class="nav-link text-primary text-center fw-bold" href="./administradorComic.html">Comics &#9881</a>`;
+                adminUser.innerHTML = `<a class="nav-link text-primary text-center fw-bold" href="./administradorUsuarios.html">Usuarios &#9881</a>`;
             }
         }
         btnSuscribe.onclick = function (event) { desloguearUsuario(event); };
