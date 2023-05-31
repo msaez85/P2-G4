@@ -150,6 +150,9 @@ function desloguearUsuario(event) {
         adminComic.innerHTML = `<a class="nav-link text-danger fw-bold" href=""></a>`;
         adminUser.innerHTML = `<a class="nav-link text-danger fw-bold" href=""></a>`;
     }
+    if (window.location.href.includes('administrador')){
+        window.location.href = window.location.origin;
+    }
 }
 
 export { generarID, validarComic, validarComicModificacion, deleteChildNode, parsearBoolean, validarFormulario, validarUsuario, loginUsuario, cargarPaginaUsuario, validarUsuarioModificado }; 
