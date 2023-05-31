@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: #404342;
+}
+
+.error404-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #error404-img{
+    width: 886px;
+    margin-top: 17px;
+  }
+  @media (max-width: 991px){
+    #error404-img{
+      width: 100% ;
+      margin-top: 180px;
+      margin-bottom: 0px;
+      margin-left: 0px;
+      margin-left: 0px;
+    }
+}
