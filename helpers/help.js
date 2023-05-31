@@ -24,7 +24,7 @@ function generarID() {
 function validarComic(comic) {
     if (comic.name.length == 1 || comic.name.match(ExpRegTitulo) == null) return "Ingrese Nombre Correcto del Comic! ";
     if (comic.category.length == 1 || comic.category.match(ExpRegTitulo) == null) return "Ingrese Categoría Correcta del Comic! ";
-    if (comic.synopsis.length == 1 || comic.synopsis.match(ExpRegTexto)) return "Ingrese Sinopsis Correcta del Comic! ";
+    if (comic.synopsis.length == 1 || comic.synopsis.match(ExpRegTexto) == null) return "Ingrese Sinopsis Correcta del Comic! ";
     if (comic.publics == null) return "Seleccioná una opcion de publicacion!";
     if (comic.status == "") return "Seleccioná un Estado! ";
     if (comic.price.length == 1 || comic.price.includes(',')) return "Ingrese un precio correcto!";
@@ -36,7 +36,7 @@ function validarComic(comic) {
 function validarComicModificacion(comic) {
     if (comic.name.length == 1 || comic.name.match(ExpRegTitulo) == null) return "Ingrese Nombre Correcto del Comic! ";
     if (comic.category.length == 1 || comic.category.match(ExpRegTitulo) == null) return "Ingrese Categoría Correcta del Comic! ";
-    if (comic.synopsis.length == 1 || comic.synopsis.match(ExpRegTexto)) return "Ingrese Sinopsis Correcta del Comic! ";
+    if (comic.synopsis.length == 1 || comic.synopsis.match(ExpRegTexto) == null) return "Ingrese Sinopsis Correcta del Comic! ";
     if (comic.status == "") return "Seleccioná un Estado! ";
     if (comic.price.length == 1 || comic.price.includes(',')) return "Ingrese un precio correcto!";
     if (comic.editorial.length == 1 || comic.editorial.match(ExpRegTitulo) == null) return "Ingrese Editorial Correcta del Comic!";
