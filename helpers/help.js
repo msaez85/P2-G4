@@ -1,7 +1,7 @@
 import { listaUsuariosComics } from "../model/data.js";
 import { Usuario } from "../model/Usuario.js";
 
-const ExpRegNombre =  /^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$/,
+const ExpRegNombre = /^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$/,
     ExpRegTitulo = /^[\w\s():\-?!¡¿"]+$/i,
     ExpRegURL = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/,
     ExpRegEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/,
@@ -24,7 +24,7 @@ function generarID() {
 function validarComic(comic) {
     if (comic.name.length == 1 || comic.name.match(ExpRegTitulo) == null) return "Ingrese Nombre Correcto del Comic! ";
     if (comic.category.length == 1 || comic.category.match(ExpRegTitulo) == null) return "Ingrese Categoría Correcta del Comic! ";
-    if (comic.synopsis.length == 1 ||comic.synopsis.match(ExpRegTexto) ) return "Ingrese Sinopsis Correcta del Comic! ";
+    if (comic.synopsis.length == 1 || comic.synopsis.match(ExpRegTexto)) return "Ingrese Sinopsis Correcta del Comic! ";
     if (comic.publics == null) return "Seleccioná una opcion de publicacion!";
     if (comic.status == "") return "Seleccioná un Estado! ";
     if (comic.price.length == 1 || comic.price.includes(',')) return "Ingrese un precio correcto!";
@@ -36,7 +36,7 @@ function validarComic(comic) {
 function validarComicModificacion(comic) {
     if (comic.name.length == 1 || comic.name.match(ExpRegTitulo) == null) return "Ingrese Nombre Correcto del Comic! ";
     if (comic.category.length == 1 || comic.category.match(ExpRegTitulo) == null) return "Ingrese Categoría Correcta del Comic! ";
-    if (comic.synopsis.length == 1 ||comic.synopsis.match(ExpRegTexto)) return "Ingrese Sinopsis Correcta del Comic! ";
+    if (comic.synopsis.length == 1 || comic.synopsis.match(ExpRegTexto)) return "Ingrese Sinopsis Correcta del Comic! ";
     if (comic.status == "") return "Seleccioná un Estado! ";
     if (comic.price.length == 1 || comic.price.includes(',')) return "Ingrese un precio correcto!";
     if (comic.editorial.length == 1 || comic.editorial.match(ExpRegTitulo) == null) return "Ingrese Editorial Correcta del Comic!";
@@ -69,13 +69,13 @@ function validarUsuario(nombre, email, pass) {
     if (pass.length == 1 || pass.match(ExpRegPass) == null) return "Ingrese un correcto, solo letras, numeros y/o caracteres especiales";
     return null;
 }
-function validarUsuarioModificado(usuario){
+function validarUsuarioModificado(usuario) {
     if (usuario.estado == "") return "Seleccioná un Estado de Usuario! ";
-    if(usuario.tipo == "") return "Seleccioná un Rol  de Usuario! ";
-    return null; 
-} 
+    if (usuario.tipo == "") return "Seleccioná un Rol  de Usuario! ";
+    return null;
+}
 function loginUsuario(event) {
-    event.preventDefault(); 
+    event.preventDefault();
     localStorage.removeItem("usuarioActual");
     let usuarioEncontrado = null;
     const usuarioForm = document.getElementById('FormControlText').value,
@@ -110,11 +110,11 @@ function cargarPaginaUsuario() {
         btnSuscribe.style.height = "44px";
         if (usuarioLogin.tipo == "administrador") {
             if (window.location.href.includes('index') || window.location.href.endsWith('.app/#')) {
-                adminComic.innerHTML = `<a class="nav-link text-primary text-center fw-bold" href="./page/administradorComic.html">Comics &#9881</a>`;
-                adminUser.innerHTML = `<a class="nav-link text-primary text-center fw-bold" href="./page/administradorUsuarios.html">Usuarios &#9881</a>`;
+                adminComic.innerHTML = `<a class="nav-link text-primary fw-bold" href="./page/administradorComic.html"><p class="admin-text text-primary fw-bold text-center">Comics &#9881</p></a>`;
+                adminUser.innerHTML = `<a class="nav-link text-primary fw-bold" href="./page/administradorUsuarios.html"><p class="admin-text text-primary fw-bold text-center">Usuarios &#9881</p></a>`;
             } else {
-                adminComic.innerHTML = `<a class="nav-link text-primary text-center fw-bold" href="./administradorComic.html">Comics &#9881</a>`;
-                adminUser.innerHTML = `<a class="nav-link text-primary text-center fw-bold" href="./administradorUsuarios.html">Usuarios &#9881</a>`;
+                adminComic.innerHTML = `<a class="nav-link text-primary fw-bold" href="./administradorComic.html"><p class="admin-text text-primary fw-bold text-center">Comics &#9881</p></a>`;
+                adminUser.innerHTML = `<a class="nav-link text-primary fw-bold" href="./administradorUsuarios.html"><p class="admin-text text-primary fw-bold text-center">Usuarios &#9881</p></a>`;
             }
         }
         btnSuscribe.onclick = function (event) { desloguearUsuario(event); };
@@ -152,4 +152,4 @@ function desloguearUsuario(event) {
     }
 }
 
-export { generarID, validarComic,validarComicModificacion,deleteChildNode, parsearBoolean, validarFormulario, validarUsuario, loginUsuario, cargarPaginaUsuario ,validarUsuarioModificado}; 
+export { generarID, validarComic, validarComicModificacion, deleteChildNode, parsearBoolean, validarFormulario, validarUsuario, loginUsuario, cargarPaginaUsuario, validarUsuarioModificado }; 

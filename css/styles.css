@@ -187,6 +187,7 @@ body{
   box-shadow: 0 0 25px rgba(0, 0, 0, 1);
   border: #333 solid;
   border-radius: 20px;
+  width: 100%;
 }
 .parrafoFinal{
   font-size: 18px;
@@ -241,6 +242,14 @@ main{
 
 .contenido{
     width: 70% !important;
+}
+
+.container-contacto{
+    margin: auto 120px !important;
+}
+
+.panelMasInformacion{
+  width: 48% !important;
 }
 
 .card{
@@ -429,10 +438,18 @@ table {
       padding: 7px 0px;
       object-fit: cover;
   }
+
+  .panelMasInformacion, .formulario{
+    width: 85% !important;
+  }
+
+  .container-contacto{
+    margin: auto 30px !important;
+}
    
 }
 
-@media (max-width: 995px){
+@media (max-width: 991px){
     #error404-img{
       width: 100% ;
       margin-top: 180px;
@@ -450,8 +467,17 @@ table {
       padding: 7px 0px;
       object-fit: cover;
   }
+
   .descripcionEquipo{
     height: 194px;
+  }
+
+  .admin-text{
+    text-align: start !important;
+  }
+
+  .nav-container {
+      background-color: rgba(93, 83, 78) !important;
   }
 }
 
@@ -491,7 +517,7 @@ table {
     /*inicio css media-query navbar*/
     .nav-container{
         width: 100% !important;
-        background-color: rgba(93, 83, 78, 0.9) !important;
+        background-color: rgba(93, 83, 78) !important;
     }
 
     .btn-navbar{
@@ -589,13 +615,17 @@ table {
 
       .nav-container{
          width: 100% !important;
-         background-color: rgba(93, 83, 78, 0.9) !important;
+         background-color: rgba(93, 83, 78) !important;
       }
 
       .nav-img{
         height: 100px !important;
         width: 180px !important;
         max-width: 180px !important;
+      }
+
+      .btn-navbar{
+        margin-left: 0px !important;
       }
       /*fin css media-query navbar*/
       /*inicio del css destacado*/
@@ -615,10 +645,18 @@ table {
       align-items: center;
     }
 
-      /*fin del css destacado*/
-      .descripcionEquipo{
+    /*fin del css destacado*/
+    .descripcionEquipo{
         height: 106px;
-      }
+    }
+
+    #listaContacto{
+      padding-left: 0px !important;
+    }
+
+    .container-contacto {
+      margin: auto 20px !important;
+  }
 }
 .nombreequipo {
   color:black

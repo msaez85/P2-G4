@@ -241,6 +241,16 @@ body{
     }
 }
 
+@media (max-width: 991px){
+    .admin-text{
+      text-align: start !important;
+    }
+
+    .nav-container {
+      background-color: rgba(93, 83, 78) !important;
+    }
+}
+
 @media (max-width: 870px){
     /*inicio css media-query navbar*/
     @keyframes movingBackground {
@@ -304,7 +314,7 @@ body{
 
     .nav-container{
         width: 100% !important;
-        background-color: rgba(93, 83, 78, 0.9) !important;
+        background-color: rgba(93, 83, 78) !important;
     }
 
     .btn-navbar{
@@ -367,13 +377,17 @@ body{
 
       .nav-container{
          width: 100% !important;
-         background-color: rgba(93, 83, 78, 0.9) !important;
+         background-color: rgba(93, 83, 78) !important;
       }
 
       .nav-img{
         height: 100px !important;
         width: 180px !important;
         max-width: 180px !important;
+      }
+
+      .btn-navbar{
+        margin-left: 0px !important;
       }
       /*fin css media-query navbar*/
       /*inicio del css detalle*/
