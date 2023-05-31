@@ -418,10 +418,21 @@ table {
     .contenido{
         width: 80% !important;
     }
+
+    .quienesSomos {
+      width: 250px !important;
+      height: 250px !important;
+      border-radius: 50%;
+      display: block;
+      margin: 10% auto;
+      border: auto;
+      padding: 7px 0px;
+      object-fit: cover;
+  }
    
 }
 
-@media (max-width: 925px){
+@media (max-width: 995px){
     #error404-img{
       width: 100% ;
       margin-top: 180px;
@@ -430,8 +441,8 @@ table {
       margin-left: 0px;
     }
     .quienesSomos {
-      width: 168px;
-      height: 172px;
+      width: 200px !important;
+      height: 200px !important;
       border-radius: 50%;
       display: block;
       margin: 10% auto;
@@ -533,8 +544,8 @@ table {
     }
     /*fin del css destacado*/
     .quienesSomos {
-      width: 200px;
-      height: 200px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
       display: block;
       margin: auto;
