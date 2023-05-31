@@ -109,7 +109,7 @@ function cargarPaginaUsuario() {
         btnSuscribe.style.width = "100px";
         btnSuscribe.style.height = "44px";
         if (usuarioLogin.tipo == "administrador") {
-            if (window.location.href.includes('index') || window.location.href.endsWith('.app/#')) {
+            if (!window.location.href.includes('page')) {
                 adminComic.innerHTML = `<a class="nav-link text-primary fw-bold" href="./page/administradorComic.html"><p class="admin-text text-primary fw-bold text-center">Comics &#9881</p></a>`;
                 adminUser.innerHTML = `<a class="nav-link text-primary fw-bold" href="./page/administradorUsuarios.html"><p class="admin-text text-primary fw-bold text-center">Usuarios &#9881</p></a>`;
             } else {
@@ -134,7 +134,7 @@ function desloguearUsuario(event) {
     btnLogin.style.visibility = "visible";
     btnLogin.style.width = "94px";
     nombreUsuario.style.visibility = "hidden";
-    if (window.location.href.includes('index') || window.location.href.endsWith('.app/#')) {
+    if (!window.location.href.includes('page')) {
         btnSuscribe.innerHTML = `<a class="dropdown-item text-white" href="./page/registrarse.html">Registrarme</a>`;
         btnSuscribe.onclick = function () { window.open("./page/registrarse.html", "_self"); };
     } else {
