@@ -60,55 +60,87 @@
         </nav>
         <!-- Modal -->
         <div class="modal fade" id="modalIniciarSesion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true" >
-        <div class="modal-dialog">
-          <div class="modal-content modal-suscribe">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5  fw-semibold text-white" id="staticBackdropLabel">Iniciar Sesión</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal-suscribe">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5  fw-semibold text-white" id="staticBackdropLabel">Iniciar Sesión
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row g-3 needs-validation" novalidate id="formIniciarSesion">
+                            <div class="mb-3">
+                                <label for="FormControlText" class="form-label fw-semibold text-white">Usuario</label>
+                                <input type="email" class="form-control" id="FormControlText"
+                                    placeholder="usuario@gmail.com" required minlength="1" maxlength="40">
+                                <div class="invalid-feedback">
+                                    <strong>Por Favor, Ingrese un E-mail!</strong>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="FormControlpassword"
+                                    class="form-label fw-semibold text-white">Contraseña</label>
+                                <input type="password" class="form-control" id="FormControlpassword"
+                                    placeholder="*********" required minlength="1" maxlength="20">
+                                <div class="invalid-feedback">
+                                    <strong>Por favor, Ingrese Contraseña!</strong>
+                                </div>
+                            </div>
+                            <div class="redes-modal-login">
+                                <ul>
+                                    <li>
+                                        <a class="redes-modal-login-text" href="./error404.html"><i
+                                                class="bi bi-facebook"></i> Iniciar
+                                            con Facebook</a>
+                                    </li>
+                                    <li>
+                                        <a class="redes-modal-login-text" href="./error404.html"><i
+                                                class="bi bi-google"></i> Iniciar con
+                                            Google</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <span style="color: white">¿No tienes cuenta? </span><a class="register-link"
+                                href="./registrarse.html">Regístrate aquí</a>
+                            <a class="register-link" data-bs-toggle="modal" data-bs-target="#passRecoveryModal"
+                                href="">Recuperar
+                                Contraseña</a>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-dark" id="btn-login">Entrar</button>
+                                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-              <form class="row g-3 needs-validation" novalidate id="formIniciarSesion">
-              <div class="mb-3">
-                <label for="FormControlText" class="form-label fw-semibold text-white">Usuario</label>
-                <input type="email" class="form-control" id="FormControlText" placeholder="usuario@gmail.com" required  minlength="1" maxlength="40">
-                <div class="invalid-feedback">
-                  <strong>Por Favor, Ingrese un E-mail!</strong> 
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="FormControlpassword" class="form-label fw-semibold text-white">Contraseña</label>
-                <input type="password" class="form-control" id="FormControlpassword"  placeholder="*********" required minlength="1"
-                maxlength="20">
-                <div class="invalid-feedback">
-                 <strong>Por favor, Ingrese Contraseña!</strong> 
-                </div>
-              </div>
-              <div class="redes-modal-login">
-                <ul>
-                  <li>
-                    <a class="redes-modal-login-text" href="./error404.html"><i class="bi bi-facebook"></i> Iniciar
-                      con Facebook</a>
-                  </li>
-                  <li>
-                    <a class="redes-modal-login-text" href="./error404.html"><i class="bi bi-google"></i> Iniciar con
-                      Google</a>
-                  </li>
-  
-                </ul>
-              </div>
-              <span style="color: white">¿No tienes cuenta? </span><a class="register-link"
-                href="./registrarse.html">Regístrate aquí</a>
-                <div class="modal-footer">
-                  <button type="submit" class="btn btn-dark" id="btn-login" >Entrar</button>
-                  <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-              </form>
-            </div>
-          </div>
         </div>
-      </div>
         <!-- Fin modal -->
+        <!-- Modal recuperar contraseña -->
+        <div class="modal fade" id="passRecoveryModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content modal-suscribe">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 fw-semibold text-white" id="exampleModalLabel">Recuperación de
+                            Contraseña</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-white">
+                        Para recuperar su contraseña por favor envíe un mail a "admin@gmail.com" desde el correo
+                        electrónico
+                        que utilizó en su registro, en el asunto del mismo coloque "PASS RECOVERY", recibirá un mail con
+                        un
+                        link para resetear su contraseña, él mismo tiene validez por 3 hs una vez enviado.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin modal recuperar contraseña-->
     </header>
     <main class="error404-main">
         <img id="error404-img" src="../assets/error404bgbw.jpg" alt="" srcset="">
