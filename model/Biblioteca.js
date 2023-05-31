@@ -85,6 +85,16 @@ class Biblioteca {
             comic.status = updateComic.status; 
             comic.urlVideo = updateComic.urlVideo;
             comic.urlImage = updateComic.urlImage; 
+        }else if(idComic == this.#favoriteComic.id ) {
+            this.#favoriteComic.name = updateComic.name; 
+            this.#favoriteComic.category = updateComic.category; 
+            this.#favoriteComic.synopsis = updateComic.synopsis;
+            this.#favoriteComic.price = updateComic.price; 
+            this.#favoriteComic.editorial = updateComic.editorial; 
+            this.#favoriteComic.status = updateComic.status; 
+            this.#favoriteComic.urlVideo = updateComic.urlVideo;
+            this.#favoriteComic.urlImage = updateComic.urlImage; 
+            localStorage.setItem("comicFavorite", JSON.stringify(this.#favoriteComic)); 
         }
        }
 }

@@ -2,7 +2,7 @@ import { listaUsuariosComics } from "../model/data.js";
 import { Usuario } from "../model/Usuario.js";
 
 const ExpRegNombre = /^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$/,
-    ExpRegTitulo = /^[\w\s():\-?!¡¿"]+$/i,
+    ExpRegTitulo = /^[\w\s():\-?!¡¿áéíóúÁÉÍÓÚüÜñÑ"]+$/i,
     ExpRegURL = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/,
     ExpRegEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/,
     ExpRegTelefono = /^\+(?:[0-9] ?){6,14}[0-9]$/,
