@@ -8,7 +8,7 @@ const ExpRegNombre = /^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$/,
     ExpRegTelefono = /^\+(?:[0-9] ?){6,14}[0-9]$/,
     ExpRegAsunto = /^[A-Za-z0-9\s\-\_\.\,\!\?\']+$/,
     ExpRegMensaje = /^[A-Za-z0-9\s\-\_\.\,\!\?\']+$/,
-    ExpRegTexto = /^[A-Za-z\s\-()!¡¿?&""0-9]+$/,
+    ExpRegTexto = /^[\x00-\xFF]*$/,
     ExpRegPass = /^[A-Za-z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
 
 function generarID() {
