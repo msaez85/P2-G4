@@ -10,7 +10,9 @@ const formAgregarComic = document.getElementById("formAgregarComicModal"),
   btnCancelar = document.getElementById('btnCancelar'),
   btnFavoriteComic = document.getElementsByClassName('btnFavoriteComic'),
   formModificarComic = document.getElementById("formModificarComicModal"),
-  formIniciarSesion = document.getElementById('formIniciarSesion'); 
+  formIniciarSesion = document.getElementById('formIniciarSesion'),
+  btnCloseModal = document.getElementById("bntCloseModal"),
+  btnCancelarModificacion = document.getElementById("btnCancelarModificacion"); 
 
   /**Validamos el form de iniciar sesion**/
   formIniciarSesion.addEventListener('submit', validarFormulariInciarSesion)
@@ -268,3 +270,10 @@ function guardarModificacionComic(event) {
   localStorage.removeItem("idComicModificar");
   return window.location.reload();
 }
+
+btnCloseModal.addEventListener("click", ()=>{
+  formModificarComic.reset(); 
+}); 
+btnCancelarModificacion.addEventListener("click", ()=>{
+  formModificarComic.reset(); 
+})
