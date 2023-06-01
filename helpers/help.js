@@ -35,9 +35,9 @@ function validarComic(comic) {
 }
 function validarComicModificacion(comic) {
     if (comic.name.length == 1 || comic.name.match(ExpRegTitulo) == null) return "Ingrese un nombre correcto del comic!";
-    if (comic.category.length == 1 || comic.category.match(ExpRegTitulo) == null) return "Ingrese una categoría correcta del Comic! ";
-    if (comic.synopsis.length == 1 || comic.synopsis.match(ExpRegTexto) == null) return "Ingrese una sinopsis correcta del Comic! ";
-    if (comic.status == "") return "Seleccioná un Estado! ";
+    if (comic.category.length == 1 || comic.category.match(ExpRegTitulo) == null) return "Ingrese una categoría correcta del Comic!";
+    if (comic.synopsis.length == 1 || comic.synopsis.match(ExpRegTexto) == null) return "Ingrese una sinopsis correcta del Comic!";
+    if (comic.status == "") return "Seleccioná un Estado!";
     if (comic.price.length == 1 || comic.price.includes(',')) return "Ingrese un precio correcto!";
     if (comic.editorial.length == 1 || comic.editorial.match(ExpRegTitulo) == null) return "Ingrese una editorial correcta del Comic!";
     if (comic.urlVideo.length == 1 || comic.urlVideo.match(ExpRegURL) == null) return "Ingrese una URL de video correcta del Comic!";
