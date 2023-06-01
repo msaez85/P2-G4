@@ -131,7 +131,7 @@ function modificarUsuario(event) {
   }
   alert(listaUsuariosComics.modificarUsuario(idUsuario, usuarioModificado.toModificarUsuario()));
   localStorage.removeItem("idUsuarioModificar");
-  return fromModificarUsuario.rest();
+  return window.location.reload(); 
 }
 
 btnCloseModal.addEventListener("click", ()=>{
