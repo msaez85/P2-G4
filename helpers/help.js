@@ -22,26 +22,26 @@ function generarID() {
     return id;
 }
 function validarComic(comic) {
-    if (comic.name.length == 1 || comic.name.match(ExpRegTitulo) == null) return "Ingrese Nombre Correcto del Comic! ";
-    if (comic.category.length == 1 || comic.category.match(ExpRegTitulo) == null) return "Ingrese Categoría Correcta del Comic! ";
-    if (comic.synopsis.length == 1 || comic.synopsis.match(ExpRegTexto) == null) return "Ingrese Sinopsis Correcta del Comic! ";
-    if (comic.publics == null) return "Seleccioná una opcion de publicacion!";
-    if (comic.status == "") return "Seleccioná un Estado! ";
-    if (comic.price.length == 1 || comic.price.includes(',')) return "Ingrese un precio correcto!";
-    if (comic.editorial.length == 1 || comic.editorial.match(ExpRegTitulo) == null) return "Ingrese Editorial Correcta del Comic!";
-    if (comic.urlVideo.length == 1 || comic.urlVideo.match(ExpRegURL) == null) return "Ingrese URL de Video Correcta del Comic!";
-    if (comic.urlImage.length == 1 || comic.urlImage.match(ExpRegURL) == null) return "Ingrese URL de Imagen Correcta del Comic!";
+    if (comic.name.length == 1 || comic.name.match(ExpRegTitulo) == null) return "Ingrese un nombre correcto del comic!";
+    if (comic.category.length == 1 || comic.category.match(ExpRegTitulo) == null) return "Ingrese una categoría correcta del comic!";
+    if (comic.synopsis.length == 1 || comic.synopsis.match(ExpRegTexto) == null) return "Ingrese una sinopsis correcta del comic!";
+    if (comic.publics == null) return "Seleccione una opción de publicación";
+    if (comic.status == "") return "Seleccione un Estado";
+    if (comic.price.length == 1 || comic.price.includes(',')) return "Ingrese un precio correcto";
+    if (comic.editorial.length == 1 || comic.editorial.match(ExpRegTitulo) == null) return "Ingrese una Editorial correcta del comic!";
+    if (comic.urlVideo.length == 1 || comic.urlVideo.match(ExpRegURL) == null) return "Ingrese una URL de video correcta del comic!";
+    if (comic.urlImage.length == 1 || comic.urlImage.match(ExpRegURL) == null) return "Ingrese una URL de imagen correcta del comic!";
     return null;
 }
 function validarComicModificacion(comic) {
-    if (comic.name.length == 1 || comic.name.match(ExpRegTitulo) == null) return "Ingrese Nombre Correcto del Comic! ";
-    if (comic.category.length == 1 || comic.category.match(ExpRegTitulo) == null) return "Ingrese Categoría Correcta del Comic! ";
-    if (comic.synopsis.length == 1 || comic.synopsis.match(ExpRegTexto) == null) return "Ingrese Sinopsis Correcta del Comic! ";
+    if (comic.name.length == 1 || comic.name.match(ExpRegTitulo) == null) return "Ingrese un nombre correcto del comic!";
+    if (comic.category.length == 1 || comic.category.match(ExpRegTitulo) == null) return "Ingrese una categoría correcta del Comic! ";
+    if (comic.synopsis.length == 1 || comic.synopsis.match(ExpRegTexto) == null) return "Ingrese una sinopsis correcta del Comic! ";
     if (comic.status == "") return "Seleccioná un Estado! ";
     if (comic.price.length == 1 || comic.price.includes(',')) return "Ingrese un precio correcto!";
-    if (comic.editorial.length == 1 || comic.editorial.match(ExpRegTitulo) == null) return "Ingrese Editorial Correcta del Comic!";
-    if (comic.urlVideo.length == 1 || comic.urlVideo.match(ExpRegURL) == null) return "Ingrese URL de Video Correcta del Comic!";
-    if (comic.urlImage.length == 1 || comic.urlImage.match(ExpRegURL) == null) return "Ingrese URL de Imagen Correcta del Comic!";
+    if (comic.editorial.length == 1 || comic.editorial.match(ExpRegTitulo) == null) return "Ingrese una editorial correcta del Comic!";
+    if (comic.urlVideo.length == 1 || comic.urlVideo.match(ExpRegURL) == null) return "Ingrese una URL de video correcta del Comic!";
+    if (comic.urlImage.length == 1 || comic.urlImage.match(ExpRegURL) == null) return "Ingrese una URL de imagen correcta del Comic!";
     return null;
 }
 function deleteChildNode(container) {
@@ -55,23 +55,23 @@ function parsearBoolean(text) {
     if (text == 'no') return false;
 }
 function validarFormulario(nombreApellido, email, numero, asunto, mensaje) {
-    if (nombreApellido.length == 1 || nombreApellido.match(ExpRegNombre) == null) return "Ingrese un numero y apellido correcto";
+    if (nombreApellido.length == 1 || nombreApellido.match(ExpRegNombre) == null) return "Ingrese un nombre y apellido correcto";
     if (email.length == 1 || email.match(ExpRegEmail) == null) return "Ingrese un email correcto";
     if (numero.length == 1 || numero.match(ExpRegTelefono) == null) return "Ingrese un numero de telefono correcto";
-    if (asunto.length == 1 || asunto.match(ExpRegAsunto) == null) return "Ingrese un asunto Correcto";
-    if (mensaje.length == 1 || mensaje.match(ExpRegMensaje) == null) return "Ingrese un mensaje Correcto";
+    if (asunto.length == 1 || asunto.match(ExpRegAsunto) == null) return "Ingrese un asunto correcto";
+    if (mensaje.length == 1 || mensaje.match(ExpRegMensaje) == null) return "Ingrese un mensaje correcto";
     return null;
 }
 
 function validarUsuario(nombre, email, pass) {
-    if (nombre.length == 1 || nombre.match(ExpRegNombre) == null) return "Ingrese un numero y apellido correcto";
+    if (nombre.length == 1 || nombre.match(ExpRegNombre) == null) return "Ingrese un nombre y apellido correcto";
     if (email.length == 1 || email.match(ExpRegEmail) == null) return "Ingrese un email correcto";
-    if (pass.length == 1 || pass.match(ExpRegPass) == null) return "Ingrese un correcto, solo letras, numeros y/o caracteres especiales";
+    if (pass.length == 1 || pass.match(ExpRegPass) == null) return "Ingrese una contraseña correcta, solo letras, numeros y/o caracteres especiales";
     return null;
 }
 function validarUsuarioModificado(usuario) {
-    if (usuario.estado == "") return "Seleccioná un Estado de Usuario! ";
-    if (usuario.tipo == "") return "Seleccioná un Rol  de Usuario! ";
+    if (usuario.estado == "") return "Seleccione un Estado de Usuario";
+    if (usuario.tipo == "") return "Seleccione un Rol de Usuario";
     return null;
 }
 function loginUsuario(event) {
