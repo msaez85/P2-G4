@@ -29,6 +29,7 @@ function cargardetalle() {
 function updateDetalle(idComic) {
   const detalleDiv = document.querySelector('.detalle');
   const tituloComic = document.getElementById('titulo');
+  let dirImagen = '';
   if (!tituloComic.textContent) {
     let Comics = listaComics.getArrayComic;
     let comicDetalle = '';
@@ -37,9 +38,14 @@ function updateDetalle(idComic) {
         comicDetalle = c;
       }
     });
+    if (comicDetalle.urlImage.includes('http')){
+      dirImagen = `${comicDetalle.urlImage}`;
+    } else{
+      dirImagen = `.${comicDetalle.urlImage}`;
+    }
     detalleDiv.innerHTML = `
       <div class="img-detalle">
-        <img src=".${comicDetalle.urlImage}" class="img-fluid img-main m-5" alt='${comicDetalle.urlImage.slice(9, comicDetalle.urlImage.indexOf(".jpg"))}'>
+        <img src="${dirImagen}" class="img-fluid img-main m-5" alt='${comicDetalle.urlImage.slice(9, comicDetalle.urlImage.indexOf(".jpg"))}'>
       </div>
       <div class="descripcion-detalle container-fluid d-flex flex-column justify-content-start align-items-center">
         <h3 class="text-black fs-5 text-center">${comicDetalle.editorial}</h3>
