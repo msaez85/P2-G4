@@ -6,7 +6,9 @@ const bodyListaUsuarios = document.getElementById('bodyListUsuarios'),
   listaEstadoUsuario = document.getElementById("estadoUsuarioModificar"),
   listaRolUsuario = document.getElementById("rolUsuarioModificar"),
   fromModificarUsuario = document.getElementById("formModificarUsuarioModal"),
-  formIniciarSesion = document.getElementById('formIniciarSesion'); 
+  formIniciarSesion = document.getElementById('formIniciarSesion'),
+  btnCloseModal = document.getElementById("bntCloseModal"),
+  btnCancelarModificacion = document.getElementById("btnCancelarModificacionUsuario"); 
 
   /**Validamos el form de iniciar sesion**/
   formIniciarSesion.addEventListener('submit', validarFormulariInciarSesion)
@@ -129,6 +131,12 @@ function modificarUsuario(event) {
   }
   alert(listaUsuariosComics.modificarUsuario(idUsuario, usuarioModificado.toModificarUsuario()));
   localStorage.removeItem("idUsuarioModificar");
-  return window.location.reload();
+  return fromModificarUsuario.rest();
 }
 
+btnCloseModal.addEventListener("click", ()=>{
+  fromModificarUsuario.reset(); 
+}); 
+btnCancelarModificacion.addEventListener("click", ()=>{
+  fromModificarUsuario.reset(); 
+})
